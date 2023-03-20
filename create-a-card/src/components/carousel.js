@@ -1,48 +1,89 @@
-import Carousel from "react-bootstrap/Carousel";
-import "bootstrap/dist/css/bootstrap.min.css";
+import React, { useEffect, useState } from "react";
+import "./Carousel.css";
 
-function CarouselComp() {
+export const CarouselItem = ({ children, width }) => {
 	return (
-		<Carousel>
-			<Carousel.Item>
-				<img
-					className="d-block w-10"
-					src="../assets/images/michelle-ziling-ou-fa_H1xTvrZE-unsplash.png"
-					alt="First slide"
-				/>
-				<Carousel.Caption>
-					<h3>First slide label</h3>
-					<p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-				</Carousel.Caption>
-			</Carousel.Item>
-			<Carousel.Item>
-				<img
-					className="d-block w-100"
-					src="../assets/images/michelle-ziling-ou-fa_H1xTvrZE-unsplash.png"
-					alt="Second slide"
-				/>
-
-				<Carousel.Caption>
-					<h3>Second slide label</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-				</Carousel.Caption>
-			</Carousel.Item>
-			<Carousel.Item>
-				<img
-					className="d-block w-100"
-					src="../assets/images/michelle-ziling-ou-fa_H1xTvrZE-unsplash.png"
-					alt="Third slide"
-				/>
-
-				<Carousel.Caption>
-					<h3>Third slide label</h3>
-					<p>
-						Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-					</p>
-				</Carousel.Caption>
-			</Carousel.Item>
-		</Carousel>
+		<div
+			className="carousel-item"
+			style={{ width: width }}
+		>
+			{children}
+		</div>
 	);
-}
+};
+const Carousel = ({ children }) => {
+	const [activeIndex, setActiveIndex] = useState(0);
+	// const [width, setWidth] = useState(0);
+	const [paused, setPaused] = useState(false);
+	const updateIndex = (newIndex) => {
+		if (newIndex < 0) {
+			newIndex = React.Children.count(children) - 1;
+		} else if (newIndex >= React.Children.count(children)) {
+			newIndex = 0;
+		}
+		setActiveIndex(newIndex);
+	};
 
-export default CarouselComp;
+	useEffect(() => {
+		const interval = setInterval(() => {
+			if (!paused) {
+				updateIndex(activeIndex + 1);
+			}
+		}, 1500);
+
+		return () => {
+			if (interval) {
+				clearInterval(interval);
+			}
+		};
+	});
+
+	return (
+		<div
+			className="carousel"
+			onMouseEnter={() => setPaused(true)}
+			onMouseLeave={() => setPaused(false)}
+		>
+			<div
+				className="inner"
+				style={{ transform: `translateX(-${activeIndex * 100}%)` }}
+			>
+				{React.Children.map(children, (child, index) => {
+					return React.cloneElement(child, {
+						width: "100%",
+					});
+				})}
+			</div>
+			<div className="indicators">
+				<button
+					onClick={() => {
+						updateIndex(activeIndex - 1);
+					}}
+				>
+					Prev
+				</button>
+				{React.Children.map(children, (child, index) => {
+					return (
+						<button
+							className={`${index === activeIndex ? "active" : ""}`}
+							onClick={() => {
+								updateIndex(index);
+							}}
+						>
+							{index + 1}
+						</button>
+					);
+				})}
+				<button
+					onClick={() => {
+						updateIndex(activeIndex + 1);
+					}}
+				>
+					Next
+				</button>
+			</div>
+		</div>
+	);
+};
+
+export default Carousel;
