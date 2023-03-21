@@ -47,7 +47,7 @@ const Carousel = ({ children }) => {
 
 	return (
 		<div
-			{...handlers``}
+			{...handlers}
 			className="carousel"
 			onMouseEnter={() => setPaused(true)}
 			onMouseLeave={() => setPaused(false)}
