@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "materialize": "^1.0.0"
+    "react": "^18.2.0",
+    "react-swipeable": "^7.0.0"
   }
 }
