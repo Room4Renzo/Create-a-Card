@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 // import { useSpring, animated } from "react-spring";
-import { useSwipeble } from "react-swipeable";
+import { useSwipeable } from "react-swipeable";
 import "./Carousel.css";
 
 export const CarouselItem = ({ children, width }) => {
@@ -40,14 +40,14 @@ const Carousel = ({ children }) => {
 		};
 	});
 
-	const handlers = useSwipeble({
+	const handlers = useSwipeable({
 		onSwipedLeft: () => updateIndex(activeIndex + 1),
 		onSwipedRight: () => updateIndex(activeIndex - 1),
 	});
 
 	return (
 		<div
-			{...handlers}
+			{...handlers``}
 			className="carousel"
 			onMouseEnter={() => setPaused(true)}
 			onMouseLeave={() => setPaused(false)}
