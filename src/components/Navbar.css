@@ -1,0 +1,13 @@
+.navbar-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    height: 50px;
+    align-items: center;
+    background-color: rgb(186, 205, 228);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.navbar-container .nav-link {
+    text-decoration: none;
+}
