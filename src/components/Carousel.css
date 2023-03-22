@@ -1,19 +1,23 @@
 .carousel {
     overflow: hidden;
+    width: 40%;
 }
 
 .inner {
     white-space: nowrap;
-    transition: transform 0.5s ease;
+    transition: transform 0.3s ease;
+    height: 100%;
+    width: 100%;
 }
 
 .carousel-item {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    height: 200px;
-    background-color: green;
-    color: white;
+    height: 100%;
+    border: 0.1em solid black;
+    margin: 0.1em;
+    width: 100%;
 }
 
 .indicators {
@@ -29,3 +33,4 @@
     background-color: green;
     color: white;
 }
+

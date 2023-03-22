@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 // import { useSpring, animated } from "react-spring";
 import { useSwipeable } from "react-swipeable";
 import "./Carousel.css";
+import { Templates } from "../data/CarouselData";
+import { Animals } from "../data/CarouselData";
 
 export const CarouselItem = ({ children, width }) => {
 	return (
@@ -54,11 +56,11 @@ const Carousel = ({ children }) => {
 		>
 			<div
 				className="inner"
-				style={{ transform: `translateX(-${activeIndex * 100}%)` }}
+				style={{ transform: `translateX(-${activeIndex * 35}%)` }}
 			>
 				{React.Children.map(children, (child, index) => {
 					return React.cloneElement(child, {
-						width: "100%",
+						width: "35%",
 					});
 				})}
 			</div>
