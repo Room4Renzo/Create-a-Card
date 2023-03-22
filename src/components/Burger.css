@@ -11,8 +11,6 @@
     position: absolute;
     top: 0;
     right: 0;
-    /* background-color: rgba(86,27,79,255) !important; */
-    color: rgba(86,27,79,255);
     border: none;
     padding: 0.3rem 0.5rem;
     margin: 0px;
@@ -28,11 +26,10 @@
     position: fixed;
     top: 0;
     right: 0;
-    background-color:  rgba(236, 227, 238, 0.16);
-    color: rgba(104,40,90,255);
     padding: 0.5rem;
     border: none;
     margin: 0px;
+    background-color: transparent;
   }
 
   .burger-menu .menu-cross-button:hover {
@@ -48,9 +45,7 @@
     margin: 0;
     padding: 0;
     border-radius: 5px;
-    background: rgba(246, 241, 248, 0.999);
-    font-family: 'Overlock', cursive;
-
+    font-size: 16px;
   }
   
   .burger-menu .menu-item {
@@ -59,8 +54,6 @@
   }
   
   .burger-menu .menu-link {
-    color: rgba(104,40,90,255);
-    font-size: larger;
     text-decoration: none;
   }
   
@@ -76,8 +69,38 @@
     color: white;
   }
 
+  .subnav {
+    float: left;
+    overflow: hidden;
+  }
+  
+  .subnav .subnavbtn {
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+  }
+
+  .subnav-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .subnav-content a {
+    text-decoration: none;
+  }
+  
+  .card-type {
+    margin: 10px;
+    color: blue;
+  }
+
   @media only screen and (min-width: 576px) {
-    .dropdown-menu {
+    .burger-menu {
         display: none;
     }
   };

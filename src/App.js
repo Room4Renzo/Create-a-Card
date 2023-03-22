@@ -1,6 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Carousel, { CarouselItem } from "./components/Carousel";
+import About from "./pages/About.js";
+import Contact from "./pages/Contact.js";
 
 import TextInput from "./components/TextInput";
 
@@ -51,8 +53,8 @@ export default function App() {
 						</Carousel>
 					}
 				/>
-				{/* <Route path="/about" element={<About/>} />
-            <Route path="/contact" element={<Contact/>} /> */}
+				<Route path="/about" element={<About/>} />
+            <Route path="/contact" element={<Contact/>} />
 			</Routes>
 		</Router>
 	);
