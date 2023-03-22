@@ -12,7 +12,16 @@ const  Navbar = () => {
   return (
     <nav className="navbar-container">
         <strong>Create a card</strong>
+        <NavLink
+        to="/"
+        end
+        className={({ isActive }) =>
+          isActive ? "nav-link active" : "nav-link"
+        }
+      >
         <Dropdown />
+      </NavLink>
+       
         <NavLink
         to="/about"
         end
