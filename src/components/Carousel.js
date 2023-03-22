@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 // import { useSpring, animated } from "react-spring";
 import { useSwipeable } from "react-swipeable";
 import "./Carousel.css";
+import { Templates } from "../data/CarouselData";
+import { Animals } from "../data/CarouselData";
 
 export const CarouselItem = ({ children, width }) => {
 	return (
