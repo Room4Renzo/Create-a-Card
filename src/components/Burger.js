@@ -11,12 +11,6 @@ import { Link } from "react-router-dom";
 const options = ["Birthday Card", "Wedding Card", "Get Well Soon"];
 const Burger = () => {
   const [open, setOpen] = useState(true);
-  const [displayCardTypes, setDisplayCardTypes] = useState(false);
-
-
-  const handleDropdown = () => {
-    setDisplayCardTypes(!displayCardTypes);
-  }
 
   return (
     <nav className="burger-menu">
@@ -39,16 +33,15 @@ const Burger = () => {
 
         <li className="menu-item">
           <div className="subnav">
-            <button className="subnavbtn" onClick={handleDropdown}>
-              Category <FontAwesomeIcon icon={faCaretDown} />
+            <button className="subnavbtn">
+              Category 
             </button>
             <div className="subnav-content">
-                {displayCardTypes ?  options.map(option => (
-                <a href="/{option}" className="card-type">
+                {options.map(option => (
+                <a href="/" className="card-type" key={option}>
                   {option}
                 </a>
-              )) : <div></div>}
-             
+              ))}
             </div>
           </div>
         </li>

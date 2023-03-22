@@ -18,10 +18,6 @@
     background-color: transparent;
   }
   
-  .burger-menu .menu-button:hover {
-    color: black;
-  }
-  
   .burger-menu .menu-cross-button {
     position: fixed;
     top: 0;
@@ -32,10 +28,6 @@
     background-color: transparent;
   }
 
-  .burger-menu .menu-cross-button:hover {
-    color: black;
-  }
-  
   .burger-menu .menu-list{
     position: fixed;
     top: 0;
@@ -46,6 +38,7 @@
     padding: 0;
     border-radius: 5px;
     font-size: 16px;
+    color: white;
   }
   
   .burger-menu .menu-item {
@@ -55,10 +48,12 @@
   
   .burger-menu .menu-link {
     text-decoration: none;
-  }
-  
-  .burger-menu .menu-link:hover {
     color: white;
+  }
+
+  .burger-menu .menu-link:hover {
+   cursor: pointer;
+   color: blue;
   }
   
   .burger-menu .menu-icon {
@@ -71,7 +66,7 @@
 
   .subnav {
     float: left;
-    overflow: hidden;
+    /* overflow: hidden; */
   }
   
   .subnav .subnavbtn {
@@ -79,26 +74,36 @@
     border: none;
     outline: none;
     color: white;
-    padding: 14px 16px;
+    padding: 14px 0;
     background-color: inherit;
     font-family: inherit;
     margin: 0;
   }
 
+  .subnav .subnavbtn:hover {
+   cursor: pointer;
+   color: blue;
+  }
+
   .subnav-content {
     display: flex;
     flex-direction: column;
+    gap: 10px;
+    align-content: center;
+    justify-content: center;
+    margin-bottom: 10px;
   }
 
   .subnav-content a {
     text-decoration: none;
   }
-  
-  .card-type {
-    margin: 10px;
-    color: blue;
-  }
 
+  .subnav-content a:hover {
+    cursor: pointer;
+    color: white;
+  }
+  
+  
   @media only screen and (min-width: 576px) {
     .burger-menu {
         display: none;
