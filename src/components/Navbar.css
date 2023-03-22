@@ -11,3 +11,11 @@
 .navbar-container .nav-link {
     text-decoration: none;
 }
+
+
+@media only screen and (max-width: 576px) {
+    .navbar-container {
+        display: none;
+    }
+  };
+    
