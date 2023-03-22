@@ -14,41 +14,35 @@ export default function App() {
 				<Route
 					path="/"
 					element={
-						<Carousel>
-							<CarouselItem>Item 1</CarouselItem>
-							<CarouselItem>Item 2</CarouselItem>
-							<CarouselItem>Item 3</CarouselItem>
-							<CarouselItem>Item 4</CarouselItem>
-							<div className="App">
-								<Carousel>
-									<CarouselItem>
-										<img
-											src="./assets/images/Birthday.png"
-											className="carousel-item"
-										/>
-									</CarouselItem>
-									<CarouselItem>
-										<img
-											src="./assets/images/Birthday.png"
-											className="carousel-item"
-										/>
-									</CarouselItem>
-									<CarouselItem>
-										<img
-											src="./assets/images/Birthday.png"
-											className="carousel-item"
-										/>
-									</CarouselItem>
-									<CarouselItem>
-										<img
-											src="./assets/images/Birthday.png"
-											className="carousel-item"
-										/>
-									</CarouselItem>
-								</Carousel>
-								<TextInput />
-							</div>
-						</Carousel>
+						<div className="App">
+							<Carousel>
+								<CarouselItem>
+									<img
+										src="./assets/images/Birthday.png"
+										className="carousel-item"
+									/>
+								</CarouselItem>
+								<CarouselItem>
+									<img
+										src="./assets/images/Birthday.png"
+										className="carousel-item"
+									/>
+								</CarouselItem>
+								<CarouselItem>
+									<img
+										src="./assets/images/Birthday.png"
+										className="carousel-item"
+									/>
+								</CarouselItem>
+								<CarouselItem>
+									<img
+										src="./assets/images/Birthday.png"
+										className="carousel-item"
+									/>
+								</CarouselItem>
+							</Carousel>
+							<TextInput />
+						</div>
 					}
 				/>
 				{/* <Route path="/about" element={<About/>} />
