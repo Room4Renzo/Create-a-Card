@@ -65,7 +65,7 @@ const Dropdown = () => {
         ></button>
 
         {options.map((option) => (
-          <li className="menu-item">{option}</li>
+          <li className="menu-item" key={option}>{option}</li>
         ))}
       </ul>
     </nav>
