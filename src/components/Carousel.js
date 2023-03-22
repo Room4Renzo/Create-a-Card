@@ -56,11 +56,15 @@ const Carousel = ({ children }) => {
 		>
 			<div
 				className="inner"
-				style={{ transform: `translateX(-${activeIndex * 35}%)` }}
+				style={{ transform: `translateX(-${activeIndex * 100}%)` }}
 			>
+				<img
+					src={Animals[activeIndex].img}
+					className="carousel-item"
+				/>
 				{React.Children.map(children, (child, index) => {
 					return React.cloneElement(child, {
-						width: "35%",
+						width: "100%",
 					});
 				})}
 			</div>
@@ -72,18 +76,6 @@ const Carousel = ({ children }) => {
 				>
 					Prev
 				</button>
-				{React.Children.map(children, (child, index) => {
-					return (
-						<button
-							className={`${index === activeIndex ? "active" : ""}`}
-							onClick={() => {
-								updateIndex(index);
-							}}
-						>
-							{index + 1}
-						</button>
-					);
-				})}
 				<button
 					onClick={() => {
 						updateIndex(activeIndex + 1);
