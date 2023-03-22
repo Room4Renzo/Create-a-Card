@@ -6,16 +6,28 @@ export default function App() {
 		<div className="App">
 			<Carousel>
 				<CarouselItem>
-					<img src="./assets/images/Deer.jpg" />
+					<img
+						src="./assets/images/Birthday.png"
+						className="carousel-item"
+					/>
 				</CarouselItem>
 				<CarouselItem>
-					<img src="./assets/images/Fox.jpg" />
+					<img
+						src="./assets/images/Birthday.png"
+						className="carousel-item"
+					/>
 				</CarouselItem>
 				<CarouselItem>
-					<img src="./assets/images/Kitten.jpg" />
+					<img
+						src="./assets/images/Birthday.png"
+						className="carousel-item"
+					/>
 				</CarouselItem>
 				<CarouselItem>
-					<img src="./assets/images/Tiger.jpg" />
+					<img
+						src="./assets/images/Birthday.png"
+						className="carousel-item"
+					/>
 				</CarouselItem>
 			</Carousel>
 		</div>
