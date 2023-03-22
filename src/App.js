@@ -1,5 +1,6 @@
 import React from "react";
 import Carousel, { CarouselItem } from "./components/Carousel";
+import TextInput from "./components/TextInput";
 
 export default function App() {
 	return (
@@ -10,6 +11,7 @@ export default function App() {
 				<CarouselItem>Item 3</CarouselItem>
 				<CarouselItem>Item 4</CarouselItem>
 			</Carousel>
+			<TextInput />
 		</div>
 	);
 }
