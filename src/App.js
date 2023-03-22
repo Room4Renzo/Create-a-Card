@@ -4,12 +4,12 @@ import Carousel, { CarouselItem } from "./components/Carousel";
 
 import TextInput from "./components/TextInput";
 
-import Navbar from "./components/Navbar";
+import Header from "./components/Header";
 
 export default function App() {
 	return (
 		<Router>
-			<Navbar />
+			<Header />
 			<Routes>
 				<Route
 					path="/"
@@ -53,7 +53,6 @@ export default function App() {
 				/>
 				{/* <Route path="/about" element={<About/>} />
             <Route path="/contact" element={<Contact/>} /> */}
-				{/**/}
 			</Routes>
 		</Router>
 	);
