@@ -2,9 +2,7 @@ import React, { useEffect, useState } from "react";
 // import { useSpring, animated } from "react-spring";
 import { useSwipeable } from "react-swipeable";
 import "./Carousel.css";
-import { Templates } from "../data/CarouselData";
-import { Animals } from "../data/CarouselData";
-
+import { CarouselData } from "../data/CarouselData";
 export const CarouselItem = ({ children, width }) => {
 	return (
 		<div
@@ -59,7 +57,7 @@ const Carousel = ({ children }) => {
 				style={{ transform: `translateX(-${activeIndex * 100}%)` }}
 			>
 				<img
-					src={Animals[activeIndex].img}
+					src={CarouselData[activeIndex].img[activeIndex]}
 					className="carousel-item"
 				/>
 				{React.Children.map(children, (child, index) => {

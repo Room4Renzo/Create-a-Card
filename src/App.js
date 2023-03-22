@@ -15,32 +15,7 @@ export default function App() {
 					path="/"
 					element={
 						<div className="App">
-							<Carousel>
-								<CarouselItem>
-									<img
-										src="./assets/images/Birthday.png"
-										className="carousel-item"
-									/>
-								</CarouselItem>
-								<CarouselItem>
-									<img
-										src="./assets/images/Birthday.png"
-										className="carousel-item"
-									/>
-								</CarouselItem>
-								<CarouselItem>
-									<img
-										src="./assets/images/Birthday.png"
-										className="carousel-item"
-									/>
-								</CarouselItem>
-								<CarouselItem>
-									<img
-										src="./assets/images/Birthday.png"
-										className="carousel-item"
-									/>
-								</CarouselItem>
-							</Carousel>
+							<Carousel />
 							<TextInput />
 						</div>
 					}
