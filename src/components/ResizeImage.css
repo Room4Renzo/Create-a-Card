@@ -1,0 +1,10 @@
+  .drag-wrapper {
+    cursor: -webkit-grab;
+    cursor: grab;
+  }
+  
+  .item {
+    background-image: url("../assets/images/animals/Deer.jpg");
+    position: absolute;
+    background-size: cover;
+  }

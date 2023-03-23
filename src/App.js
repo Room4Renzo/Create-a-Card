@@ -7,6 +7,7 @@ import "./App.css";
 import TextInput from "./components/TextInput";
 import Header from "./components/Header";
 import CardTemlate from "./components/CardTemplate";
+import ResizeImage from "./components/ResizeImage";
 
 export default function App() {
   return (
@@ -23,6 +24,7 @@ export default function App() {
 				</div>
 				
 			  	<CardTemlate />
+          <ResizeImage />
             </div>
           }
         />
