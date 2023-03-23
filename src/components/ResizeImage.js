@@ -1,11 +1,20 @@
 import "./ResizeImage.css";
 import Resizable from "react-resizable-box";
 import Draggable from "react-draggable";
-import Deer from "../assets/images/animals/Deer.jpg";
+import { useState } from 'react';
 
 const ResizeImage = () => {
+    const [size, setSize] = useState({
+        width: 300,
+        height: 400
+    })
+
+    const onResize = (event) => {
+        setSize({width: event.target.value.width, height: event.target.value.height});
+      };
+
   return (
-    <div style={{ height: "80vh", width: "100px", padding: "10px"}}>
+    <div style={{ height: "80vh", width: "80vh"}}>
       <Draggable
       >
       <div
@@ -16,6 +25,7 @@ const ResizeImage = () => {
           className="item"
           width={300}
           height={400}
+          onResize={onResize}
           enable={{
             top: true,
             right: true,
@@ -27,7 +37,6 @@ const ResizeImage = () => {
             topLeft: true
           }}
         >
-          Basic Sample
         </Resizable>
       </div>
       </Draggable>
