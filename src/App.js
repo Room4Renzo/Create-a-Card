@@ -32,6 +32,7 @@ export default function App() {
               <ResizeImage />
               <div className="wrapper" id="download-image">
               <DownloadButton />
+
               <CardTemlate />
               </div>
              
