@@ -4,7 +4,7 @@
   }
   
   .resizable-item {
-    background-image: url("../assets/images/animals/Deer.jpg");
+    background-image: url("../assets/images/Animals/Deer.jpg");
     position: absolute;
     background-size: cover;
     display: flex;
@@ -12,3 +12,4 @@
     justify-content: center;
     border: solid 1px #ddd;
   }
+ 
