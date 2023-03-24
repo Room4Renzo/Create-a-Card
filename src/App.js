@@ -7,6 +7,7 @@ import "./App.css";
 import TextInput from "./components/TextInput";
 import Header from "./components/Header";
 import CardTemlate from "./components/CardTemplate";
+import ResizeImage from "./components/ResizeImage";
 import BirthdayCardTemplate from "./assets/images/templates/birthday-template1.jpeg";
 
 export default function App() {
@@ -23,6 +24,13 @@ export default function App() {
                 <TextInput />
                 {/* <CardTemlate image={BirthdayCardTemplate} /> */}
               </div>
+              <div className="left-container">
+                <Carousel />
+                <TextInput />
+              </div>
+              <ResizeImage />
+
+              <CardTemlate />
             </div>
           }
         />
