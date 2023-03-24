@@ -18,13 +18,13 @@ export default function App() {
           path="/"
           element={
             <div className="app-container">
-				<div className="left-container">
-				<Carousel />
-			  	<TextInput />
-				</div>
-				
-			  	<CardTemlate />
-          <ResizeImage />
+              <div className="left-container">
+                <Carousel />
+                <TextInput />
+              </div>
+              <ResizeImage />
+
+              <CardTemlate />
             </div>
           }
         />
