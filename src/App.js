@@ -25,15 +25,14 @@ export default function App() {
                 <TextInput />
                 {/* <CardTemlate image={BirthdayCardTemplate} /> */}
               </div>
-              <div className="left-container">
+              {/* <div className="left-container">
                 <Carousel />
                 <TextInput />
-              </div>
-              <ResizeImage />
+              </div> */}
+              {/* <ResizeImage /> */}
               <div className="wrapper" id="download-image">
-              <DownloadButton />
-
-              <CardTemlate />
+              {/* <DownloadButton /> */}
+              {/* <CardTemlate /> */}
               </div>
              
             </div>
