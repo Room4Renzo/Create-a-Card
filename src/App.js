@@ -18,12 +18,11 @@ export default function App() {
           path="/"
           element={
             <div className="app-container">
-				<div className="left-container">
-				<Carousel />
-			  	<TextInput />
-			  	{/* <CardTemlate image={BirthdayCardTemplate}/> */}
-				</div>
-				
+              <div className="left-container">
+                {/* <Carousel /> */}
+                <TextInput />
+                {/* <CardTemlate image={BirthdayCardTemplate} /> */}
+              </div>
             </div>
           }
         />

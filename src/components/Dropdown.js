@@ -25,13 +25,13 @@ const options = [
 const Dropdown = () => {
   const [open, setOpen] = useState(true);
   const [cardTemplate, setCardTemplate] = useState(options[0].template);
-  const [clickedCardCategory, setClickedCardCategory] = useState(true);
+  const [clickedCardCategory, setClickedCardCategory] = useState(false);
 
   const setTemplate = (name) => {
     console.log(name.category);
     console.log(name.template);
-    setClickedCardCategory(!clickedCardCategory);
     setCardTemplate(name.template);
+    setClickedCardCategory(true);
   };
 
   return (
@@ -42,12 +42,6 @@ const Dropdown = () => {
         </button>
 
         <ul hidden={open} onClick={() => setOpen(!open)} className="menu-list">
-          <button
-            onClick={() => setOpen(open)}
-            hidden={open}
-            className="menu-cross-button"
-          ></button>
-
           {options.map((option) => (
             <li
               className="menu-item"
@@ -55,11 +49,10 @@ const Dropdown = () => {
               onClick={() => setTemplate(option)}
             >
               {option.category}
-              {clickedCardCategory ? <CardTemplate image={cardTemplate} /> : <CardTemplate image={BirthdayCardTemplate} />}
             </li>
           ))}
         </ul>
-        <CardTemplate image={BirthdayCardTemplate} />
+        {clickedCardCategory ? <CardTemplate image={cardTemplate} className="rectangle"/> : <CardTemplate image={BirthdayCardTemplate} className="rectangle"/> }
       </div>
     </div>
   );
