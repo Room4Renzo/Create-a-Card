@@ -6,13 +6,25 @@ import Tiger from "../assets/images/animals/Tiger.jpg";
 
 export const CarouselData = [
 	{
-		category: "animals",
-		img: [Deer, Fox, Kitten, Tiger],
+		category: "Animals",
+		picture: Deer,
 	},
-
 	{
-		category: "template",
-
-		img: [Birthday],
+		category: "Animals",
+		picture: Fox,
+	},
+	{
+		category: "Animals",
+		picture: Kitten,
+	},
+	{
+		category: "Animals",
+		picture: Tiger,
+	},
+	{
+		category: "Templates",
+		picture: Birthday,
 	},
 ];
+
+export default CarouselData;

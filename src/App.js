@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Carousel, { CarouselItem } from "./components/Carousel";
+import CarouselTwo from "./components/Carousel2";
 
 import TextInput from "./components/TextInput";
 
@@ -15,7 +15,7 @@ export default function App() {
 					path="/"
 					element={
 						<div className="App">
-							<Carousel />
+							<CarouselTwo />
 							<TextInput />
 						</div>
 					}

@@ -1,6 +1,10 @@
 .carousel {
     overflow: hidden;
     width: 40%;
+    height: 300px;
+    margin: 0.4em;
+    border-radius: 0.4em;
+    
 }
 
 .inner {
@@ -8,6 +12,11 @@
     transition: transform 0.4s ease;
     height: 100%;
     width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    border-radius: 0.1em;
 }
 
 .carousel-item {
@@ -20,17 +29,27 @@
     width: 100%;
 }
 
-.indicators {
-    display: flex;
-    justify-content: center;
+.carousel-left
+{
+    display: grid;
+    place-items: center;
+    flex: 10%;
+    height: 100%;
+    background-color: rgb(0, 0, 0, 0.6);
+
 }
 
-.indicators > button {
-    margin: 5px;
+.carousel-center
+{
+    height: 100%;
+    flex: 80%;
 }
 
-.indicators >button.active {
-    background-color: green;
-    color: white;
+.carousel-right
+{
+    display: grid;
+    place-items: center;
+    height: 100%;
+    flex: 10%;
+        background-color: rgb(0, 0, 0, 0.6);
 }
-
