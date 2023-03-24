@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import CarouselTwo from "./components/Carousel2";
+import CarouselTwo from "./components/CarouselTwo";
 
 import TextInput from "./components/TextInput";
 
