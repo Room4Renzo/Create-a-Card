@@ -1,0 +1,22 @@
+
+  #download-image.wrapper {
+    position: relative;
+  }
+  
+  .download-btn {
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+    z-index: 10;
+    border: 1px solid #eee;
+    background: #ebf8ff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  
+  .download-btn:hover {
+    opacity: 0.9;
+  }
+  
