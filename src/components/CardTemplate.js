@@ -1,7 +1,4 @@
 import "./CardTemplate.css";
-import { useState } from "react";
-import Deer from "../assets/images/animals/Deer.jpg";
-import Template from "../assets/images/templates/Birthday.png";
 
 const CardTemplate = ({ image }) => {
   // const [image, setImage] = useState(props);
