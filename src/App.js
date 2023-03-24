@@ -7,6 +7,7 @@ import "./App.css";
 import TextInput from "./components/TextInput";
 import Header from "./components/Header";
 import CardTemlate from "./components/CardTemplate";
+import ResizeImage from "./components/ResizeImage";
 
 export default function App() {
   return (
@@ -17,12 +18,13 @@ export default function App() {
           path="/"
           element={
             <div className="app-container">
-				<div className="left-container">
-				<Carousel />
-			  	<TextInput />
-				</div>
-				
-			  	<CardTemlate />
+              <div className="left-container">
+                <Carousel />
+                <TextInput />
+              </div>
+              <ResizeImage />
+
+              <CardTemlate />
             </div>
           }
         />
