@@ -1,10 +1,13 @@
 .rectangle {
     display: inline-block;
-    border: 2px solid black;
-    background-image: url( "../assets/images/templates/Birthday.png");
+    border: 2px solid red;
     background-size: contain;
+    background-repeat: no-repeat;
     width: 300px;
     height: 400px;
+    position: absolute;
+    top: 30%;
+    right: 50%;
   }
 
   img {

@@ -7,7 +7,7 @@
     display: block;
 }
   
-.dropdown-menu button {
+.dropdown-menu .menu-button {
         background: none!important;
         border: none;
         padding: 0!important;
@@ -34,3 +34,11 @@
     padding-bottom: 0.5rem;
   }
   
+  .menu-item:hover {
+    cursor: pointer;
+    color: purple;
+  }
+
+  .appear {
+    margin-top: 1000px;
+  }
