@@ -7,34 +7,29 @@ import Carousel from "./components/CarouselTest";
 import TextInput from "./components/TextInput";
 import Header from "./components/Header";
 import CardTemlate from "./components/CardTemplate";
+import ResizeImage from "./components/ResizeImage";
 
 export default function App() {
-	return (
-		<Router>
-			<Header />
-			<Routes>
-				<Route
-					path="/"
-					element={
-						<div className="app-container">
-							<div className="left-container">
-								<Carousel />
-								{/* <TextInput /> */}
-							</div>
-
-							{/* <CardTemplate /> */}
-						</div>
-					}
-				/>
-				<Route
-					path="/about"
-					element={<About />}
-				/>
-				<Route
-					path="/contact"
-					element={<Contact />}
-				/>
-			</Routes>
-		</Router>
-	);
+  return (
+    <Router>
+      <Header />
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <div className="app-container">
+              <div className="left-container">
+                <Carousel />
+                <TextInput />
+              </div>
+              <ResizeImage />
+              <CardTemlate />
+            </div>
+          }
+        />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </Router>
+  );
 }
