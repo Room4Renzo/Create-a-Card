@@ -8,6 +8,7 @@ import TextInput from "./components/TextInput";
 import Header from "./components/Header";
 import CardTemlate from "./components/CardTemplate";
 import ResizeImage from "./components/ResizeImage";
+import DownloadButton from "./components/DownloadButton";
 
 export default function App() {
   return (
@@ -23,8 +24,11 @@ export default function App() {
                 <TextInput />
               </div>
               <ResizeImage />
-
+              <div className="wrapper" id="download-image">
+              <DownloadButton />
               <CardTemlate />
+              </div>
+             
             </div>
           }
         />
