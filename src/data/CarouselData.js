@@ -72,7 +72,7 @@ import Spaceship from "../assets/images/Vehicles/Spaceship.png";
 import UFO from "../assets/images/Vehicles/UFO.png";
 import Yacht from "../assets/images/Vehicles/Yacht.png";
 
-import Birthday from "../assets/images/Templates/Birthday.png";
+import Birthday from "../assets/images/templates/Birthday.png";
 
 export const CarouselData = [
 	{
