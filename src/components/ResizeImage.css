@@ -3,6 +3,21 @@
 	cursor: grab;
 }
 
+  .drag-wrapper {
+    cursor: -webkit-grab;
+    cursor: grab;
+  }
+  
+  .resizable-item {
+    background-image: url("../assets/images/Animals/Deer.jpg");
+    position: absolute;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid 1px #ddd;
+  }
+
 .resizable-item {
 	background-image: url("../assets/images/Animals/Deer.jpg");
 	position: absolute;
