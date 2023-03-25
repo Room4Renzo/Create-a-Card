@@ -22,20 +22,14 @@ export default function App() {
           element={
             <div className="app-container">
               <div className="left-container">
-                {/* <Carousel /> */}
-                {/* <TextInput /> */}
-                {/* <CardTemlate image={BirthdayCardTemplate} /> */}
-              </div>
-              {/* <div className="left-container">
                 <Carousel />
                 <TextInput />
+                {/* <CardTemlate image={BirthdayCardTemplate}/> */}
               </div>
-              <ResizeImage />
-              <div className="wrapper" id="download-image">
-              <DownloadButton />
-
-              <CardTemlate />
-              </div> */}
+              {/* <ResizeImage /> */}
+              {/* <div className="wrapper" id="download-image"> */}
+              {/* <DownloadButton /> */}
+              {/* </div>  */}
               <RadioButtons />
             </div>
           }
