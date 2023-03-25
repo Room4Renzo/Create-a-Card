@@ -3,15 +3,20 @@ import "./CarouselTest.css";
 import CarouselData from "../data/CarouselData";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import CardTemplate from "./CardTemplate";
 
 function Carousel() {
 	const [activeIndex, setActiveIndex] = useState(0);
 	const [image, setImage] = useState(CarouselData[activeIndex].picture);
-	const [category, setCategory] = useState(CarouselData[activeIndex].category);
+	// const [category, setCategory] = useState(CarouselData[activeIndex].category);
 	const currentImage = CarouselData[activeIndex].picture;
 	const [clicked, setClicked] = useState(false);
 	const activeImage = CarouselData[activeIndex];
 
+	const uploadImage = () => {
+		setImage(currentImage);
+		setClicked(!clicked);
+	};
 
 	return (
 		<div className="carousel">
@@ -27,7 +32,12 @@ function Carousel() {
 				>
 					<ArrowBackIosNewIcon style={{ fontSize: 30 }} />
 				</div>
-				<div className="carousel-center"></div>
+				<div
+					className="carousel-center"
+					onClick={() => {
+						uploadImage();
+					}}
+				></div>
 				<div
 					className="carousel-right"
 					onClick={() => {

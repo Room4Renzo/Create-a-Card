@@ -2,25 +2,21 @@ import "./CardTemplate.css";
 import { useState } from "react";
 import Deer from "../assets/images/Animals/Deer.jpg";
 import Template from "../assets/images/Templates/Birthday.png";
+import CarouselData from "../data/CarouselData";
 
 const CardTemplate = () => {
-	const [image, setImage] = useState(Template);
+	const [activeIndex, setActiveIndex] = useState(0);
+	const [image, setImage] = useState(CarouselData[activeIndex].picture);
 	const [clicked, setClicked] = useState(false);
 
 	const uploadImage = () => {
-		setImage(Deer);
+		setImage();
 		setClicked(!clicked);
 	};
 
 	return (
 		<div className="card-template-container">
-			<img
-				src={Deer}
-				onClick={uploadImage}
-			/>
-			<div className="rectangle">
-				{clicked ? <img src={Deer} /> : <div></div>}
-			</div>
+			<div className="rectangle"></div>
 		</div>
 	);
 };
