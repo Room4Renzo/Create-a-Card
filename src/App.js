@@ -2,6 +2,7 @@ import * as React from "react";
 import { styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
+import Grid2 from "@mui/material/Unstable_Grid2";
 
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Container } from "@mui/material";
@@ -23,39 +24,41 @@ export default function App() {
 			<Container maxWidth="xl">
 				<CssBaseline />
 				<Header />
-				<Grid
+				<Grid2
 					container
 					spacing={8}
+					rowSpacing={1}
+					columnSpacing={{ xs: 1, sm: 2, md: 3 }}
 				>
-					<Grid
+					<Grid2
 						item
 						xs={4}
 						md={6}
 					>
 						<Carousel />
-					</Grid>
-					<Grid
+					</Grid2>
+					<Grid2
 						item
 						xs={4}
 						md={6}
 					>
 						<CardTemplate />
-					</Grid>
-					<Grid
+					</Grid2>
+					<Grid2
 						item
 						xs={4}
 						md={6}
 					>
 						<Carousel />
-					</Grid>
-					<Grid
+					</Grid2>
+					<Grid2
 						item
 						xs={6}
 						md={6}
 					>
 						<TextInput />
-					</Grid>
-				</Grid>
+					</Grid2>
+				</Grid2>
 			</Container>
 		</Router>
 	);
