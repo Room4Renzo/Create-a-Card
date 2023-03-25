@@ -1,36 +1,35 @@
 .carousel {
-    overflow: hidden;
-    width: 40%;
+	overflow: hidden;
+	width: 100%;
 }
 
 .inner {
-    white-space: nowrap;
-    transition: transform 0.3s ease;
-    height: 100%;
-    width: 100%;
+	white-space: nowrap;
+	transition: transform 0.3s ease;
+	height: 100%;
+	width: 100%;
 }
 
 .carousel-item {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    border: 0.1em solid black;
-    margin: 0.1em;
-    width: 100%;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	border: 0.1em solid black;
+	margin: 0.1em;
+	width: 100%;
 }
 
 .indicators {
-    display: flex;
-    justify-content: center;
+	display: flex;
+	justify-content: center;
 }
 
 .indicators > button {
-    margin: 5px;
+	margin: 5px;
 }
 
-.indicators >button.active {
-    background-color: green;
-    color: white;
+.indicators > button.active {
+	background-color: green;
+	color: white;
 }
-

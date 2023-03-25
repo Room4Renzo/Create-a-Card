@@ -19,10 +19,10 @@ export default function App() {
 						<div className="app-container">
 							<div className="left-container">
 								<Carousel />
-								{/* <TextInput /> */}
+								<TextInput />
 							</div>
 
-							{/* <CardTemplate /> */}
+							<CardTemlate />
 						</div>
 					}
 				/>

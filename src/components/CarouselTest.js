@@ -6,6 +6,12 @@ import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 
 function Carousel() {
 	const [activeIndex, setActiveIndex] = useState(0);
+	const [image, setImage] = useState(CarouselData[activeIndex].picture);
+	const [category, setCategory] = useState(CarouselData[activeIndex].category);
+	const currentImage = CarouselData[activeIndex].picture;
+	const [clicked, setClicked] = useState(false);
+	const activeImage = CarouselData[activeIndex];
+
 	return (
 		<div className="carousel">
 			<div
