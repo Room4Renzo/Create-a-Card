@@ -66,7 +66,6 @@
 
   .subnav {
     float: left;
-    /* overflow: hidden; */
   }
   
   .subnav .subnavbtn {
@@ -82,7 +81,7 @@
 
   .subnav .subnavbtn:hover {
    cursor: pointer;
-   color: blue;
+   color: purple;
   }
 
   .subnav-content {
@@ -92,15 +91,13 @@
     align-content: center;
     justify-content: center;
     margin-bottom: 10px;
-  }
-
-  .subnav-content a {
-    text-decoration: none;
-  }
-
-  .subnav-content a:hover {
-    cursor: pointer;
+    margin-left: 20px;
     color: white;
+  }
+
+  .burger-menu-item:hover {
+    cursor: pointer;
+    color: purple;
   }
   
   

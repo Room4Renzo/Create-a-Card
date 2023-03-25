@@ -27,6 +27,7 @@ import CoconutDrink from "../assets/images/Holiday/CoconutDrink.png";
 import Sunshine from "../assets/images/Holiday/Sunshine.png";
 import SunSpikes from "../assets/images/Holiday/SunSpikes.png";
 
+
 import Family from "../assets/images/Misc/Family.png";
 import FamilySilhouette from "../assets/images/Misc/FamilySilhouette.png";
 import LightsBig from "../assets/images/Misc/LightsBig.png";

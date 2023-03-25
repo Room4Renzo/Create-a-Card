@@ -3,10 +3,12 @@
 	flex-direction: row;
 	justify-content: space-between;
 	width: 100%;
+
 }
 
 .left-container {
 	display: flex;
 	flex-direction: column;
 	width: 40%;
+
 }

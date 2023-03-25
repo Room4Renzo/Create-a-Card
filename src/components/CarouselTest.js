@@ -12,6 +12,7 @@ function Carousel() {
 	const [clicked, setClicked] = useState(false);
 	const activeImage = CarouselData[activeIndex];
 
+
 	return (
 		<div className="carousel">
 			<div
