@@ -44,35 +44,22 @@ const Dropdown = () => {
 					Category
 				</button>
 
-				<ul
-					hidden={open}
-					onClick={() => setOpen(!open)}
-					className="menu-list"
-				>
-					{options.map((option) => (
-						<li
-							className="menu-item"
-							key={option.category}
-							onClick={() => setTemplate(option)}
-						>
-							{option.category}
-						</li>
-					))}
-				</ul>
-				{clickedCardCategory ? (
-					<CardTemplate
-						image={cardTemplate}
-						className="rectangle"
-					/>
-				) : (
-					<CardTemplate
-						image={BirthdayCardTemplate}
-						className="rectangle"
-					/>
-				)}
-			</div>
-		</div>
-	);
+
+        <ul hidden={open} onClick={() => setOpen(!open)} className="menu-list">
+          {options.map((option) => (
+            <li
+              className="menu-item"
+              key={option.category}
+              onClick={() => setTemplate(option)}
+            >
+              {option.category}
+            </li>
+          ))}
+        </ul>
+        {clickedCardCategory ? <CardTemplate image={cardTemplate} className="rectangle"/> : <div></div> }
+      </div>
+    </div>
+  );
 };
 
 export default Dropdown;
