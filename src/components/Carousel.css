@@ -1,6 +1,9 @@
 .carousel {
 	overflow: hidden;
 	width: 100%;
+	margin-top: 3em;
+	border-radius: 3em;
+	border: solid black 0.1em;
 }
 
 .inner {
