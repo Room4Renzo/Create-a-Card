@@ -27,6 +27,7 @@ import CoconutDrink from "../assets/images/Holiday/CoconutDrink.png";
 import Sunshine from "../assets/images/Holiday/Sunshine.png";
 import SunSpikes from "../assets/images/Holiday/SunSpikes.png";
 
+
 import Family from "../assets/images/Misc/Family.png";
 import FamilySilhouette from "../assets/images/Misc/FamilySilhouette.png";
 import LightsBig from "../assets/images/Misc/LightsBig.png";
@@ -72,7 +73,7 @@ import Spaceship from "../assets/images/Vehicles/Spaceship.png";
 import UFO from "../assets/images/Vehicles/UFO.png";
 import Yacht from "../assets/images/Vehicles/Yacht.png";
 
-import Birthday from "../assets/images/templates/Birthday.png";
+import Birthday from "../assets/images/Templates/Birthday.png";
 
 export const CarouselData = [
 	{

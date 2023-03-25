@@ -1,13 +1,15 @@
 .rectangle {
-    display: inline-block;
-    border: 2px solid red;
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 300px;
-    height: 400px;
-    position: absolute;
-   
-  }
+	display: inline-block;
+	border: 2px solid red;
+	background-size: contain;
+	background-repeat: no-repeat;
+	width: 500px;
+	height: 550px;
+	position: absolute;
+	top: 10%;
+	right: 10%;
+}
+
 
 img {
 	width: 300px;
