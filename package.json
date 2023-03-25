@@ -20,11 +20,9 @@
     "@mui/styled-engine-sc": "^5.11.11",
 
     "html-to-image": "^1.11.11",
-
     "@mui/icons-material": "^5.11.11",
     "@mui/material": "^5.11.14",
     "@mui/styled-engine-sc": "^5.11.11",
-    "html-to-image": "^1.11.11",
     "react": "^18.2.0",
     "react-alice-carousel": "^2.7.0",
     "react-dom": "^18.2.0",
