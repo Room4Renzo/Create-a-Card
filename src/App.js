@@ -10,6 +10,7 @@ import CardTemlate from "./components/CardTemplate";
 import ResizeImage from "./components/ResizeImage";
 import DownloadButton from "./components/DownloadButton";
 import BirthdayCardTemplate from "./assets/images/templates/birthday-template1.jpeg";
+import RadioButtons from "./components/RadioButtons.js";
 
 export default function App() {
   return (
@@ -21,6 +22,7 @@ export default function App() {
           element={
             <div className="app-container">
               <div className="left-container">
+
                 {/* <Carousel /> */}
                 <TextInput />
                 {/* <CardTemlate image={BirthdayCardTemplate} /> */}

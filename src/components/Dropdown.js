@@ -52,7 +52,7 @@ const Dropdown = () => {
             </li>
           ))}
         </ul>
-        {clickedCardCategory ? <CardTemplate image={cardTemplate} className="rectangle"/> : <CardTemplate image={BirthdayCardTemplate} className="rectangle"/> }
+        {clickedCardCategory ? <CardTemplate image={cardTemplate} className="rectangle"/> : <div></div> }
       </div>
     </div>
   );
