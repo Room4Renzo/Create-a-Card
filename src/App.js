@@ -30,8 +30,8 @@ export default function App() {
 				>
 					<Grid2
 						item
-						xs={5}
-						md={5}
+						xs={4}
+						md={4}
 					>
 						<Carousel />
 					</Grid2>
@@ -44,15 +44,15 @@ export default function App() {
 					</Grid2>
 					<Grid2
 						item
-						xs={4}
-						md={4}
+						xs={5}
+						md={5}
 					>
 						<Carousel />
 					</Grid2>
 					<Grid2
 						item
-						xs={5}
-						md={5}
+						xs={6}
+						md={6}
 					>
 						<CardTemplate />
 					</Grid2>
