@@ -3,10 +3,10 @@ import { faXmark, faBars } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 import "./Burger.css";
 import { Link } from "react-router-dom";
-import CardTemplate from "./CardTemplate";
-import BirthdayCardTemplate from "../assets/images/Templates/birthday-template1.jpeg";
-import WeddingCardTemplate from "../assets/images/Templates/wedding-template1.jpeg";
-import GetWellSoonCardTemplate from "../assets/images/Templates/get-well-soon-template1.jpeg";
+import CardTemplate from "./components/CardTemplate";
+import BirthdayCardTemplate from "./assets/images/Templates/birthday-template1.jpeg";
+import WeddingCardTemplate from "./assets/images/Templates/wedding-template1.jpeg";
+import GetWellSoonCardTemplate from "./assets/images/Templates/get-well-soon-template1.jpeg";
 
 const options = [
 	{
