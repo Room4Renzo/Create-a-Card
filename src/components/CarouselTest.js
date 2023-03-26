@@ -4,6 +4,8 @@ import "./CarouselTest.css";
 import CarouselData from "../data/CarouselData";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import ResizeImage from "./ResizeImage";
+import CardTemplate from "./CardTemplate";
 
 function Carousel() {
 	const [activeIndex, setActiveIndex] = useState(0);
@@ -22,6 +24,14 @@ function Carousel() {
 	// 		setPaused(false);
 	// 	}
 	// };
+
+	const style = {
+		display: "flex",
+		alignItems: "center",
+		justifyContent: "center",
+		border: "solid 1px #ddd",
+	  };
+	
 
 	useEffect(() => {
 		const interval = setInterval(() => {
@@ -48,6 +58,8 @@ function Carousel() {
 		console.log("Clicked");
 		setClicked(true);
 		setUploadImage(currentImage);
+		console.log(currentImage);
+		console.log(clicked);
 	}
 
 	return (
@@ -83,7 +95,9 @@ function Carousel() {
 				</div>
 			</div>
 		</div>
-		{ clicked ? <img src={uploadImage} /> : <div></div>}
+		{ clicked ? <div><CardTemplate image={uploadImage}/></div> : <div></div>}
+		{/* { clicked ? 
+			<ResizeImage style = {style} image={uploadImage}/> : <div></div>} */}
 		</div>
 	);
 }

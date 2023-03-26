@@ -5,15 +5,15 @@
 	background-repeat: no-repeat;
 	width: 500px;
 	height: 550px;
-	position: absolute;
 	top: 10%;
 	right: 10%;
+	margin-top: 30px;
 }
 
 
 img {
-	width: 300px;
-	height: 400px;
+	max-height: 400px;
+	max-width: 400px;
 }
 
 .card-template-container {
@@ -22,4 +22,10 @@ img {
 	justify-content: space-between;
 	align-items: center;
 	gap: 10px;
+}
+
+.image-position {
+	position: relative;
+	margin: 10px;
+	top: 50px;
 }
