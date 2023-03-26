@@ -14,6 +14,7 @@ import CssBaseline from "@mui/material/CssBaseline";
 import Grid2 from "@mui/material/Unstable_Grid2/Grid2.js";
 import Dropdown from "./components/Dropdown.js";
 import CategoryDropdown from "./components/CategoryDropdown.jsx";
+import CategoryDrawer from "./components/CategoryDrawer.jsx";
 
 export default function App() {
 	return (
@@ -32,7 +33,7 @@ export default function App() {
 						xs={4}
 						md={5}
 					>
-						<CategoryDropdown />
+						<CategoryDrawer />
 					</Grid2>
 					<Grid2
 						item
