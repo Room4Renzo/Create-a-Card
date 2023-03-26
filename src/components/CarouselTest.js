@@ -13,6 +13,7 @@ function Carousel() {
 	const activeCategory = CarouselData[activeIndex];
 	const [paused, setPaused] = useState(false);
 	const [clicked, setClicked] = useState(false);
+	const [uploadImage, setUploadImage] = useState("");
 
 	// const pauseOnHover = () => {
 	// 	if (!paused) {
@@ -43,7 +44,14 @@ function Carousel() {
 	// 	setClicked(!clicked);
 	// };
 
+	const onClick = () => {
+		console.log("Clicked");
+		setClicked(true);
+		setUploadImage(currentImage);
+	}
+
 	return (
+		<div>
 		<div className="carousel">
 			<div
 				className="inner"
@@ -59,7 +67,7 @@ function Carousel() {
 				>
 					<ArrowBackIosNewIcon style={{ fontSize: 30 }} />
 				</div>
-				<div className="carousel-center"></div>
+				<div className="carousel-center" onClick={() => onClick()} value={clicked}></div>
 				<div
 					className="carousel-right"
 					onClick={() => {
@@ -74,6 +82,8 @@ function Carousel() {
 					/>
 				</div>
 			</div>
+		</div>
+		{ clicked ? <img src={uploadImage} /> : <div></div>}
 		</div>
 	);
 }

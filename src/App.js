@@ -47,14 +47,14 @@ export default function App() {
 						xs={4}
 						md={6}
 					>
-						<CardTemplate />
+						{/* <CardTemplate /> */}
 					</Grid2>
 					<Grid2
 						item
 						xs={4}
 						md={6}
 					>
-						<Carousel />
+						{/* <Carousel /> */}
 					</Grid2>
 					<Grid2
 						item

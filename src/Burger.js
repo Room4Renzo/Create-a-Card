@@ -100,7 +100,7 @@ const Burger = () => {
 					</li>
 				</ul>
 			</nav>
-			{clickedCardCategory ? (
+			{/* {clickedCardCategory ? (
 				<CardTemplate
 					image={cardTemplate}
 					className="rectangle"
@@ -110,7 +110,7 @@ const Burger = () => {
 					image={BirthdayCardTemplate}
 					className="rectangle"
 				/>
-			)}
+			)} */}
 		</div>
 	);
 };
