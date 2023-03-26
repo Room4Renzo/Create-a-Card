@@ -1,16 +1,103 @@
-import Dropdown from "react-dropdown";
-import "react-dropdown/style.css";
+import { useState } from "react";
+import List from "@mui/material/List";
+import ListItemButton from "@mui/material/ListItemButton";
+import ListItemText from "@mui/material/ListItemText";
+import Collapse from "@mui/material/Collapse";
+import ExpandLess from "@mui/icons-material/ExpandLess";
+import ExpandMore from "@mui/icons-material/ExpandMore";
 
 const CategoryDropdown = () => {
-	const options = ["one", "two", "three"];
-	const defaultOption = options[0];
+	const [open, setOpen] = useState(true);
+
+	const handleClick = () => {
+		setOpen(!open);
+	};
+
 	return (
-		<Dropdown
-			options={options}
-			onChange={this._onSelect}
-			value={defaultOption}
-			placeholder="Select an option"
-		/>
+		<List sx={{ width: "30%", maxWidth: "30%", bgcolor: "background.paper" }}>
+			<ListItemButton onClick={handleClick}>
+				<ListItemText primary="Categories" />
+				{open ? <ExpandMore /> : <ExpandLess />}
+			</ListItemButton>
+			<Collapse
+				in={!open}
+				timeout="auto"
+				unmountOnExit
+			>
+				<List
+					component="div"
+					disablePadding
+				>
+					<ListItemButton>
+						<ListItemText primary="Animals" />
+					</ListItemButton>
+				</List>
+				<List
+					component="div"
+					disablePadding
+				>
+					<ListItemButton>
+						<ListItemText primary="Cartoon" />
+					</ListItemButton>
+				</List>
+				<List
+					component="div"
+					disablePadding
+				>
+					<ListItemButton>
+						<ListItemText primary="Holiday" />
+					</ListItemButton>
+				</List>
+				<List
+					component="div"
+					disablePadding
+				>
+					<ListItemButton>
+						<ListItemText primary="Misc" />
+					</ListItemButton>
+				</List>
+				<List
+					component="div"
+					disablePadding
+				>
+					<ListItemButton>
+						<ListItemText primary="Nature" />
+					</ListItemButton>
+				</List>
+				<List
+					component="div"
+					disablePadding
+				>
+					<ListItemButton>
+						<ListItemText primary="Smiley" />
+					</ListItemButton>
+				</List>{" "}
+				<List
+					component="div"
+					disablePadding
+				>
+					<ListItemButton>
+						<ListItemText primary="Templates" />
+					</ListItemButton>
+				</List>
+				<List
+					component="div"
+					disablePadding
+				>
+					<ListItemButton>
+						<ListItemText primary="Text" />
+					</ListItemButton>
+				</List>{" "}
+				<List
+					component="div"
+					disablePadding
+				>
+					<ListItemButton>
+						<ListItemText primary="Vehicles" />
+					</ListItemButton>
+				</List>
+			</Collapse>
+		</List>
 	);
 };
 

@@ -13,6 +13,7 @@ import { Container } from "@mui/material";
 import CssBaseline from "@mui/material/CssBaseline";
 import Grid2 from "@mui/material/Unstable_Grid2/Grid2.js";
 import Dropdown from "./components/Dropdown.js";
+import CategoryDropdown from "./components/CategoryDropdown.jsx";
 
 export default function App() {
 	return (
@@ -22,7 +23,7 @@ export default function App() {
 				<Header />
 				<Grid2
 					container
-					spacing={8}
+					spacing={{ xs: 1, sm: 2, md: 3 }}
 					rowSpacing={1}
 					columnSpacing={{ xs: 1, sm: 2, md: 3 }}
 				>
@@ -31,7 +32,7 @@ export default function App() {
 						xs={4}
 						md={5}
 					>
-						<Dropdown />
+						<CategoryDropdown />
 					</Grid2>
 					<Grid2
 						item
@@ -58,9 +59,7 @@ export default function App() {
 						item
 						xs={6}
 						md={6}
-					>
-						<TextInput />
-					</Grid2>
+					></Grid2>
 				</Grid2>
 			</Container>
 		</Router>
