@@ -24,7 +24,7 @@ function Carousel() {
 
 	useEffect(() => {
 		const interval = setInterval(() => {
-			if (activeImage < currentImage.length - 1) {
+			if (activeImage < CarouselData[activeIndex].picture.length - 1) {
 				setActiveImage(activeImage + 1);
 			} else {
 				setActiveImage(0);
