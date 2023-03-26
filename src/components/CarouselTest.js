@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./CarouselTest.css";
 import CarouselData from "../data/CarouselData";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
@@ -37,14 +37,9 @@ function Carousel() {
 						onClick={() => {
 							if (activeIndex < CarouselData.length - 1)
 								setActiveIndex(activeIndex + 1);
+
 						}}
-					>
-						<ArrowForwardIosIcon
-							style={{
-								fontSize: 30,
-							}}
-						/>
-					</div>
+					/>
 				</div>
 			</div>
 		</div>
