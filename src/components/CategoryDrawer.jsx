@@ -8,11 +8,34 @@ import Divider from "@mui/material/Divider";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
+import "./CategoryDrawer.css";
+import CarouselData from "../data/CarouselData";
+import Carousel from "./CarouselTest";
 
-export default function CategoryDrawer() {
+function CategoryDrawer() {
 	const [state, setState] = useState({
 		left: false,
+		right: false,
+		top: false,
+		bottom: false,
 	});
+
+	const [activeCategory, setActiveCategory] = useState(CarouselData[0]);
+	const [activeIndex, setActiveIndex] = useState(0);
+
+	function changeCategory(category) {
+		const activeIndex = CarouselData.findIndex(
+			(item) => item.category === category
+		);
+
+		const activeCategory = CarouselData[activeIndex];
+
+		const categoryIndex = CarouselData.filter(
+			(item) => item.category === activeCategory
+		);
+
+		return setActiveCategory(categoryIndex);
+	}
 
 	const toggleDrawer = (anchor, open) => (event) => {
 		if (
@@ -48,7 +71,7 @@ export default function CategoryDrawer() {
 						key={text}
 						disablePadding
 					>
-						<ListItemButton>
+						<ListItemButton onClick={() => changeCategory()}>
 							<ListItemText primary={text} />
 						</ListItemButton>
 					</ListItem>
@@ -75,3 +98,5 @@ export default function CategoryDrawer() {
 		</div>
 	);
 }
+
+export default CategoryDrawer;
