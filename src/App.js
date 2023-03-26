@@ -30,37 +30,42 @@ export default function App() {
 				>
 					<Grid2
 						item
-						xs={4}
+						xs={5}
 						md={5}
-					>
-						<CategoryDrawer />
-					</Grid2>
-					<Grid2
-						item
-						xs={4}
-						md={6}
 					>
 						<Carousel />
 					</Grid2>
 					<Grid2
 						item
 						xs={4}
-						md={6}
+						md={4}
 					>
-						{/* <CardTemplate /> */}
+						<CategoryDrawer />
 					</Grid2>
 					<Grid2
 						item
 						xs={4}
-						md={6}
+						md={4}
 					>
-						{/* <Carousel /> */}
+						<Carousel />
+
+
 					</Grid2>
 					<Grid2
 						item
-						xs={6}
-						md={6}
-					></Grid2>
+						xs={5}
+						md={5}
+					>
+						<CardTemplate />
+
+					</Grid2>
+					<Grid2
+						item
+						xs={3}
+						md={3}
+					>
+						<TextInput />
+					</Grid2>
 				</Grid2>
 			</Container>
 		</Router>
