@@ -48,6 +48,8 @@ export default function App() {
 						md={4}
 					>
 						<Carousel />
+
+
 					</Grid2>
 					<Grid2
 						item
@@ -55,6 +57,7 @@ export default function App() {
 						md={5}
 					>
 						<CardTemplate />
+
 					</Grid2>
 					<Grid2
 						item

@@ -38,6 +38,10 @@
 	height: 100%;
 	flex: 80%;
 }
+
+.carousel-center:hover {
+	cursor: pointer;
+}
 .carousel-right {
 	display: grid;
 	place-items: center;
