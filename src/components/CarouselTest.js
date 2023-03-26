@@ -12,6 +12,18 @@ function Carousel() {
 	const [clicked, setClicked] = useState(false);
 	const activeImage = CarouselData[activeIndex];
 
+	useEffect(() => {
+		console.log("useEffect");
+		const interval = setInterval(() => {
+			if (activeIndex < currentImage.length - 1) {
+				setActiveIndex(activeIndex + 1);
+			} else {
+				setActiveIndex(0);
+			}
+		}, 2800);
+		return () => clearInterval(interval);
+	});
+
 	return (
 		<div className="carousel">
 			<div className="outer">
@@ -29,9 +41,7 @@ function Carousel() {
 					>
 						<ArrowBackIosNewIcon style={{ fontSize: 30 }} />
 					</div>
-					<div
-						className="carousel-center"
-					></div>
+					<div className="carousel-center"></div>
 					<div
 						className="carousel-right"
 						onClick={() => {
