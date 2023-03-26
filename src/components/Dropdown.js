@@ -34,6 +34,35 @@ const Dropdown = () => {
     setClickedCardCategory(true);
   };
 
+				<ul
+					hidden={open}
+					onClick={() => setOpen(!open)}
+					className="menu-list"
+				>
+					{options.map((option) => (
+						<li
+							className="menu-item"
+							key={option.category}
+							onClick={() => setTemplate(option)}
+						>
+							{option.category}
+						</li>
+					))}
+				</ul>
+				{clickedCardCategory ? (
+					<CardTemplate
+						image={cardTemplate}
+						className="rectangle"
+					/>
+				) : (
+					<CardTemplate
+						image={BirthdayCardTemplate}
+						className="rectangle"
+					/>
+				)}
+			</div>
+		</div>
+	);
   return (
     <div>
       <div className="dropdown-menu">

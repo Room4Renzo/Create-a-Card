@@ -1,5 +1,20 @@
 import "./CardTemplate.css";
 
+const CardTemplate = () => {
+	const [activeIndex, setActiveIndex] = useState(0);
+	const [image, setImage] = useState(CarouselData[activeIndex].picture);
+	const [clicked, setClicked] = useState(false);
+
+	const uploadImage = () => {
+		setImage();
+		setClicked(!clicked);
+	};
+
+	return (
+		<div className="card-template-container">
+			<div className="rectangle"></div>
+		</div>
+	);
 const CardTemplate = ({ image, className}) => {
   // const [image, setImage] = useState(props);
   // const [clicked, setClicked] = useState(false);
