@@ -9,59 +9,29 @@ import CardTemplate from "./components/CardTemplate";
 import ResizeImage from "./components/ResizeImage";
 import DownloadButton from "./components/DownloadButton";
 import BirthdayCardTemplate from "./assets/images/Templates/birthday-template1.jpeg";
-import { Container } from "@mui/material";
-import CssBaseline from "@mui/material/CssBaseline";
-import Grid2 from "@mui/material/Unstable_Grid2/Grid2.js";
 import Dropdown from "./components/Dropdown.js";
 import CategoryDropdown from "./components/CategoryDropdown.jsx";
 import CategoryDrawer from "./components/CategoryDrawer.jsx";
+import "bulma/css/bulma.css";
 
 export default function App() {
 	return (
 		<Router>
-			<Container maxWidth="xl">
-				<CssBaseline />
-				<Header />
-				<Grid2
-					container
-					spacing={{ xs: 1, sm: 2, md: 3 }}
-					rowSpacing={1}
-					columnSpacing={{ xs: 1, sm: 2, md: 3 }}
-				>
-					<Grid2
-						item
-						xs={4}
-						md={4}
-					>
-						<Carousel />
-						{/* <Carousel /> */}
-					</Grid2>
-					<Grid2
-						item
-						xs={4}
-						md={4}
-					></Grid2>
-					<Grid2
-						item
-						xs={4}
-						md={4}
-					></Grid2>
-					<Grid2
-						item
-						xs={5}
-						md={5}
-					>
-						{/* <CardTemplate /> */}
-					</Grid2>
-					<Grid2
-						item
-						xs={3}
-						md={3}
-					>
-						<TextInput />
-					</Grid2>
-				</Grid2>
-			</Container>
+			<Header />
+			<div className="columns">
+				<div className="column is-two-fifths">
+					<h1 className="title">Create your own card</h1>
+					<Carousel />
+					<h2>pick a font</h2>
+					<Carousel />
+				</div>
+				<div className="column">
+					<h1>Create a c ard</h1>
+					<CardTemplate />
+					<DownloadButton />
+				</div>
+			</div>
+
 		</Router>
 	);
 }
