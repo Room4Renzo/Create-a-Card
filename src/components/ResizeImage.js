@@ -22,9 +22,8 @@ const ResizeImage = (props) => {
       setWidth(ref.offsetWidth);
       setHeight(ref.offsetHeight);
     }}
-    style={props.style}
   >
-    <img src={props.image} width={width} height={height}/>
+    <img src={props.image} width={width} height={height} />
   </Rnd>
   </div>
 );
