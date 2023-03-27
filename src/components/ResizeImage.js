@@ -9,6 +9,7 @@ const ResizeImage = (props) => {
   const [height, setHeight] = useState(400);
 
   return (
+    <div className="rectangle">
   <Rnd
     className="resizable-item"
     default={{
@@ -25,6 +26,7 @@ const ResizeImage = (props) => {
   >
     <img src={props.image} width={width} height={height}/>
   </Rnd>
+  </div>
 );
 };
 

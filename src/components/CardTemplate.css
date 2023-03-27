@@ -1,16 +1,4 @@
-.rectangle {
-  display: inline-block;
-  border: 2px solid red;
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 500px;
-  height: 550px;
-  margin-top: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  /* background-image: url("../assets/images/Templates/birthday-template1.jpeg"); */
-}
+
 
 img {
   max-height: 400px;

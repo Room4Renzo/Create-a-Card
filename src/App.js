@@ -29,7 +29,8 @@ export default function App() {
 				</div>
 				<div className="column">
 					<h1>Create a card</h1>
-					<CardTemplate imageUrl={image} />
+					{/* <CardTemplate imageUrl={image} /> */}
+					<ResizeImage image={image} />
 					<DownloadButton />
 				</div> 
 			</div>
