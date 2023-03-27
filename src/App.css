@@ -1,7 +1,10 @@
+@import "bulma/css/bulma.css";
+
 .app-container {
-	display: grid;
+	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
+	align-items: center;
+	width: 100%;
 }
 
 .left-container {
@@ -9,5 +12,3 @@
 	flex-direction: column;
 	width: 60%;
 }
-
-
