@@ -1,31 +1,34 @@
 .rectangle {
-	display: inline-block;
-	border: 2px solid red;
-	background-size: cover;
-	background-repeat: no-repeat;
-	width: 500px;
-	height: 550px;
-	margin-top: 30px;
-	background-image: url("../assets/images/Templates/birthday-template1.jpeg");
+  display: inline-block;
+  border: 2px solid red;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 500px;
+  height: 550px;
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../assets/images/Templates/birthday-template1.jpeg");
 }
 
-
 img {
-	max-height: 400px;
-	max-width: 300px;
+  max-height: 400px;
+  max-width: 300px;
 }
 
 .card-template-container {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: center;
-	gap: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
 }
 
 .image-position {
-	position: relative;
-	margin: 10px;
-	top: 50px;
-	z-index: 5;
+  position: relative;
+  margin: 10px;
+  top: 50px;
+  z-index: 5;
+  align-self: center;
 }

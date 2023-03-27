@@ -96,7 +96,6 @@ function Carousel() {
 				</div>
 			</div>
 		</div>
-		{/* <img src={template} className="rectangle"/> */}
 		{ clicked ? <div><CardTemplate image={uploadImage} 
 		style={style}/></div> : <div></div>}
 		{/* { clicked ? 
