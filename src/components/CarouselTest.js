@@ -6,6 +6,7 @@ import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import ResizeImage from "./ResizeImage";
 import CardTemplate from "./CardTemplate";
+import template from "../assets/images/Templates/birthday-template1.jpeg";
 
 function Carousel() {
 	const [activeIndex, setActiveIndex] = useState(0);
@@ -95,7 +96,9 @@ function Carousel() {
 				</div>
 			</div>
 		</div>
-		{ clicked ? <div><CardTemplate image={uploadImage}/></div> : <div></div>}
+		{/* <img src={template} className="rectangle"/> */}
+		{ clicked ? <div><CardTemplate image={uploadImage} 
+		style={style}/></div> : <div></div>}
 		{/* { clicked ? 
 			<ResizeImage style = {style} image={uploadImage}/> : <div></div>} */}
 		</div>

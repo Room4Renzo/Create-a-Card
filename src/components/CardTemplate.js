@@ -9,7 +9,10 @@ const CardTemplate = (props) => {
 
   return (
     <div className="card-template-container">
-      <div className="rectangle"><img src={props.image} className='image-position'/></div>
+      <div className="rectangle"><img 
+	  src={props.image} 
+	  className='image-position' 
+	  /></div>
     </div>
   );
 };
