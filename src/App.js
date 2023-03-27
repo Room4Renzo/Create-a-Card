@@ -13,23 +13,25 @@ import Dropdown from "./components/Dropdown.js";
 import CategoryDropdown from "./components/CategoryDropdown.jsx";
 import CategoryDrawer from "./components/CategoryDrawer.jsx";
 import "bulma/css/bulma.css";
+import { useState } from "react";
 
 export default function App() {
+	let [image, setImageUrl] = useState();
 	return (
 		<Router>
 			<Header />
 			<div className="columns">
-				<div className="column is-two-fifths">
+				<div className="column">
 					<h1 className="title">Create your own card</h1>
-					<Carousel />
+					<Carousel onClickImage={(abc) => setImageUrl(abc)} />
 					<h2>pick a font</h2>
-					<Carousel />
+					{/* <Carousel /> */}
 				</div>
 				<div className="column">
-					<h1>Create a c ard</h1>
-					<CardTemplate />
+					<h1>Create a card</h1>
+					<CardTemplate imageUrl={image} />
 					<DownloadButton />
-				</div>
+				</div> 
 			</div>
 
 		</Router>
