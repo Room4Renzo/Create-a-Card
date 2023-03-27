@@ -5,6 +5,8 @@ import ListItemText from "@mui/material/ListItemText";
 import Collapse from "@mui/material/Collapse";
 import ExpandLess from "@mui/icons-material/ExpandLess";
 import ExpandMore from "@mui/icons-material/ExpandMore";
+import "./CategoryDropdown.css";
+import CarouselData from "../data/CarouselData";
 
 const CategoryDropdown = () => {
 	const [open, setOpen] = useState(true);
@@ -12,6 +14,13 @@ const CategoryDropdown = () => {
 	const handleClick = () => {
 		setOpen(!open);
 	};
+
+	// const changeCategory = (category) => {
+	// 	const categoryIndex = CarouselData.findIndex(
+	// 		(item) => item.category === category
+	// 	);
+	// 	console.log(categoryIndex);
+	// };
 
 	return (
 		<List sx={{ width: "30%", maxWidth: "30%", bgcolor: "background.paper" }}>
@@ -71,7 +80,7 @@ const CategoryDropdown = () => {
 					<ListItemButton>
 						<ListItemText primary="Smiley" />
 					</ListItemButton>
-				</List>{" "}
+				</List>
 				<List
 					component="div"
 					disablePadding

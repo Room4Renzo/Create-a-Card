@@ -1,11 +1,13 @@
 .app-container {
-	display: flex;
+	display: grid;
 	flex-direction: row;
 	justify-content: space-between;
 }
 
 .left-container {
-	display: flex;
+	display: grid;
 	flex-direction: column;
 	width: 60%;
 }
+
+
