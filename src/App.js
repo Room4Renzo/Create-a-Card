@@ -19,11 +19,16 @@ export default function App() {
 		<Router>
 			<Header />
 			<div className="columns">
-				<div className="column">
+				<div className="column is-two-fifths">
+					<h1 className="title">Create your own card</h1>
+					<Carousel />
+					<h2>pick a font</h2>
 					<Carousel />
 				</div>
 				<div className="column">
-					<Carousel />
+					<h1>Create a c ard</h1>
+					<CardTemplate />
+					<DownloadButton />
 				</div>
 			</div>
 		</Router>
