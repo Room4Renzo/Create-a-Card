@@ -15,6 +15,7 @@ import { Resizable } from "re-resizable";
 import ResizableElements from "./components/ResizableElements.jsx";
 import FontDropdown from "./components/FontDropdown";
 import { Box } from "@mui/system";
+import { identifier } from "@babel/types";
 
 export default function App() {
 	const [name, setName] = useState("");
@@ -83,8 +84,9 @@ export default function App() {
 						</div>
 					</div>
 					<div className="column is-6">
+
 					<h1>Your card</h1>
-					<CardTemplate templateUrl={template} />
+					<CardTemplate templateUrl={template} name={name} />
 					<ResizeImage image={image} />
 					<DownloadButton />
 					</div>
