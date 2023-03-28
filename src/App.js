@@ -86,9 +86,8 @@ export default function App() {
 							<TextWrapper
 								name={name}
 								handleChange={handleChange}
-
-							/> */}
-							{/* <ResizableElements /> */}
+							/>
+							<ResizableElements />
 							<CategoryDropdown />
 						</div>
 					</div>
@@ -99,14 +98,6 @@ export default function App() {
 							name={name}
 							message={message}
 							handleChange={handleChange}
-						/>
-						<ResizeImage image={image} />
-						<DownloadButton />
-
-						<h1>Your card</h1>
-						<CardTemplate
-							templateUrl={template}
-							name={name}
 						/>
 						<ResizeImage image={image} />
 						<DownloadButton />
