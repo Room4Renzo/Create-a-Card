@@ -15,6 +15,8 @@ import { Resizable } from "re-resizable";
 import ResizableElements from "./components/ResizableElements.jsx";
 import FontDropdown from "./components/FontDropdown";
 import { Box } from "@mui/system";
+import TextWrapper from "./components/ResizableElements.jsx";
+
 import { identifier } from "@babel/types";
 
 export default function App() {
@@ -76,7 +78,7 @@ export default function App() {
 									</figure>
 								</div>
 							</div>
-							{/* <TextInput
+							<TextWrapper
 								name={name}
 								handleChange={handleChange}
 							/> */}
