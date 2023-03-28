@@ -88,17 +88,17 @@ export default function App() {
 							<TextWrapper
 								name={name}
 								handleChange={handleChange}
-							/>
+
+							/> */}
+							{/* <ResizableElements /> */}
 						</div>
 					</div>
 					<div className="column is-6">
-						<h1>Your card</h1>
-						<CardTemplate
-							templateUrl={template}
-							name={name}
-						/>
-						<ResizeImage image={image} />
-						<DownloadButton />
+
+					<h1>Your card</h1>
+					<CardTemplate templateUrl={template} name={name} />
+					<ResizeImage image={image} />
+					{/* <DownloadButton /> */}
 					</div>
 				</div>
 			</div>
