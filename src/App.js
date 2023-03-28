@@ -1,30 +1,28 @@
+import ResizableElements from "./components/ResizableElements.jsx";
+import { identifier } from "@babel/types";
+import { Resizable } from "re-resizable";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { useState } from "react";
 import "./App.css";
 import Carousel from "./components/CarouselTest";
-import TextInput from "./components/TextInput";
 import Header from "./components/Header";
 import CardTemplate from "./components/CardTemplate";
 import ResizeImage from "./components/ResizeImage";
 import DownloadButton from "./components/DownloadButton";
-import CategoryDropdown from "./components/CategoryDropdown.jsx";
-import CategoryDrawer from "./components/CategoryDrawer.jsx";
 import "bulma/css/bulma.css";
 import TemplateCarousel from "./components/TemplateCarousel.js";
-import { Resizable } from "re-resizable";
-import ResizableElements from "./components/ResizableElements.jsx";
 import FontDropdown from "./components/FontDropdown";
-import { Box } from "@mui/system";
 import TextWrapper from "./components/ResizableElements.jsx";
-
-import { identifier } from "@babel/types";
+import CategoryDropdown from "./components/CategoryDropdown.jsx";
 
 export default function App() {
 	const [name, setName] = useState("");
 	const [message, setMessage] = useState("");
+
 	const handleChange = (event) => {
 		console.log(event.target.value);
 		setName(event.target.value);
+		setMessage(event.target.value);
 	};
 
 	const [image, setImageUrl] = useState();
@@ -51,7 +49,7 @@ export default function App() {
 								<div className="card-image">
 									<figure className="image">
 										<img
-											src={require("./assets/images/Navigation/LeftArrow.svg")}
+											src={require("./assets/images/Navigation/PointLeft.png")}
 										/>
 									</figure>
 								</div>
@@ -89,6 +87,7 @@ export default function App() {
 								name={name}
 								handleChange={handleChange}
 							/>
+							<CategoryDropdown />
 						</div>
 					</div>
 					<div className="column is-6">
@@ -96,6 +95,8 @@ export default function App() {
 						<CardTemplate
 							templateUrl={template}
 							name={name}
+							message={message}
+							handleChange={handleChange}
 						/>
 						<ResizeImage image={image} />
 						<DownloadButton />
