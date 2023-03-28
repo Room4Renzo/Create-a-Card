@@ -1,4 +1,6 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { useState } from "react";
+
 import About from "./pages/About.js";
 import Contact from "./pages/Contact.js";
 import "./App.css";
@@ -13,32 +15,47 @@ import Dropdown from "./components/Dropdown.js";
 import CategoryDropdown from "./components/CategoryDropdown.jsx";
 import CategoryDrawer from "./components/CategoryDrawer.jsx";
 import "bulma/css/bulma.css";
-import { useState } from "react";
-
-import FontDropdown from './components/FontDropdown';
-
+import { Resizable } from "re-resizable";
+import ResizableElements from "./components/ResizableElements.jsx";
+import FontDropdown from "./components/FontDropdown";
 
 export default function App() {
+	const [name, setName] = useState("");
+	const handleChange = (event) => {
+		console.log(event.target.value);
+		setName(event.target.value);
+	};
 	let [image, setImageUrl] = useState();
 	return (
 		<Router>
 			<Header />
 			<div className="columns">
+				<div className="column is-two-fifths">
+					<Carousel />
+				</div>
+				<div className="column">
+					<ResizableElements
+						name={name}
+						handleChange={handleChange}
+					/>
+					<CardTemplate name={name} />
+				</div>
+
 				<div className="column">
 					<h1 className="title">Create your own card</h1>
 					<Carousel onClickImage={(abc) => setImageUrl(abc)} />
 					<h2>pick a font</h2>
 					{/* <Carousel /> */}
 				</div>
+
 				<div className="column">
 					<h1>Create a card</h1>
 					{/* <CardTemplate imageUrl={image} /> */}
 					<ResizeImage image={image} />
 
 					<DownloadButton />
-				</div> 
+				</div>
 			</div>
-
 		</Router>
 	);
 }
