@@ -75,10 +75,11 @@ export default function App() {
 									</figure>
 								</div>
 							</div>
-							<TextInput
+							{/* <TextInput
 								name={name}
 								handleChange={handleChange}
-							/>
+							/> */}
+							<ResizableElements />
 						</div>
 					</div>
 					<div className="column is-6">

@@ -11,7 +11,6 @@ const ResizeImage = (props) => {
   return (
     <div className="rectangle">
   <Rnd
-  className="resizable-item"
     default={{
       x: 0,
       y: 0,
@@ -23,7 +22,7 @@ const ResizeImage = (props) => {
       setHeight(ref.offsetHeight);
     }}
   >
-    <img src={props.image} width={width} height={height} className="resizable-item"/>
+    <img src={props.image} width={width} height={height}/>
   </Rnd>
   </div>
 );
