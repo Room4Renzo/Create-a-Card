@@ -20,6 +20,7 @@ import { Resizable } from "re-resizable";
 import ResizableElements from "./components/ResizableElements.jsx";
 import FontDropdown from "./components/FontDropdown";
 import { Box } from "@mui/system";
+import { identifier } from "@babel/types";
 
 export default function App() {
 	const [name, setName] = useState("");
@@ -79,7 +80,7 @@ export default function App() {
 						</div>
 					</div>
 					<div className="column is-6">
-						<CardTemplate name={name} />
+						<CardTemplate name={name}  />
 					</div>
 				</div>
 			</div>
