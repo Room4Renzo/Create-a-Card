@@ -2,20 +2,14 @@
     cursor: -webkit-grab;
     cursor: grab;
   }
-  
-  img {
-    max-height: 400px;
-    max-width: 300px;
-
+  .rectangle-image {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
   }
 
-  .rectangle {
-    display: inline-block;
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 420px;
-    height: 600px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  .rectangle-image img {
+    max-height: 400px;
+    max-width: 300px;
   }
