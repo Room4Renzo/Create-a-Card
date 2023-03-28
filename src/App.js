@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import About from "./pages/About.js";
 import Contact from "./pages/Contact.js";
@@ -18,6 +19,7 @@ import "bulma/css/bulma.css";
 import { Resizable } from "re-resizable";
 import ResizableElements from "./components/ResizableElements.jsx";
 import FontDropdown from "./components/FontDropdown";
+import { Box } from "@mui/system";
 
 export default function App() {
 	const [name, setName] = useState("");
@@ -29,31 +31,54 @@ export default function App() {
 	return (
 		<Router>
 			<Header />
-			<div className="columns">
-				<div className="column is-two-fifths">
-					<Carousel />
-				</div>
-				<div className="column">
-					<ResizableElements
-						name={name}
-						handleChange={handleChange}
-					/>
-					<CardTemplate name={name} />
-				</div>
+			<div className="container is-fluid">
+				<div className="columns">
+					<div className="column is-5">
+						<Carousel onClickImage={(abc) => setImageUrl(abc)} />
+						<Carousel />
+					</div>
+					<div className="column is-2">
+						<div className="card">
+							<div className="card-content">
+								<div className="media"></div>
+								<div className="card-image">
+									<figure className="image">
+										<img src="src\assets\images\Navigation\LeftArrow.svg" />
+									</figure>
+								</div>
+								<div className="content">Pick an image here.</div>
+							</div>
+						</div>
 
-				<div className="column">
-					<h1 className="title">Create your own card</h1>
-					<Carousel onClickImage={(abc) => setImageUrl(abc)} />
-					<h2>pick a font</h2>
-					{/* <Carousel /> */}
-				</div>
+						<div className="card">
+							<div className="card-content">
+								<div className="media"></div>
+								<div className="card-image">
+									<figure className="image">
+										<img src="./assets/images/Navigation/PointRight.png" />
+									</figure>
+								</div>
+							</div>
+							<div className="content">Design your card here.</div>
+						</div>
 
-				<div className="column">
-					<h1>Create a card</h1>
-					{/* <CardTemplate imageUrl={image} /> */}
-					<ResizeImage image={image} />
-
-					<DownloadButton />
+						<div className="card">
+							<div className="card-content">
+								<div className="content">Type your text here.</div>
+								<div className="media"></div>
+								<div className="card-image">
+									<figure className="image is-4by3">
+										<img src="src\assets\images\Navigation\PointDown.png" />
+									</figure>
+								</div>
+							</div>
+							<TextInput />
+						</div>
+					</div>
+					<div className="column is-6">
+						<CardTemplate name={name} />
+						<Download />
+					</div>
 				</div>
 			</div>
 		</Router>
