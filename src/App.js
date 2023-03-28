@@ -80,7 +80,7 @@ export default function App() {
 								name={name}
 								handleChange={handleChange}
 							/> */}
-							<ResizableElements />
+							{/* <ResizableElements /> */}
 						</div>
 					</div>
 					<div className="column is-6">
@@ -88,7 +88,7 @@ export default function App() {
 					<h1>Your card</h1>
 					<CardTemplate templateUrl={template} name={name} />
 					<ResizeImage image={image} />
-					<DownloadButton />
+					{/* <DownloadButton /> */}
 					</div>
 				</div> 
 			</div>
