@@ -72,12 +72,14 @@ export default function App() {
 									</figure>
 								</div>
 							</div>
-							<TextInput />
+							<TextInput
+								name={name}
+								handleChange={handleChange}
+							/>
 						</div>
 					</div>
 					<div className="column is-6">
 						<CardTemplate name={name} />
-						<Download />
 					</div>
 				</div>
 			</div>
