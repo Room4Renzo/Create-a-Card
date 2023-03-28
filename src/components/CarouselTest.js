@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Fragment } from "react";
 import { useSwipeable } from "react-swipeable";
 import "./CarouselTest.css";
 import CarouselData from "../data/CarouselData";
@@ -6,17 +6,26 @@ import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import ResizeImage from "./ResizeImage";
 import CardTemplate from "./CardTemplate";
+import {
+	Box,
+	List,
+	ListItem,
+	ListItemText,
+	ListItemButton,
+	Divider,
+} from "@mui/material";
+import Drawer from "@mui/material/Drawer";
+import { Button } from "@mui/material";
 
 function Carousel(props) {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [activeImage, setActiveImage] = useState(0);
-  const currentImage = CarouselData[activeIndex].picture[activeImage];
-  const [image, setImage] = useState(currentImage);
-  const activeCategory = CarouselData[activeIndex];
-  const [paused, setPaused] = useState(false);
-  const [clicked, setClicked] = useState(false);
-  const [uploadImage, setUploadImage] = useState("");
-
+	const [activeIndex, setActiveIndex] = useState(0);
+	const [activeImage, setActiveImage] = useState(0);
+	const currentImage = CarouselData[activeIndex].picture[activeImage];
+	const [image, setImage] = useState(currentImage);
+	const activeCategory = CarouselData[activeIndex];
+	const [paused, setPaused] = useState(false);
+	const [clicked, setClicked] = useState(false);
+	const [uploadImage, setUploadImage] = useState("");
 
 	const [state, setState] = useState({
 		left: false,
@@ -33,36 +42,56 @@ function Carousel(props) {
 	// };
 	function changeCategory(event) {
 		console.log(event.target.innerHTML);
+		const category = event.target.innerHTML;
 
-		// const activeIndex = CarouselData.findIndex(
-		// 	(item) => item.category === category
-		// );
-		// console.log(activeIndex);
-		// const activeCategory = CarouselData[activeIndex];
-		// console.log(activeCategory);
-		// const categoryIndex = CarouselData.filter(
-		// 	(item) => item.category === activeCategory
-		// );
+		switch (category) {
+			case "Animals":
+				setActiveIndex(0);
+				break;
+			case "Cartoon":
+				setActiveIndex(1);
+				break;
+			case "Holiday":
+				setActiveIndex(2);
+				break;
+			case "Misc":
+				setActiveIndex(3);
+				break;
+			case "Nature":
+				setActiveIndex(4);
+				break;
+			case "Smiley":
+				setActiveIndex(5);
+				break;
+			case "Templates":
+				setActiveIndex(6);
+				break;
+			case "Text":
+				setActiveIndex(7);
+				break;
+			case "Vehicles":
+				setActiveIndex(8);
+				break;
+			default:
+				setActiveIndex(0);
+		}
 	}
-  useEffect(() => {
-    const interval = setInterval(() => {
-      if (activeImage < CarouselData[activeIndex].picture.length - 1) {
-        setActiveImage(activeImage + 1);
-      } else {
-        setActiveImage(0);
-      }
-    }, 3600);
-    return () => clearInterval(interval);
-  });
 
-  const onClick = () => {
-    console.log("Clicked");
-    setClicked(true);
-    setUploadImage(currentImage);
-    props.onClickImage(currentImage);
-    console.log(currentImage);
-    console.log(clicked);
-  };
+	useEffect(() => {
+		const interval = setInterval(() => {
+			if (activeImage < CarouselData[activeIndex].picture.length - 1) {
+				setActiveImage(activeImage + 1);
+			} else {
+				setActiveImage(0);
+			}
+		}, 3600);
+		return () => clearInterval(interval);
+	});
+
+	const onClick = () => {
+		setClicked(true);
+		setUploadImage(currentImage);
+	};
 
 	const toggleDrawer = (anchor, open) => (event) => {
 		if (
@@ -108,11 +137,6 @@ function Carousel(props) {
 			<Divider />
 		</Box>
 	);
-
-	const onClick = () => {
-		setClicked(true);
-		setUploadImage(currentImage);
-	};
 
 	return (
 		<div>
@@ -171,6 +195,5 @@ function Carousel(props) {
 			{clicked ? <img src={uploadImage} /> : <div></div>}
 		</div>
 	);
-
 }
 export default Carousel;

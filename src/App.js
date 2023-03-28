@@ -17,6 +17,7 @@ import CategoryDrawer from "./components/CategoryDrawer.jsx";
 import "bulma/css/bulma.css";
 import { Resizable } from "re-resizable";
 import ResizableElements from "./components/ResizableElements.jsx";
+import FontDropdown from "./components/FontDropdown";
 
 export default function App() {
 	const [name, setName] = useState("");
@@ -24,13 +25,6 @@ export default function App() {
 		console.log(event.target.value);
 		setName(event.target.value);
 	};
-
-import { useState } from "react";
-
-import FontDropdown from './components/FontDropdown';
-
-
-export default function App() {
 	let [image, setImageUrl] = useState();
 	return (
 		<Router>
@@ -53,15 +47,15 @@ export default function App() {
 					<h2>pick a font</h2>
 					{/* <Carousel /> */}
 				</div>
+
 				<div className="column">
 					<h1>Create a card</h1>
 					{/* <CardTemplate imageUrl={image} /> */}
 					<ResizeImage image={image} />
 
 					<DownloadButton />
-				</div> 
+				</div>
 			</div>
-
 		</Router>
 	);
 }
