@@ -9,11 +9,13 @@
 
   }
 
-  .resizable-item {
+  .rectangle {
+    display: inline-block;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 420px;
+    height: 600px;
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: center;
-    position: absolute;
-    top: 10%;
   }
