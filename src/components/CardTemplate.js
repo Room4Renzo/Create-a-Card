@@ -11,7 +11,7 @@ const CardTemplate = (props) => {
     <div className="card-template-container">
       <div className="rectangle">
 		<img 
-	  src={props.image} 
+	  src={props.imageUrl} 
 	  className='image-position' 
 	  /></div>
     </div>
