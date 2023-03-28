@@ -91,6 +91,7 @@ function Carousel(props) {
 	const onClick = () => {
 		setClicked(true);
 		setUploadImage(currentImage);
+		props.onClickImage(currentImage);
 	};
 
 	const toggleDrawer = (anchor, open) => (event) => {
@@ -192,7 +193,7 @@ function Carousel(props) {
 					</div>
 				</div>
 			</div>
-			{clicked ? <img src={uploadImage} /> : <div></div>}
+			{/* {clicked ? <img src={uploadImage} /> : <div></div>} */}
 		</div>
 	);
 }
