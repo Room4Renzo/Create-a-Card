@@ -25,6 +25,13 @@ export default function App() {
 		setName(event.target.value);
 	};
 
+import { useState } from "react";
+
+import FontDropdown from './components/FontDropdown';
+
+
+export default function App() {
+	let [image, setImageUrl] = useState();
 	return (
 		<Router>
 			<Header />
@@ -39,7 +46,22 @@ export default function App() {
 					/>
 					<CardTemplate name={name} />
 				</div>
+
+				<div className="column">
+					<h1 className="title">Create your own card</h1>
+					<Carousel onClickImage={(abc) => setImageUrl(abc)} />
+					<h2>pick a font</h2>
+					{/* <Carousel /> */}
+				</div>
+				<div className="column">
+					<h1>Create a card</h1>
+					{/* <CardTemplate imageUrl={image} /> */}
+					<ResizeImage image={image} />
+
+					<DownloadButton />
+				</div> 
 			</div>
+
 		</Router>
 	);
 }

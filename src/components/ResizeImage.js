@@ -1,10 +1,15 @@
 import "./ResizeImage.css";
 import React from "react";
 import { Rnd } from "react-rnd";
+import { useState } from 'react';
 
 
-const ResizeImage = () => {
+const ResizeImage = (props) => {
+  const [width, setWidth] = useState(300);
+  const [height, setHeight] = useState(400);
+
   return (
+    <div className="rectangle">
   <Rnd
     className="resizable-item"
     default={{
@@ -13,8 +18,14 @@ const ResizeImage = () => {
       width: 300,
       height: 400
     }}
+    onResize={(e, direction, ref, delta, position) => {
+      setWidth(ref.offsetWidth);
+      setHeight(ref.offsetHeight);
+    }}
   >
+    <img src={props.image} width={width} height={height} />
   </Rnd>
+  </div>
 );
 };
 
