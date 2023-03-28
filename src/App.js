@@ -13,6 +13,7 @@ import Dropdown from "./components/Dropdown.js";
 import CategoryDropdown from "./components/CategoryDropdown.jsx";
 import CategoryDrawer from "./components/CategoryDrawer.jsx";
 import "bulma/css/bulma.css";
+import FontDropdown from './components/FontDropdown';
 
 export default function App() {
 	return (
@@ -20,13 +21,14 @@ export default function App() {
 			<Header />
 			<div className="columns">
 				<div className="column is-two-fifths">
-					<h1 className="title">Create your own card</h1>
+					<h1 className="title">Choose an image</h1>
 					<Carousel />
-					<h2>pick a font</h2>
-					<Carousel />
+					<h2>Pick a font</h2>
+					<FontDropdown />
+					<TextInput />
 				</div>
 				<div className="column">
-					<h1>Create a c ard</h1>
+					<h1>Create a card</h1>
 					<CardTemplate />
 					<DownloadButton />
 				</div>
