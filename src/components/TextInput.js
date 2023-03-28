@@ -22,7 +22,7 @@ import { useState, useRef, useEffect, Component } from "react";
 const TextInput = (props) => {
 	return (
 		<div>
-			{/* <p>{props.name}</p> */}
+			<p>{props.name}</p>
 			<p>Change name:</p>
 			<input
 				type="text"

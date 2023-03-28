@@ -16,8 +16,8 @@ import ResizableElements from "./components/ResizableElements.jsx";
 import FontDropdown from "./components/FontDropdown";
 import { Box } from "@mui/system";
 import TextWrapper from "./components/ResizableElements.jsx";
-
 import { identifier } from "@babel/types";
+
 
 export default function App() {
 	const [name, setName] = useState("");
@@ -30,6 +30,7 @@ export default function App() {
 
 	const [image, setImageUrl] = useState();
 	const [template, setTemplateUrl] = useState();
+	const [card, setCard] = useState();
 
 	return (
 		<Router>
@@ -49,7 +50,7 @@ export default function App() {
 								<div className="media"></div>
 								<div className="card-image">
 									<figure className="image">
-										<img src="src\assets\images\Navigation\LeftArrow.svg" />
+										{/* <img src="..\assets\images\Navigation\LeftArrow.svg" /> */}
 									</figure>
 								</div>
 								<div className="content">Pick an image here.</div>
@@ -61,7 +62,7 @@ export default function App() {
 								<div className="media"></div>
 								<div className="card-image">
 									<figure className="image">
-										<img src="./assets/images/Navigation/PointRight.png" />
+										<img src="Create-a-Card/src/assets/images/Navigation/PointDown.png" />
 									</figure>
 								</div>
 							</div>
@@ -74,23 +75,26 @@ export default function App() {
 								<div className="media"></div>
 								<div className="card-image">
 									<figure className="image is-4by3">
-										<img src="src\assets\images\Navigation\PointDown.png" />
+										<img src="..\assets\images\Navigation\PointDown.png" />
 									</figure>
 								</div>
 							</div>
 							<TextWrapper
 								name={name}
 								handleChange={handleChange}
-							/> */}
-							{/* <ResizableElements /> */}
+							/>
+							<ResizableElements />
 						</div>
 					</div>
 					<div className="column is-6">
 
 					<h1>Your card</h1>
+					<div className="download">
 					<CardTemplate templateUrl={template} name={name} />
 					<ResizeImage image={image} />
-					{/* <DownloadButton /> */}
+					<DownloadButton image={image} template={template}/>
+					</div>
+					
 					</div>
 				</div> 
 			</div>

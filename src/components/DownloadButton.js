@@ -1,6 +1,7 @@
 import React from 'react';
 import { toPng } from 'html-to-image';
 import "./DownloadButton.css";
+import mergeImages from 'merge-images';
 
 const downloadImage = (dataUrl) => {
   const a = document.createElement('a');
@@ -9,9 +10,11 @@ const downloadImage = (dataUrl) => {
   a.click();
 }
 
-const DownloadButton = () => {
+const DownloadButton = (props) => {
   const onClick = () => {
-    toPng(document.querySelector('.rectangle')).then(downloadImage);
+    mergeImages([props.template, props.image])
+  .then(b64 => (document.querySelector('img').src = b64));
+    toPng(document.querySelector('img')).then(downloadImage);
   };
 
   return (
