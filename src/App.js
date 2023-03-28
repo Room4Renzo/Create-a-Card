@@ -20,6 +20,7 @@ import { Resizable } from "re-resizable";
 import ResizableElements from "./components/ResizableElements.jsx";
 import FontDropdown from "./components/FontDropdown";
 import { Box } from "@mui/system";
+import TextWrapper from "./components/ResizableElements.jsx";
 
 export default function App() {
 	const [name, setName] = useState("");
@@ -72,7 +73,7 @@ export default function App() {
 									</figure>
 								</div>
 							</div>
-							<TextInput
+							<TextWrapper
 								name={name}
 								handleChange={handleChange}
 							/>
