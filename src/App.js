@@ -16,6 +16,11 @@ import Dropdown from "./components/Dropdown.js";
 import CategoryDropdown from "./components/CategoryDropdown.jsx";
 import CategoryDrawer from "./components/CategoryDrawer.jsx";
 import "bulma/css/bulma.css";
+import { useState } from "react";
+
+import FontDropdown from './components/FontDropdown';
+import TemplateCarousel from "./components/TemplateCarousel.js";
+
 import { Resizable } from "re-resizable";
 import ResizableElements from "./components/ResizableElements.jsx";
 import FontDropdown from "./components/FontDropdown";
@@ -28,9 +33,26 @@ export default function App() {
 		setName(event.target.value);
 	};
 	let [image, setImageUrl] = useState();
+	let [template, setTemplateUrl] = useState();
 	return (
 		<Router>
 			<Header />
+			<div className="columns">
+				<div className="column">
+					<h1 className="title">Create your own card</h1>
+					<TemplateCarousel onClickTemplate={(template) => setTemplateUrl(template)} />
+					<Carousel onClickImage={(image) => setImageUrl(image)} />
+					
+					<h2>pick a font</h2>
+					{/* <Carousel /> */}
+				</div>
+				<div className="column">
+					<h1>Create a card</h1>
+					<CardTemplate imageUrl={template} />
+					<ResizeImage image={image} />
+					<DownloadButton />
+				</div> 
+			</div>
 			<div className="container is-fluid">
 				<div className="columns">
 					<div className="column is-5">

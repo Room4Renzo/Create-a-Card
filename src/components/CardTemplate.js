@@ -43,13 +43,10 @@ const CardTemplate = (props) => {
 //   const [clicked, setClicked] = useState(false);
 
   return (
-    <div className="card-template-container">
-      <div className="rectangle">
+    <div className="rectangle-template">
 		<img 
 	  src={props.imageUrl} 
-	  className='image-position' 
 	  /></div>
-    </div>
   );
 };
 
