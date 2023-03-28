@@ -15,6 +15,9 @@ import CategoryDrawer from "./components/CategoryDrawer.jsx";
 import "bulma/css/bulma.css";
 import { useState } from "react";
 
+import FontDropdown from './components/FontDropdown';
+
+
 export default function App() {
 	let [image, setImageUrl] = useState();
 	return (
@@ -31,6 +34,7 @@ export default function App() {
 					<h1>Create a card</h1>
 					{/* <CardTemplate imageUrl={image} /> */}
 					<ResizeImage image={image} />
+
 					<DownloadButton />
 				</div> 
 			</div>
