@@ -2,7 +2,7 @@ import "./CardTemplate.css";
 import { useState } from "react";
 import CarouselData from "../data/CarouselData";
 
-const CardTemplate = () => {
+const CardTemplate = (props) => {
 	const [activeIndex, setActiveIndex] = useState(0);
 	const [image, setImage] = useState(CarouselData[activeIndex].picture);
 	const [clicked, setClicked] = useState(false);
@@ -14,7 +14,7 @@ const CardTemplate = () => {
 
 	return (
 		<div className="card-template-container">
-			<div className="rectangle"></div>
+			<div className="rectangle">{props.name}</div>
 		</div>
 	);
 	const CardTemplate = ({ image, className }) => {

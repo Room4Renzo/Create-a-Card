@@ -37,6 +37,19 @@ function Carousel() {
 	// 		setPaused(false);
 	// 	}
 	// };
+	function changeCategory(event) {
+		console.log(event.target.innerHTML);
+
+		// const activeIndex = CarouselData.findIndex(
+		// 	(item) => item.category === category
+		// );
+		// console.log(activeIndex);
+		// const activeCategory = CarouselData[activeIndex];
+		// console.log(activeCategory);
+		// const categoryIndex = CarouselData.filter(
+		// 	(item) => item.category === activeCategory
+		// );
+	}
 
 	useEffect(() => {
 		const interval = setInterval(() => {
@@ -82,8 +95,9 @@ function Carousel() {
 					<ListItem
 						key={text}
 						disablePadding
+						onClick={(event) => changeCategory(event)}
 					>
-						<ListItemButton onClick={() => changeCategory()}>
+						<ListItemButton>
 							<ListItemText primary={text} />
 						</ListItemButton>
 					</ListItem>
@@ -97,20 +111,6 @@ function Carousel() {
 		setClicked(true);
 		setUploadImage(currentImage);
 	};
-
-	function changeCategory(category) {
-		const activeIndex = CarouselData.findIndex(
-			(item) => item.category === category
-		);
-
-		const activeCategory = CarouselData[activeIndex];
-
-		const categoryIndex = CarouselData.filter(
-			(item) => item.category === activeCategory
-		);
-
-		return setActiveCategory(categoryIndex);
-	}
 
 	return (
 		<div>

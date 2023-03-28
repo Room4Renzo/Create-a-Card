@@ -1,35 +1,54 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect, Component } from "react";
 
+// const TextInput = () => {
+// const [message, setMessage] = useState("Happy Birthday!");
+// const inputRef = useRef();
+// const [state, setState] = useState({ name: "" });
 
-const TextInput = () => {
+// useEffect(() => {
+// 	inputRef.current.focus();
+// }, []);
 
-    const [message, setMessage] = useState('Happy Birthday!');
-    const inputRef = useRef();
+// const handleChange = (event) => {
+// 	setMessage(event.target.value);
+// };
 
-    useEffect(() => {
-        inputRef.current.focus()
-    }, [])
+// const handleSubmit = (event) => {
+// 	event.preventDefault();
+// 	console.log(message);
+// 	setMessage("");
+// };
 
+const TextInput = (props) => {
+	return (
+		<div>
+			{/* <p>{props.name}</p> */}
+			<p>Change name:</p>
+			<input
+				type="text"
+				name="name"
+				onChange={props.handleChange}
+			/>
+		</div>
+	);
+};
 
-    const handleChange = (event) => {
-        setMessage(event.target.value);
-      }
-    
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        console.log(message);
-        setMessage('');
-    }
-    
-    return (
-        <form onSubmit={handleSubmit}>
-        <label>
-          Write your message
-          <input ref={inputRef} type="text" value={message} onChange={handleChange} />
-        </label>
-        <input type="submit" value="Save" />
-      </form>
-    )
+{
+	/* <form onSubmit={handleSubmit}>
+  <label>
+    Write your message
+    <input
+      ref={inputRef}
+      type="text"
+      value={message}
+      onChange={handleChange}
+    />
+  </label>
+  <input
+    type="submit"
+    value="Save"
+  />
+</form> */
 }
 
 export default TextInput;
