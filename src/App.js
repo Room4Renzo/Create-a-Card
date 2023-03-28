@@ -21,12 +21,11 @@ import { identifier } from "@babel/types";
 
 export default function App() {
 	const [name, setName] = useState("");
-
+	const [message, setMessage] = useState("");
 	const handleChange = (event) => {
 		console.log(event.target.value);
 		setName(event.target.value);
 	};
-
 
 	const [image, setImageUrl] = useState();
 	const [template, setTemplateUrl] = useState();
@@ -37,11 +36,13 @@ export default function App() {
 			<div className="container is-fluid">
 				<div className="columns">
 					<div className="column is-5">
-					<h1 className="title">Create your own card</h1>
-					<TemplateCarousel onClickTemplate={(template) => setTemplateUrl(template)} />
-					<Carousel onClickImage={(image) => setImageUrl(image)} />
-					<h2>pick a font</h2>
-					<FontDropdown />
+						<h1 className="title">Create your own card</h1>
+						<TemplateCarousel
+							onClickTemplate={(template) => setTemplateUrl(template)}
+						/>
+						<Carousel onClickImage={(image) => setImageUrl(image)} />
+						<h2>pick a font</h2>
+						<FontDropdown />
 					</div>
 					<div className="column is-2">
 						<div className="card">
@@ -49,7 +50,9 @@ export default function App() {
 								<div className="media"></div>
 								<div className="card-image">
 									<figure className="image">
-										<img src="src\assets\images\Navigation\LeftArrow.svg" />
+										<img
+											src={require("./assets/images/Navigation/LeftArrow.svg")}
+										/>
 									</figure>
 								</div>
 								<div className="content">Pick an image here.</div>
@@ -61,7 +64,9 @@ export default function App() {
 								<div className="media"></div>
 								<div className="card-image">
 									<figure className="image">
-										<img src="./assets/images/Navigation/PointRight.png" />
+										<img
+											src={require("./assets/images/Navigation/PointRight.png")}
+										/>
 									</figure>
 								</div>
 							</div>
@@ -74,13 +79,16 @@ export default function App() {
 								<div className="media"></div>
 								<div className="card-image">
 									<figure className="image is-4by3">
-										<img src="src\assets\images\Navigation\PointDown.png" />
+										<img
+											src={require("./assets/images/Navigation/PointDown.png")}
+										/>
 									</figure>
 								</div>
 							</div>
 							<TextWrapper
 								name={name}
 								handleChange={handleChange}
+
 							/> */}
 							{/* <ResizableElements /> */}
 						</div>
@@ -92,7 +100,7 @@ export default function App() {
 					<ResizeImage image={image} />
 					{/* <DownloadButton /> */}
 					</div>
-				</div> 
+				</div>
 			</div>
 		</Router>
 	);

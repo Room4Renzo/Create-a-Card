@@ -5,72 +5,71 @@ import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 
 function TemplateCarousel(props) {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [activeImage, setActiveImage] = useState(0);
-  const currentTemplate = TemplateData[activeImage];
-  const [template, setTemplate] = useState(currentTemplate);
-  const activeCategory = TemplateData[activeIndex];
-  const [clicked, setClicked] = useState(false);
-  const [uploadTemplate, setUploadTemplate] = useState(TemplateData[0]);
+	const [activeIndex, setActiveIndex] = useState(0);
+	const [activeImage, setActiveImage] = useState(0);
+	const currentTemplate = TemplateData[activeIndex];
+	const [template, setTemplate] = useState(currentTemplate);
+	const [clicked, setClicked] = useState(false);
+	const [uploadTemplate, setUploadTemplate] = useState(TemplateData[0]);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      if (activeImage < TemplateData[activeIndex].length - 1) {
-        setActiveImage(activeImage + 1);
-      } else {
-        setActiveImage(0);
-      }
-    }, 3600);
-    return () => clearInterval(interval);
-  });
+	useEffect(() => {
+		const interval = setInterval(() => {
+			if (activeIndex < TemplateData.length - 1) {
+				setActiveIndex(activeIndex + 1);
+			} else {
+				setActiveImage(0);
+			}
+		}, 3600);
+		return () => clearInterval(interval);
+	});
 
-  const onClick = () => {
-    console.log("Clicked");
-    setClicked(true);
-    setUploadTemplate(currentTemplate);
-    props.onClickTemplate(currentTemplate);
-    console.log(currentTemplate);
-    console.log(clicked);
-  };
+	const onClick = () => {
+		console.log("Clicked");
+		setClicked(true);
+		setUploadTemplate(currentTemplate);
+		props.onClickTemplate(currentTemplate);
+		console.log(currentTemplate);
+		console.log(clicked);
+	};
 
-  return (
-    <div className="right">
-      <div className="carousel">
-        <div
-          className="inner"
-          style={{
-            backgroundImage: `url(${currentTemplate})`,
-          }}
-        >
-          <div
-            className="carousel-left"
-            onClick={() => {
-              if (activeImage > 0) setActiveImage(activeImage - 1);
-            }}
-          >
-            <ArrowBackIosNewIcon style={{ fontSize: 30 }} />
-          </div>
-          <div
-            className="carousel-center"
-            onClick={() => onClick()}
-            value={clicked}
-          ></div>
-          <div
-            className="carousel-right"
-            onClick={() => {
-              if (activeImage < currentTemplate.length - 1)
-                setActiveImage(activeImage + 1);
-            }}
-          >
-            <ArrowForwardIosIcon
-              style={{
-                fontSize: 30,
-              }}
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+	return (
+		<div className="right">
+			<div className="carousel">
+				<div
+					className="inner"
+					style={{
+						backgroundImage: `url(${currentTemplate})`,
+					}}
+				>
+					<div
+						className="carousel-left"
+						onClick={() => {
+							if (activeImage > 0) setActiveImage(activeImage - 1);
+						}}
+					>
+						<ArrowBackIosNewIcon style={{ fontSize: 30 }} />
+					</div>
+					<div
+						className="carousel-center"
+						onClick={() => onClick()}
+						value={clicked}
+					></div>
+					<div
+						className="carousel-right"
+						onClick={() => {
+							if (activeImage < TemplateData.length - 1)
+								setActiveImage(activeImage + 1);
+						}}
+					>
+						<ArrowForwardIosIcon
+							style={{
+								fontSize: 30,
+							}}
+						/>
+					</div>
+				</div>
+			</div>
+		</div>
+	);
 }
 export default TemplateCarousel;
