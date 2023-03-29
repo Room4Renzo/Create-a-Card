@@ -44,7 +44,7 @@ export default function App() {
 						<Carousel onClickImage={(image) => setImageUrl(image)} />
 						<div className="extras">
 							<div><h1 className="title">Fonts</h1>
-							<FontDropdown /></div>
+							{/* <FontDropdown /></div> */}
 						<div><h1 className="title">Colors</h1>
 							<ColorPicker /></div>
 						</div>
