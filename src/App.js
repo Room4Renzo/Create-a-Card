@@ -45,49 +45,46 @@ export default function App() {
 					</div>
 					<div className="column is-2">
 						<div className="card">
-									<figure className="image">
-										<img
-											src={require("./assets/images/Navigation/PointLeft.png")}
-										/>
-									</figure>
-								<div className="content">Pick an image here.</div>
+							<figure className="image">
+								<img
+									src={require("./assets/images/Navigation/PointLeft.png")}
+								/>
+							</figure>
+							<div className="content">Pick an image here.</div>
 						</div>
 
 						<div className="card">
-									<figure className="image">
-										<img
-											src={require("./assets/images/Navigation/PointRight.png")}
-										/>
-									</figure>
+							<figure className="image">
+								<img
+									src={require("./assets/images/Navigation/PointRight.png")}
+								/>
+							</figure>
 							<div className="content">Design your card here.</div>
 						</div>
 
 						<div className="card">
-									<figure className="image">
-										<img
-											src={require("./assets/images/Navigation/PointDown.png")}
-										/>
-									</figure>
-								</div>
-							</div>
-							<TextWrapper
-								name={name}
-								handleChange={handleChange}
-							/>
-							<ResizableElements />
-							<CategoryDropdown />
+							<figure className="image">
+								<img
+									src={require("./assets/images/Navigation/PointDown.png")}
+								/>
+							</figure>
 						</div>
 					</div>
-					<div className="column is-6">
-						<h1>Your card</h1>
-						<CardTemplate
-							templateUrl={template}
-							name={name}
-							message={message}
-							handleChange={handleChange}
-						/>
-						<ResizeImage image={image} />
-						<DownloadButton />
+					<TextWrapper
+						name={name}
+						handleChange={handleChange}
+					/>
+					<ResizableElements />
+					<CategoryDropdown />
+				</div>
+			</div>
+			<div className="column is-6">
+				<CardTemplate
+					templateUrl={template}
+					name={name}
+				/>
+				<ResizeImage image={image} />
+				{/* <DownloadButton /> */}
 			</div>
 		</Router>
 	);
