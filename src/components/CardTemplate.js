@@ -1,5 +1,4 @@
 import "./CardTemplate.css";
-import { useState } from "react";
 
 const CardTemplate = (props) => {
 	return (
