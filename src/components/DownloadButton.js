@@ -1,7 +1,5 @@
 import React from "react";
-import { toJpeg, toPng } from "html-to-image";
 import "./DownloadButton.css";
-import mergeImages from "merge-images";
 import html2canvas from "html2canvas"
 
 const downloadImage = (dataUrl) => {
