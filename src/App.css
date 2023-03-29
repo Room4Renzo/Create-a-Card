@@ -12,3 +12,10 @@
 	flex-direction: column;
 	width: 60%;
 }
+
+
+.download {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}

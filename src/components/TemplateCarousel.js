@@ -7,8 +7,8 @@ import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 function TemplateCarousel(props) {
 	// const [activeIndex, setActiveIndex] = useState(0);
 	const [activeImage, setActiveImage] = useState(0);
-	const currentTemplate = TemplateData[activeImage];
-	// const [template, setTemplate] = useState(currentTemplate);
+	const currentTemplate = TemplateData[activeIndex];
+
 	const [clicked, setClicked] = useState(false);
 	const [uploadTemplate, setUploadTemplate] = useState(TemplateData[0]);
 
