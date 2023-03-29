@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect, Component } from "react";
+import { useState, useRef, useEffect } from "react";
 
 
 const handleChange = (event) => {
@@ -9,33 +9,17 @@ const handleChange = (event) => {
 
 const TextInput = (props) => {
 	const [state, setState] = useState();
+
 	return (
 		<div>
+			<p>{props.name}</p>
 			<input
 				type="text"
 				name={props.name}
-				onChange={props.handleChange}
+				value={message}
+				onChange={handleChange}
 			/>
 		</div>
 	);
 };
-
-{
-	/* <form onSubmit={handleSubmit}>
-  <label>
-    Write your message
-    <input
-      ref={inputRef}
-      type="text"
-      value={message}
-      onChange={handleChange}
-    />
-  </label>
-  <input
-    type="submit"
-    value="Save"
-  />
-</form> */
-}
-
 export default TextInput;

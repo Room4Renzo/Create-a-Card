@@ -6,26 +6,53 @@ import Collapse from "@mui/material/Collapse";
 import ExpandLess from "@mui/icons-material/ExpandLess";
 import ExpandMore from "@mui/icons-material/ExpandMore";
 import "./CategoryDropdown.css";
-import CarouselData from "../data/CarouselData";
 
-const CategoryDropdown = () => {
+const FontDropdown = () => {
 	const [open, setOpen] = useState(true);
+	const [activeIndex, setActiveIndex] = useState(0);
 
 	const handleClick = () => {
 		setOpen(!open);
 	};
 
-	// const changeCategory = (category) => {
-	// 	const categoryIndex = CarouselData.findIndex(
-	// 		(item) => item.category === category
-	// 	);
-	// 	console.log(categoryIndex);
-	// };
+	function changeFont(event) {
+		console.log(event.target.innerHTML);
+		const font = event.target.innerHTML;
+
+		switch (font) {
+			case "Roboto":
+				setActiveIndex(0);
+				break;
+			case "Open sans":
+				setActiveIndex(1);
+				break;
+			case "Lato":
+				setActiveIndex(2);
+				break;
+			case "Source Sans Pro":
+				setActiveIndex(3);
+				break;
+			case "Roboto Condensed":
+				setActiveIndex(4);
+				break;
+			case "Oswald":
+				setActiveIndex(5);
+				break;
+			case "Poppins":
+				setActiveIndex(6);
+				break;
+			case "Raleway":
+				setActiveIndex(7);
+				break;
+			default:
+				setActiveIndex(0);
+		}
+	}
 
 	return (
-		<List sx={{ width: "30%", maxWidth: "30%", bgcolor: "background.paper" }}>
+		<List onClick={(event) => changeFont(event)}>
 			<ListItemButton onClick={handleClick}>
-				<ListItemText primary="Categories" />
+				<ListItemText primary="Fonts" />
 				{open ? <ExpandMore /> : <ExpandLess />}
 			</ListItemButton>
 			<Collapse
@@ -38,7 +65,7 @@ const CategoryDropdown = () => {
 					disablePadding
 				>
 					<ListItemButton>
-						<ListItemText primary="Animals" />
+						<ListItemText primary="Roboto" />
 					</ListItemButton>
 				</List>
 				<List
@@ -46,7 +73,7 @@ const CategoryDropdown = () => {
 					disablePadding
 				>
 					<ListItemButton>
-						<ListItemText primary="Cartoon" />
+						<ListItemText primary="Open sans" />
 					</ListItemButton>
 				</List>
 				<List
@@ -54,7 +81,7 @@ const CategoryDropdown = () => {
 					disablePadding
 				>
 					<ListItemButton>
-						<ListItemText primary="Holiday" />
+						<ListItemText primary="Lato" />
 					</ListItemButton>
 				</List>
 				<List
@@ -62,7 +89,7 @@ const CategoryDropdown = () => {
 					disablePadding
 				>
 					<ListItemButton>
-						<ListItemText primary="Misc" />
+						<ListItemText primary="Source Sans Pro" />
 					</ListItemButton>
 				</List>
 				<List
@@ -70,7 +97,7 @@ const CategoryDropdown = () => {
 					disablePadding
 				>
 					<ListItemButton>
-						<ListItemText primary="Nature" />
+						<ListItemText primary="Roboto Condensed" />
 					</ListItemButton>
 				</List>
 				<List
@@ -78,7 +105,7 @@ const CategoryDropdown = () => {
 					disablePadding
 				>
 					<ListItemButton>
-						<ListItemText primary="Smiley" />
+						<ListItemText primary="Oswald" />
 					</ListItemButton>
 				</List>
 				<List
@@ -86,7 +113,7 @@ const CategoryDropdown = () => {
 					disablePadding
 				>
 					<ListItemButton>
-						<ListItemText primary="Templates" />
+						<ListItemText primary="Poppins" />
 					</ListItemButton>
 				</List>
 				<List
@@ -94,20 +121,12 @@ const CategoryDropdown = () => {
 					disablePadding
 				>
 					<ListItemButton>
-						<ListItemText primary="Text" />
+						<ListItemText primary="Raleway" />
 					</ListItemButton>
 				</List>{" "}
-				<List
-					component="div"
-					disablePadding
-				>
-					<ListItemButton>
-						<ListItemText primary="Vehicles" />
-					</ListItemButton>
-				</List>
 			</Collapse>
 		</List>
 	);
 };
 
-export default CategoryDropdown;
+export default FontDropdown;
