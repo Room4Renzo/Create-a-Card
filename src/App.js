@@ -59,13 +59,13 @@ export default function App() {
 							<div className="content">
 								<h2 className="is-size-2">Enter Text Here ↓</h2>
 							</div>
-
-							<TextWrapper
-								name={name}
+							<TextInput
+								name="name"
 								handleChange={handleChange}
 							/>
 
-							<CategoryDropdown />
+							{/* <ResizableElements /> */}
+
 						</div>
 					</div>
 				</div>
