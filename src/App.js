@@ -11,6 +11,7 @@ import DownloadButton from "./components/DownloadButton";
 import "bulma/css/bulma.css";
 import TemplateCarousel from "./components/TemplateCarousel.js";
 import FontDropdown from "./components/FontDropdown";
+import ColorPicker from "./components/ColorPicker.js";
 import TextWrapper from "./components/ResizableElements.jsx";
 import CategoryDropdown from "./components/CategoryDropdown.jsx";
 import { identifier } from "@babel/types";
@@ -35,11 +36,19 @@ export default function App() {
 			<div className="container is-fluid">
 				<div className="columns is-vcentered">
 					<div className="column is-5">
-						{/* <h1 className="title is-size-2">Create your own card</h1> */}
+						<h1 className="title">Templates</h1>
 						<TemplateCarousel
 							onClickTemplate={(template) => setTemplateUrl(template)}
 						/>
+						<h1 className="title">Images</h1>
 						<Carousel onClickImage={(image) => setImageUrl(image)} />
+						<div className="extras">
+							<div><h1 className="title">Fonts</h1>
+							<FontDropdown /></div>
+						<div><h1 className="title">Colors</h1>
+							<ColorPicker /></div>
+						</div>
+
 					</div>
 
 					<div className="column is-2">
