@@ -1,17 +1,28 @@
-import BirthdayTemplate1 from "../assets/images/Templates/birthday-template1.jpeg";
-import Birthday from "../assets/images/Templates/Birthday.png";
-import BirthdayTemplate2 from "../assets/images/Templates/birthday-template2.png";
-import GetWellTemplate1 from "../assets/images/Templates/get-well-soon-template1.jpeg";
-import WeddingTemplate1 from "../assets/images/Templates/wedding-template1.jpeg";
-import WeddingTemplate2 from "../assets/images/Templates/wedding-template2.jpeg";
+import Template1 from "../assets/images/Templates/template1.png";
+import Template2 from "../assets/images/Templates/template2.png";
+import Template3 from "../assets/images/Templates/template3.png";
+import Template4 from "../assets/images/Templates/template4.png";
+import Template5 from "../assets/images/Templates/template5.png";
+import Template6 from "../assets/images/Templates/template6.png";
+import Template7 from "../assets/images/Templates/template7.png";
+import Template8 from "../assets/images/Templates/template8.png";
+import Template9 from "../assets/images/Templates/template9.png";
+import Template10 from "../assets/images/Templates/template10.png";
+import Template11 from "../assets/images/Templates/template11.png";
+
 
 export const TemplateData = [
-  BirthdayTemplate1,
-  BirthdayTemplate2,
-  Birthday,
-  GetWellTemplate1,
-  WeddingTemplate1,
-  WeddingTemplate2,
+  Template1,
+  Template2,
+  Template3,
+  Template4,
+  Template5,
+  Template6,
+  Template7,
+  Template8,
+  Template9,
+  Template10, 
+  Template11
 ];
 
 export default TemplateData;

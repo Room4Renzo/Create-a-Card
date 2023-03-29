@@ -1,5 +1,4 @@
 import ResizableElements from "./components/ResizableElements.jsx";
-import { identifier } from "@babel/types";
 import { Resizable } from "re-resizable";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { useState } from "react";
@@ -14,6 +13,8 @@ import TemplateCarousel from "./components/TemplateCarousel.js";
 import FontDropdown from "./components/FontDropdown";
 import TextWrapper from "./components/ResizableElements.jsx";
 import CategoryDropdown from "./components/CategoryDropdown.jsx";
+import { identifier } from "@babel/types";
+import TemplateData from "./data/TemplateData";
 
 export default function App() {
 	const [name, setName] = useState("");
@@ -44,39 +45,25 @@ export default function App() {
 					</div>
 					<div className="column is-2">
 						<div className="card">
-							<div className="card-content">
-								<div className="media"></div>
-								<div className="card-image">
 									<figure className="image">
 										<img
 											src={require("./assets/images/Navigation/PointLeft.png")}
 										/>
 									</figure>
-								</div>
 								<div className="content">Pick an image here.</div>
-							</div>
 						</div>
 
 						<div className="card">
-							<div className="card-content">
-								<div className="media"></div>
-								<div className="card-image">
 									<figure className="image">
 										<img
 											src={require("./assets/images/Navigation/PointRight.png")}
 										/>
 									</figure>
-								</div>
-							</div>
 							<div className="content">Design your card here.</div>
 						</div>
 
 						<div className="card">
-							<div className="card-content">
-								<div className="content">Type your text here.</div>
-								<div className="media"></div>
-								<div className="card-image">
-									<figure className="image is-4by3">
+									<figure className="image">
 										<img
 											src={require("./assets/images/Navigation/PointDown.png")}
 										/>
@@ -101,8 +88,6 @@ export default function App() {
 						/>
 						<ResizeImage image={image} />
 						<DownloadButton />
-					</div>
-				</div>
 			</div>
 		</Router>
 	);
