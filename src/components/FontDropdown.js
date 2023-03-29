@@ -1,13 +1,13 @@
 import "./FontDropdown.css";
-import { FontPicker } from "react-google-font-picker";
-import { ChakraProvider } from "@chakra-ui/react";
+// import { FontPicker } from "react-google-font-picker";
+// import { ChakraProvider } from "@chakra-ui/react";
 
 const FontCarousel = () => {
   return (
     <div className="fonts">
-      <ChakraProvider>
+      {/* <ChakraProvider>
         <FontPicker />
-      </ChakraProvider>
+      </ChakraProvider> */}
     </div>
   );
 };
