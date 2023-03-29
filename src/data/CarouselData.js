@@ -1,14 +1,14 @@
-import Bear from "../assets/images/animals/Bear.png";
-import Chicks from "../assets/images/animals/Chicks.png";
-import Deer from "../assets/images/animals/Deer.jpg";
-import Dog from "../assets/images/animals/Dog.png";
-import Fox from "../assets/images/animals/Fox.jpg";
-import Horse from "../assets/images/animals/Horse.png";
-import Kitten from "../assets/images/animals/Kitten.jpg";
-import KittenHug from "../assets/images/animals/KittenHug.png";
-import Panther from "../assets/images/animals/Panther.png";
-import Tiger from "../assets/images/animals/Tiger.jpg";
-import WolfHowl from "../assets/images/animals/WolfHowl.png";
+import Bear from "../assets/images/Animals/Bear.png";
+import Chicks from "../assets/images/Animals/Chicks.png";
+import Deer from "../assets/images/Animals/Deer.jpg";
+import Dog from "../assets/images/Animals/Dog.png";
+import Fox from "../assets/images/Animals/Fox.jpg";
+import Horse from "../assets/images/Animals/Horse.png";
+import Kitten from "../assets/images/Animals/Kitten.jpg";
+import KittenHug from "../assets/images/Animals/KittenHug.png";
+import Panther from "../assets/images/Animals/Panther.png";
+import Tiger from "../assets/images/Animals/Tiger.jpg";
+import WolfHowl from "../assets/images/Animals/WolfHowl.png";
 
 import Alligator from "../assets/images/Cartoon/Alligator.png";
 import Bulbasaur from "../assets/images/Cartoon/Bulbasaur.png";
@@ -76,7 +76,7 @@ import Template1 from "../assets/images/Templates/template1.png";
 
 export const CarouselData = [
 	{
-		category: "animals",
+		category: "Animals",
 		picture: [
 			Bear,
 			Chicks,
@@ -92,43 +92,43 @@ export const CarouselData = [
 		],
 	},
 	// {
-	// 	category: "animals",
+	// 	category: "Animals",
 	// 	picture: Chicks,
 	// },
 	// {
-	// 	category: "animals",
+	// 	category: "Animals",
 	// 	picture: Deer,
 	// },
 	// {
-	// 	category: "animals",
+	// 	category: "Animals",
 	// 	picture: Dog,
 	// },
 	// {
-	// 	category: "animals",
+	// 	category: "Animals",
 	// 	picture: Fox,
 	// },
 	// {
-	// 	category: "animals",
+	// 	category: "Animals",
 	// 	picture: Horse,
 	// },
 	// {
-	// 	category: "animals",
+	// 	category: "Animals",
 	// 	picture: Kitten,
 	// },
 	// {
-	// 	category: "animals",
+	// 	category: "Animals",
 	// 	picture: KittenHug,
 	// },
 	// {
-	// 	category: "animals",
+	// 	category: "Animals",
 	// 	picture: Panther,
 	// },
 	// {
-	// 	category: "animals",
+	// 	category: "Animals",
 	// 	picture: Tiger,
 	// },
 	// {
-	// 	category: "animals",
+	// 	category: "Animals",
 	// 	picture: WolfHowl,
 	// },
 	{

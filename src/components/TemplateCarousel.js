@@ -1,5 +1,5 @@
 import React, { useState, useEffect, Fragment } from "react";
-import "./CarouselTest.css";
+import "./Carousel.css";
 import TemplateData from "../data/TemplateData";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
