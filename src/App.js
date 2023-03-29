@@ -15,6 +15,7 @@ import TextWrapper from "./components/ResizableElements.jsx";
 import CategoryDropdown from "./components/CategoryDropdown.jsx";
 import { identifier } from "@babel/types";
 import TemplateData from "./data/TemplateData";
+import CarouselData from "./data/CarouselData.js";
 
 export default function App() {
 	const [name, setName] = useState("");
@@ -27,13 +28,14 @@ export default function App() {
 	};
 
 	const [image, setImageUrl] = useState();
-	const [template, setTemplateUrl] = useState();
+	const [template, setTemplateUrl] = useState(TemplateData[0]);
 
 	return (
 		<Router>
 			<Header />
 			<div className="container is-fluid">
 				<div className="columns is-vcentered">
+
 					<div className="column is-5">
 						{/* <h1 className="title is-size-2">Create your own card</h1> */}
 						<TemplateCarousel
@@ -68,14 +70,18 @@ export default function App() {
 
 						</div>
 					</div>
-				</div>
-			</div>
-			<div className="column is-6">
+			
+			<div className="column is-5">
+				<div className="card">
 				<CardTemplate
 					templateUrl={template}
 				/>
 				<ResizeImage image={image} />
+				</div>
 			</div>
+			</div>
+			</div>
+
 		</Router>
 	);
 }
