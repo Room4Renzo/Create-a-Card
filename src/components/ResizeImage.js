@@ -7,14 +7,13 @@ import { useState } from 'react';
 const ResizeImage = (props) => {
   const [width, setWidth] = useState(200);
   const [height, setHeight] = useState(300);
-  console.log(props);
 
   return (
     <div className="rectangle-image">
   <Rnd
     default={{
-      x: -300,
-      y: -200,
+      x: 0,
+      y: 0,
       width: {width},
       height: {height}
     }}
@@ -24,7 +23,7 @@ const ResizeImage = (props) => {
     }}
     lockAspectRatio={true}
   >
-    <img className="downloadImg1" src={props.image} width={width} height={height} />
+    <img src={props.image} width={width} height={height} />
   </Rnd>
   </div>
 );

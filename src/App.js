@@ -59,10 +59,10 @@ export default function App() {
 							<div className="content">
 								<h2 className="is-size-2">Enter Text Here ↓</h2>
 							</div>
-							<TextInput
+							{/* <TextInput
 								name="name"
 								handleChange={handleChange}
-							/>
+							/> */}
 
 							{/* <ResizableElements /> */}
 
@@ -73,9 +73,7 @@ export default function App() {
 			<div className="column is-6">
 				<CardTemplate
 					templateUrl={template}
-					name={name}
 				/>
-
 				<ResizeImage image={image} />
 			</div>
 		</Router>

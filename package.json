@@ -11,6 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@chakra-ui/react": "^2.5.4",
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
     "@fortawesome/free-solid-svg-icons": "^6.3.0",
@@ -29,12 +30,12 @@
     "react-bootstrap": "^2.7.2",
     "react-dom": "^18.2.0",
     "react-dropdown": "^1.11.0",
+    "react-google-font-picker": "^0.9.3",
     "react-rnd": "^10.4.1",
     "react-router-dom": "^6.9.0",
     "react-scripts": "^5.0.1",
     "react-swipeable": "^7.0.0",
-    "styled-component": "^2.8.0",
-    "use-react-screenshot": "^3.0.0"
+    "styled-component": "^2.8.0"
   },
   "description": "",
   "browserslist": {
