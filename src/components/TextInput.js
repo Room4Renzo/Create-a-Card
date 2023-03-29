@@ -1,18 +1,11 @@
 import { useState, useRef, useEffect } from "react";
 
-// const TextInput = () => {
-// const inputRef = useRef();
 
-// useEffect(() => {
-// 	inputRef.current.focus();
-// }, []);
-
-
-
-	const handleChange = (event) => {
-		setName(event.target.value);
-		setMessage(event.target.value);
-	};
+const handleChange = (event) => {
+	const [name, setName] = useState("");
+	setMessage(event.target.value);
+	setName(event.target.value);
+};
 
 const TextInput = (props) => {
 	const [state, setState] = useState();
