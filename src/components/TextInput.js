@@ -7,10 +7,10 @@ import { useState, useRef, useEffect, Component } from "react";
 // 	inputRef.current.focus();
 // }, []);
 
-// const handleChange = (event) => {
-// 	const [message, setMessage] = useState("");
-// 	setMessage(event.target.value);
-// };
+const handleChange = (event) => {
+	const [name, setName] = useState("");
+	setMessage(event.target.value);
+};
 
 // const handleSubmit = (event) => {
 // 	event.preventDefault();
@@ -19,7 +19,7 @@ import { useState, useRef, useEffect, Component } from "react";
 // };
 
 const TextInput = (props) => {
-	const [state, setState] = useState({ name: "" });
+	const [state, setState] = useState();
 	return (
 		<div>
 			<input

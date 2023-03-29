@@ -85,10 +85,11 @@ export default function App() {
 									</figure>
 								</div>
 							</div>
-							<TextWrapper
-								name={name}
+							<TextInput
+								name="name"
 								handleChange={handleChange}
 							/>
+
 							{/* <ResizableElements /> */}
 						</div>
 					</div>
