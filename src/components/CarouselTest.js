@@ -18,10 +18,8 @@ function Carousel(props) {
 	const [activeIndex, setActiveIndex] = useState(0);
 	const [activeImage, setActiveImage] = useState(0);
 	const currentImage = CarouselData[activeIndex].picture[activeImage];
-	const [image, setImage] = useState(currentImage);
 	const activeCategory = CarouselData[activeIndex];
 	const [clicked, setClicked] = useState(false);
-	const [uploadImage, setUploadImage] = useState("");
 
 	const [state, setState] = useState({
 		left: false,
@@ -80,8 +78,8 @@ function Carousel(props) {
 
 	const onClick = () => {
 		setClicked(true);
-		setUploadImage(currentImage);
 		props.onClickImage(currentImage);
+		console.log(currentImage);
 	};
 
 	const toggleDrawer = (anchor, open) => (event) => {

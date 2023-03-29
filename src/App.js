@@ -82,9 +82,7 @@ export default function App() {
 			<div className="column is-6">
 				<CardTemplate
 					templateUrl={template}
-					name={name}
 				/>
-
 				<ResizeImage image={image} />
 			</div>
 		</Router>

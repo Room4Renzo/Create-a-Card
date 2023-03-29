@@ -3,12 +3,11 @@
     cursor: grab;
   }
 
-  .rectangle-image .react-draggable {
+  .rectangle-image {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
-    position: relative;
   }
 
   .rectangle-image img {
