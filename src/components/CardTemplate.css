@@ -10,17 +10,6 @@
 	justify-content: center;
 }
 
-.rectangle {
-	display: inline-block;
-	background-size: cover;
-	background-repeat: no-repeat;
-	width: 420px;
-	height: 600px;
-	margin-top: 30px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
 .rectangle-template img {
 	max-height: 600px;
 	max-width: 420px;
