@@ -6,7 +6,7 @@ import Dropdown from "./Dropdown";
 const  Navbar = () => {
   return (
     <nav className="navbar-container">
-        <strong>Create a card</strong>
+        <strong><h1 className="navbar-title">Create a card</h1></strong>
         <NavLink
         to="/"
         end
@@ -14,10 +14,10 @@ const  Navbar = () => {
           isActive ? "nav-link active" : "nav-link"
         }
       >
-        <Dropdown />
+        {/* <Dropdown /> */}
       </NavLink>
        
-        <NavLink
+        {/* <NavLink
         to="/about"
         end
         className={({ isActive }) =>
@@ -33,7 +33,7 @@ const  Navbar = () => {
         }
       >
         Contact
-      </NavLink>
+      </NavLink> */}
     </nav>
   );
 }

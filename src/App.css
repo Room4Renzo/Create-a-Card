@@ -1,14 +1,15 @@
 @import "bulma/css/bulma.css";
 
-.app-container {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	width: 100%;
+
+
+.container {
+	background-color: rgba(137, 43, 226, 0.088);
+	width: auto;
+	height: 120vh;
 }
 
-.left-container {
-	display: grid;
-	flex-direction: column;
-	width: 60%;
+.container h1 {
+	margin: 20px;
+	font-family: 'Alkatra', cursive;
+	color: blueviolet;
 }

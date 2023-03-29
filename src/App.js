@@ -36,12 +36,13 @@ export default function App() {
 			<div className="container is-fluid">
 				<div className="columns">
 					<div className="column is-5">
-						<h1 className="title">Create your own card</h1>
+						<h1 className="title">Templates</h1>
 						<TemplateCarousel
 							onClickTemplate={(template) => setTemplateUrl(template)}
 						/>
+						<h1 className="title">Images</h1>
 						<Carousel onClickImage={(image) => setImageUrl(image)} />
-						<h2>pick a font</h2>
+						<h1 className="title">Fonts</h1>
 						<FontDropdown />
 					</div>
 					<div className="column is-2">
@@ -55,7 +56,7 @@ export default function App() {
 										/>
 									</figure>
 								</div>
-								<div className="content">Pick an image here.</div>
+								<div className="content">Pick an image here</div>
 							</div>
 						</div>
 
@@ -70,12 +71,12 @@ export default function App() {
 									</figure>
 								</div>
 							</div>
-							<div className="content">Design your card here.</div>
+							<div className="content">Design your card here</div>
 						</div>
 
 						<div className="card">
 							<div className="card-content">
-								<div className="content">Type your text here.</div>
+								<div className="content">Type your message here</div>
 								<div className="media"></div>
 								<div className="card-image">
 									<figure className="image is-4by3">
@@ -89,13 +90,13 @@ export default function App() {
 								name={name}
 								handleChange={handleChange}
 
-							/> */}
+							/>
 							{/* <ResizableElements /> */}
 						</div>
 					</div>
 					<div className="column is-6">
 
-					<h1>Your card</h1>
+					<h1 className="title">Your design</h1>
 					<CardTemplate templateUrl={template} name={name} />
 					<ResizeImage image={image} />
 					{/* <DownloadButton /> */}
