@@ -1,11 +1,8 @@
 import React, { useState, useEffect, Fragment } from "react";
-import { useSwipeable } from "react-swipeable";
 import "./CarouselTest.css";
 import CarouselData from "../data/CarouselData";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-import ResizeImage from "./ResizeImage";
-import CardTemplate from "./CardTemplate";
 import {
 	Box,
 	List,
@@ -193,7 +190,6 @@ function Carousel(props) {
 					</div>
 				</div>
 			</div>
-			{/* {clicked ? <img src={uploadImage} /> : <div></div>} */}
 		</div>
 	);
 }

@@ -8,8 +8,6 @@ function TemplateCarousel(props) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [activeImage, setActiveImage] = useState(0);
   const currentTemplate = TemplateData[activeImage];
-  const [template, setTemplate] = useState(currentTemplate);
-  const activeCategory = TemplateData[activeIndex];
   const [clicked, setClicked] = useState(false);
   const [uploadTemplate, setUploadTemplate] = useState(TemplateData[0]);
 
@@ -19,6 +17,7 @@ function TemplateCarousel(props) {
         setActiveImage(activeImage + 1);
       } else {
         setActiveImage(0);
+        setActiveIndex(0);
       }
     }, 3600);
     return () => clearInterval(interval);
@@ -58,9 +57,13 @@ function TemplateCarousel(props) {
           <div
             className="carousel-right"
             onClick={() => {
-              if (activeImage < currentTemplate.length - 1)
+              if (activeImage < TemplateData[activeIndex].length - 1) {
                 setActiveImage(activeImage + 1);
-            }}
+              }  else {
+								setActiveIndex(0);
+							}
+            }
+          }
           >
             <ArrowForwardIosIcon
               style={{

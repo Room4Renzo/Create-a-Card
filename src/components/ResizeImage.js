@@ -13,8 +13,8 @@ const ResizeImage = (props) => {
     <div className="rectangle-image">
   <Rnd
     default={{
-      x: 0,
-      y: 0,
+      x: -250,
+      y: -500,
       width: 300,
       height: 400
     }}
@@ -22,8 +22,9 @@ const ResizeImage = (props) => {
       setWidth(ref.offsetWidth);
       setHeight(ref.offsetHeight);
     }}
+    lockAspectRatio={true}
   >
-    <img src={props.image} width={width} height={height} />
+    <img className="downloadImg1" src={props.image} width={width} height={height} />
   </Rnd>
   </div>
 );

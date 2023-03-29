@@ -2,6 +2,7 @@
     cursor: -webkit-grab;
     cursor: grab;
   }
+
   .rectangle-image {
     display: flex;
     flex-direction: row;
@@ -12,4 +13,7 @@
   .rectangle-image img {
     max-height: 400px;
     max-width: 300px;
+    display: hide;
+
   }
+
