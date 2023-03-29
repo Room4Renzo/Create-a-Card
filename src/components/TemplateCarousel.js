@@ -3,13 +3,12 @@ import "./CarouselTest.css";
 import TemplateData from "../data/TemplateData";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import template1 from "../assets/images/Templates/template1.png";
 
 function TemplateCarousel(props) {
 	const [activeImage, setActiveImage] = useState(0);
 	const currentTemplate = TemplateData[activeImage];
-
 	const [clicked, setClicked] = useState(false);
-	const [uploadImage, setUploadImage] = useState("");
 
 	useEffect(() => {
 		const interval = setInterval(() => {
@@ -24,9 +23,8 @@ function TemplateCarousel(props) {
 
 	const onClick = () => {
 		setClicked(true);
-		setUploadImage(currentTemplate);
 		props.onClickTemplate(currentTemplate);
-		console.log(activeImage);
+		console.log(currentTemplate);
 	};
 
 	return (
@@ -73,7 +71,6 @@ function TemplateCarousel(props) {
 					</div>
 				</div>
 			</div>
-			{/* {clicked ? <img src={uploadImage} /> : <div></div>} */}
 		</div>
 	);
 }
