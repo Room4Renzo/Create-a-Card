@@ -3,18 +3,20 @@ import { Resizable } from "re-resizable";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { useState } from "react";
 import "./App.css";
+import Navbar from "./components/Navbar";
 import Carousel from "./components/CarouselTest";
-import Header from "./components/Header";
 import CardTemplate from "./components/CardTemplate";
 import ResizeImage from "./components/ResizeImage";
 import DownloadButton from "./components/DownloadButton";
 import "bulma/css/bulma.css";
 import TemplateCarousel from "./components/TemplateCarousel.js";
 import FontDropdown from "./components/FontDropdown";
+import ColorPicker from "./components/ColorPicker.js";
 import TextWrapper from "./components/ResizableElements.jsx";
 import CategoryDropdown from "./components/CategoryDropdown.jsx";
 import { identifier } from "@babel/types";
 import TemplateData from "./data/TemplateData";
+import CarouselData from "./data/CarouselData.js";
 
 export default function App() {
 	const [name, setName] = useState("");
@@ -31,15 +33,27 @@ export default function App() {
 
 	return (
 		<Router>
-			<Header />
-			<div className="container">
+			<Navbar />
+			<div className="container is-fluid">
 				<div className="columns is-vcentered">
+					{/* Column 1 */}
 					<div className="column is-5">
-						{/* <h1 className="title is-size-2">Create your own card</h1> */}
+						<h1 className="title">Templates</h1>
 						<TemplateCarousel
 							onClickTemplate={(template) => setTemplateUrl(template)}
 						/>
+						<h1 className="title">Images</h1>
 						<Carousel onClickImage={(image) => setImageUrl(image)} />
+						<div className="extras">
+							<div>
+								<h1 className="title">Fonts</h1>
+								{/* <FontDropdown /></div> */}
+							</div>
+							<div>
+								<h1 className="title">Colors</h1>
+								<ColorPicker />
+							</div>
+						</div>
 					</div>
 
 					<div className="column is-2">
@@ -68,10 +82,10 @@ export default function App() {
 						</div>
 					</div>
 				</div>
-			</div>
-			<div className="column is-6">
-				<CardTemplate templateUrl={template} />
-				<ResizeImage image={image} />
+				<div className="column is-6">
+					<CardTemplate templateUrl={template} />
+					<ResizeImage image={image} />
+				</div>
 			</div>
 		</Router>
 	);
