@@ -5,11 +5,19 @@
 .container {
 	background-color: rgba(137, 43, 226, 0.088);
 	width: auto;
-	height: 120vh;
+	height: 150vh;
 }
 
 .container h1 {
 	margin: 20px;
 	font-family: 'Alkatra', cursive;
 	color: blueviolet;
+}
+
+.extras {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: flex-start;
+	gap: 30px;
 }
