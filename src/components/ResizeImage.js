@@ -23,7 +23,7 @@ const ResizeImage = (props) => {
     }}
     lockAspectRatio={true}
   >
-    <img src={props.image} width={width} height={height} />
+    {props.image ? <img src={props.image} width={width} height={height} /> : <></> }
   </Rnd>
   </div>
 );

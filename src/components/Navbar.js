@@ -6,9 +6,7 @@ import "react-dropdown/style.css";
 const Navbar = () => {
 	return (
 		<nav className="navbar-container">
-			<strong>
 				<p>Create a card</p>
-			</strong>
 		</nav>
 	);
 };
