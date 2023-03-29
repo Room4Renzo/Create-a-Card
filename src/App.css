@@ -14,10 +14,9 @@
 	color: blueviolet;
 }
 
-.extras {
+
+.download {
 	display: flex;
-	flex-direction: row;
 	justify-content: center;
-	align-items: flex-start;
-	gap: 30px;
+	align-items: center;
 }

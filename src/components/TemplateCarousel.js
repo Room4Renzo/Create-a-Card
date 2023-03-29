@@ -1,21 +1,21 @@
-import React, { useState, useEffect } from "react";
-import "./TemplateCarousel.css";
+import React, { useState, useEffect, Fragment } from "react";
+import "./CarouselTest.css";
 import TemplateData from "../data/TemplateData";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 
 function TemplateCarousel(props) {
-	const [activeIndex, setActiveIndex] = useState(0);
+	// const [activeIndex, setActiveIndex] = useState(0);
 	const [activeImage, setActiveImage] = useState(0);
-	const currentTemplate = TemplateData[activeIndex];
-	const [template, setTemplate] = useState(currentTemplate);
+	const currentTemplate = TemplateData[activeImage];
+
 	const [clicked, setClicked] = useState(false);
-	const [uploadTemplate, setUploadTemplate] = useState(TemplateData[0]);
+	const [uploadImage, setUploadImage] = useState("");
 
 	useEffect(() => {
 		const interval = setInterval(() => {
-			if (activeIndex < TemplateData.length - 1) {
-				setActiveIndex(activeIndex + 1);
+			if (activeImage < TemplateData.length - 1) {
+				setActiveImage(activeImage + 1);
 			} else {
 				setActiveImage(0);
 			}
@@ -24,16 +24,14 @@ function TemplateCarousel(props) {
 	});
 
 	const onClick = () => {
-		console.log("Clicked");
 		setClicked(true);
-		setUploadTemplate(currentTemplate);
+		setUploadImage(currentTemplate);
 		props.onClickTemplate(currentTemplate);
-		console.log(currentTemplate);
-		console.log(clicked);
+		console.log(activeImage);
 	};
 
 	return (
-		<div className="right">
+		<div>
 			<div className="carousel">
 				<div
 					className="inner"
@@ -44,7 +42,11 @@ function TemplateCarousel(props) {
 					<div
 						className="carousel-left"
 						onClick={() => {
-							if (activeImage > 0) setActiveImage(activeImage - 1);
+							if (activeImage > 0) {
+								setActiveImage(activeImage - 1);
+							} else {
+								setActiveImage(TemplateData.length - 1);
+							}
 						}}
 					>
 						<ArrowBackIosNewIcon style={{ fontSize: 30 }} />
@@ -57,8 +59,11 @@ function TemplateCarousel(props) {
 					<div
 						className="carousel-right"
 						onClick={() => {
-							if (activeImage < TemplateData.length - 1)
+							if (activeImage < TemplateData.length - 1) {
 								setActiveImage(activeImage + 1);
+							} else {
+								setActiveImage(0);
+							}
 						}}
 					>
 						<ArrowForwardIosIcon
@@ -69,6 +74,7 @@ function TemplateCarousel(props) {
 					</div>
 				</div>
 			</div>
+			{/* {clicked ? <img src={uploadImage} /> : <div></div>} */}
 		</div>
 	);
 }
