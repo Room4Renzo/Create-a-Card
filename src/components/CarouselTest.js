@@ -20,7 +20,6 @@ function Carousel(props) {
 	const currentImage = CarouselData[activeIndex].picture[activeImage];
 	const [image, setImage] = useState(currentImage);
 	const activeCategory = CarouselData[activeIndex];
-	const [paused, setPaused] = useState(false);
 	const [clicked, setClicked] = useState(false);
 	const [uploadImage, setUploadImage] = useState("");
 
@@ -30,13 +29,7 @@ function Carousel(props) {
 		top: false,
 		bottom: false,
 	});
-	// const pauseOnHover = () => {
-	// 	if (!paused) {
-	// 		setPaused(true);
-	// 	} else {
-	// 		setPaused(false);
-	// 	}
-	// };
+
 	function changeCategory(event) {
 		console.log(event.target.innerHTML);
 		const category = event.target.innerHTML;

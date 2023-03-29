@@ -1,15 +1,14 @@
 import { useState, useRef, useEffect, Component } from "react";
 
 // const TextInput = () => {
-// const [message, setMessage] = useState("Happy Birthday!");
 // const inputRef = useRef();
-// const [state, setState] = useState({ name: "" });
 
 // useEffect(() => {
 // 	inputRef.current.focus();
 // }, []);
 
 // const handleChange = (event) => {
+// 	const [message, setMessage] = useState("");
 // 	setMessage(event.target.value);
 // };
 
@@ -20,13 +19,12 @@ import { useState, useRef, useEffect, Component } from "react";
 // };
 
 const TextInput = (props) => {
+	const [state, setState] = useState({ name: "" });
 	return (
 		<div>
-			<p>{props.name}</p>
-			<p>Change name:</p>
 			<input
 				type="text"
-				name="name"
+				name={props.name}
 				onChange={props.handleChange}
 			/>
 		</div>
