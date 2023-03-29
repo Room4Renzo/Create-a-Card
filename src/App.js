@@ -14,6 +14,7 @@ import FontDropdown from "./components/FontDropdown";
 import TextWrapper from "./components/ResizableElements.jsx";
 import CategoryDropdown from "./components/CategoryDropdown.jsx";
 import { identifier } from "@babel/types";
+import ColorPicker from "./components/ColorPicker";
 import TemplateData from "./data/TemplateData";
 
 export default function App() {
@@ -26,8 +27,8 @@ export default function App() {
 		setMessage(event.target.value);
 	};
 
-	const [image, setImageUrl] = useState();
-	const [template, setTemplateUrl] = useState();
+  const [image, setImageUrl] = useState();
+  const [template, setTemplateUrl] = useState();
 
 	return (
 		<Router>
