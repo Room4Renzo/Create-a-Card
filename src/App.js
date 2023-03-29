@@ -3,8 +3,8 @@ import { Resizable } from "re-resizable";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { useState } from "react";
 import "./App.css";
+import Navbar from "./components/Navbar";
 import Carousel from "./components/CarouselTest";
-import Header from "./components/Header";
 import CardTemplate from "./components/CardTemplate";
 import ResizeImage from "./components/ResizeImage";
 import DownloadButton from "./components/DownloadButton";
@@ -31,7 +31,7 @@ export default function App() {
 
 	return (
 		<Router>
-			<Header />
+			<Navbar />
 			<div className="container is-fluid">
 				<div className="columns is-vcentered">
 					<div className="column is-5">
@@ -59,10 +59,10 @@ export default function App() {
 							<div className="content">
 								<h2 className="is-size-2">Enter Text Here ↓</h2>
 							</div>
-							<TextInput
+							{/* <TextInput
 								name="name"
 								handleChange={handleChange}
-							/>
+							/> */}
 
 							{/* <ResizableElements /> */}
 

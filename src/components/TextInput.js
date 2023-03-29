@@ -7,10 +7,6 @@ import { useState, useRef, useEffect } from "react";
 // 	inputRef.current.focus();
 // }, []);
 
-const handleChange = (event) => {
-	const [name, setName] = useState("");
-	setMessage(event.target.value);
-};
 
 
 	const handleChange = (event) => {
