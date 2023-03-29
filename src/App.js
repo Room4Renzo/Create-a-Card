@@ -17,6 +17,7 @@ import FontDropdown from "./components/FontDropdown";
 import { Box } from "@mui/system";
 import TextWrapper from "./components/ResizableElements.jsx";
 import { identifier } from "@babel/types";
+import TemplateData from "./data/TemplateData";
 
 export default function App() {
   const [name, setName] = useState("");
@@ -27,7 +28,7 @@ export default function App() {
   };
 
   const [image, setImageUrl] = useState();
-  const [template, setTemplateUrl] = useState();
+  const [template, setTemplateUrl] = useState(TemplateData[0]);
   const [card, setCard] = useState();
 
   return (
@@ -88,8 +89,8 @@ export default function App() {
             <div className="download">
               <CardTemplate templateUrl={template} name={name} />
               <ResizeImage image={image} />
-              <DownloadButton image={image} template={template} />
             </div>
+			<DownloadButton image={image} template={template} />
           </div>
         </div>
       </div>
