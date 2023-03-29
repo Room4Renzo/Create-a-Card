@@ -51,7 +51,7 @@ export default function App() {
 								<div className="card-image">
 									<figure className="image">
 										<img
-											src={require("./assets/images/Navigation/LeftArrow.svg")}
+											src={require("./assets/images/Navigation/PointLeft.png")}
 										/>
 									</figure>
 								</div>
@@ -88,17 +88,17 @@ export default function App() {
 							<TextWrapper
 								name={name}
 								handleChange={handleChange}
-
 							/>
 							{/* <ResizableElements /> */}
 						</div>
 					</div>
 					<div className="column is-6">
-
-					<h1>Your card</h1>
-					<CardTemplate templateUrl={template} name={name} />
-					<ResizeImage image={image} />
-					{/* <DownloadButton /> */}
+						<CardTemplate
+							templateUrl={template}
+							name={name}
+						/>
+						<ResizeImage image={image} />
+						{/* <DownloadButton /> */}
 					</div>
 				</div>
 			</div>

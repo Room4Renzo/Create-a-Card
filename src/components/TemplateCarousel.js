@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import "./TemplateCarousel.css";
+import React, { useState, useEffect, Fragment } from "react";
+import "./CarouselTest.css";
 import TemplateData from "../data/TemplateData";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
@@ -7,10 +7,10 @@ import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 function TemplateCarousel(props) {
 	// const [activeIndex, setActiveIndex] = useState(0);
 	const [activeImage, setActiveImage] = useState(0);
-	const currentTemplate = TemplateData[activeIndex];
+	const currentTemplate = TemplateData[activeImage];
 
 	const [clicked, setClicked] = useState(false);
-	const [uploadTemplate, setUploadTemplate] = useState(TemplateData[0]);
+	const [uploadImage, setUploadImage] = useState("");
 
 	useEffect(() => {
 		const interval = setInterval(() => {
@@ -24,15 +24,14 @@ function TemplateCarousel(props) {
 	});
 
 	const onClick = () => {
-		console.log("Clicked");
 		setClicked(true);
-		setUploadTemplate(currentTemplate);
+		setUploadImage(currentTemplate);
 		props.onClickTemplate(currentTemplate);
 		console.log(activeImage);
 	};
 
 	return (
-		<div className="right">
+		<div>
 			<div className="carousel">
 				<div
 					className="inner"
@@ -45,12 +44,10 @@ function TemplateCarousel(props) {
 						onClick={() => {
 							if (activeImage > 0) {
 								setActiveImage(activeImage - 1);
-							}
-							else {
+							} else {
 								setActiveImage(TemplateData.length - 1);
 							}
-						}
-					}
+						}}
 					>
 						<ArrowBackIosNewIcon style={{ fontSize: 30 }} />
 					</div>
@@ -64,12 +61,10 @@ function TemplateCarousel(props) {
 						onClick={() => {
 							if (activeImage < TemplateData.length - 1) {
 								setActiveImage(activeImage + 1);
-							}
-							else {
+							} else {
 								setActiveImage(0);
 							}
 						}}
-						
 					>
 						<ArrowForwardIosIcon
 							style={{
@@ -79,6 +74,7 @@ function TemplateCarousel(props) {
 					</div>
 				</div>
 			</div>
+			{/* {clicked ? <img src={uploadImage} /> : <div></div>} */}
 		</div>
 	);
 }
