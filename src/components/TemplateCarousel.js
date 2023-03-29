@@ -7,7 +7,7 @@ import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 function TemplateCarousel(props) {
 	// const [activeIndex, setActiveIndex] = useState(0);
 	const [activeImage, setActiveImage] = useState(0);
-	const currentTemplate = TemplateData[activeIndex];
+	const currentTemplate = TemplateData[activeImage];
 
 	const [clicked, setClicked] = useState(false);
 	const [uploadImage, setUploadImage] = useState("");
@@ -17,7 +17,7 @@ function TemplateCarousel(props) {
 			if (activeImage < TemplateData.length - 1) {
 				setActiveImage(activeImage + 1);
 			} else {
-				setActiveIndex(0);
+				setActiveImage(0);
 			}
 		}, 3600);
 		return () => clearInterval(interval);
@@ -25,7 +25,7 @@ function TemplateCarousel(props) {
 
 	const onClick = () => {
 		setClicked(true);
-		setUploadTemplate(currentTemplate);
+		setUploadImage(currentTemplate);
 		props.onClickTemplate(currentTemplate);
 		console.log(activeImage);
 	};
@@ -36,7 +36,7 @@ function TemplateCarousel(props) {
 				<div
 					className="inner"
 					style={{
-						backgroundImage: `url(${currentImage})`,
+						backgroundImage: `url(${currentTemplate})`,
 					}}
 				>
 					<div
@@ -78,4 +78,4 @@ function TemplateCarousel(props) {
 		</div>
 	);
 }
-export default Carousel;
+export default TemplateCarousel;
