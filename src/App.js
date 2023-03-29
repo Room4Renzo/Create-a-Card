@@ -16,6 +16,7 @@ import TextWrapper from "./components/ResizableElements.jsx";
 import CategoryDropdown from "./components/CategoryDropdown.jsx";
 import { identifier } from "@babel/types";
 import TemplateData from "./data/TemplateData";
+import CarouselData from "./data/CarouselData.js";
 
 export default function App() {
   const [name, setName] = useState("");
@@ -55,6 +56,7 @@ export default function App() {
             </div>
           </div>
 
+
           <div className="column is-2">
             <div className="card is-shadowless">
               <div className="content">
@@ -88,4 +90,5 @@ export default function App() {
       </div>
     </Router>
   );
+
 }
