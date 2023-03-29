@@ -72,7 +72,7 @@ import Spaceship from "../assets/images/Vehicles/Spaceship.png";
 import UFO from "../assets/images/Vehicles/UFO.png";
 import Yacht from "../assets/images/Vehicles/Yacht.png";
 
-import Birthday from "../assets/images/Templates/Birthday.png";
+import Template1 from "../assets/images/Templates/template1.png";
 
 export const CarouselData = [
 	{
@@ -286,10 +286,10 @@ export const CarouselData = [
 	// 	category: "Smiley",
 	// 	picture: Wink,
 	// },
-	{
-		category: "Templates",
-		picture: Birthday,
-	},
+	// {
+	// 	category: "Templates",
+	// 	picture: Birthday,
+	// },
 	{
 		category: "Text",
 		picture: [
