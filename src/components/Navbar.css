@@ -1,21 +1,31 @@
 .navbar-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    height: 50px;
-    align-items: center;
-    background-color: rgb(186, 205, 228);
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+	height: 50px;
+	align-items: center;
+	background-color: black;
+	font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+		"Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 .navbar-container .nav-link {
-    text-decoration: none;
+	text-decoration: none;
+	color: white;
+	font-size: 20px;
 }
 
+p {
+	color: white;
+	font-size: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
 
 @media only screen and (max-width: 576px) {
-    .navbar-container {
-        display: none;
-    }
-  };
-    
+	.navbar-container {
+		display: none;
+	}
+} ;
