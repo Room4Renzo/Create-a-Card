@@ -16,8 +16,8 @@ import ResizableElements from "./components/ResizableElements.jsx";
 import FontDropdown from "./components/FontDropdown";
 import { Box } from "@mui/system";
 import TextWrapper from "./components/ResizableElements.jsx";
-
 import { identifier } from "@babel/types";
+import TemplateData from "./data/TemplateData";
 
 export default function App() {
 	const [name, setName] = useState("");

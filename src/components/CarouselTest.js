@@ -3,8 +3,6 @@ import "./CarouselTest.css";
 import CarouselData from "../data/CarouselData";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-import ResizeImage from "./ResizeImage";
-import CardTemplate from "./CardTemplate";
 import {
 	Box,
 	List,
@@ -157,7 +155,12 @@ function Carousel(props) {
 					<div
 						className="carousel-left"
 						onClick={() => {
-							if (activeImage > 0) setActiveImage(activeImage - 1);
+							if (activeImage > 0) {
+								setActiveImage(activeImage - 1);
+							}
+							else {
+								setActiveImage(activeCategory.length - 1);
+							}
 						}}
 					>
 						<ArrowBackIosNewIcon style={{ fontSize: 30 }} />
@@ -185,7 +188,6 @@ function Carousel(props) {
 					</div>
 				</div>
 			</div>
-			{/* {clicked ? <img src={uploadImage} /> : <div></div>} */}
 		</div>
 	);
 }
