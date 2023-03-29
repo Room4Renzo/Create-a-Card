@@ -89,7 +89,7 @@ export default function App() {
 								name={name}
 								handleChange={handleChange}
 
-							/> */}
+							/>
 							{/* <ResizableElements /> */}
 						</div>
 					</div>
