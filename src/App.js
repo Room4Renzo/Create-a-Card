@@ -33,49 +33,41 @@ export default function App() {
 		<Router>
 			<Header />
 			<div className="container is-fluid">
-				<div className="columns">
+				<div className="columns is-vcentered">
 					<div className="column is-5">
-						<h1 className="title">Create your own card</h1>
+						{/* <h1 className="title is-size-2">Create your own card</h1> */}
 						<TemplateCarousel
 							onClickTemplate={(template) => setTemplateUrl(template)}
 						/>
 						<Carousel onClickImage={(image) => setImageUrl(image)} />
-						<h2>pick a font</h2>
-						<FontDropdown />
 					</div>
+
 					<div className="column is-2">
-						<div className="card">
-							<figure className="image">
-								<img
-									src={require("./assets/images/Navigation/PointLeft.png")}
-								/>
-							</figure>
-							<div className="content">Pick an image here.</div>
+						<div className="card is-shadowless">
+							<div className="content">
+								<h2 className="is-size-2">← Pick an image here</h2>
+							</div>
 						</div>
 
-						<div className="card">
-							<figure className="image">
-								<img
-									src={require("./assets/images/Navigation/PointRight.png")}
-								/>
-							</figure>
-							<div className="content">Design your card here.</div>
+						<div className="card is is-shadowless">
+							<div className="content">
+								<h2 className="is-size-2">Design your card here →</h2>
+							</div>
 						</div>
 
-						<div className="card">
-							<figure className="image">
-								<img
-									src={require("./assets/images/Navigation/PointDown.png")}
-								/>
-							</figure>
+						<div className="card is-shadowless">
+							<div className="content">
+								<h2 className="is-size-2">Enter Text Here ↓</h2>
+							</div>
+
+							<TextWrapper
+								name={name}
+								handleChange={handleChange}
+							/>
+
+							<CategoryDropdown />
 						</div>
 					</div>
-					<TextWrapper
-						name={name}
-						handleChange={handleChange}
-					/>
-					<ResizableElements />
-					<CategoryDropdown />
 				</div>
 			</div>
 			<div className="column is-6">
@@ -83,8 +75,8 @@ export default function App() {
 					templateUrl={template}
 					name={name}
 				/>
+
 				<ResizeImage image={image} />
-				{/* <DownloadButton /> */}
 			</div>
 		</Router>
 	);
