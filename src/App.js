@@ -32,7 +32,7 @@ export default function App() {
 	return (
 		<Router>
 			<Header />
-			<div className="container is-fluid">
+			<div className="container">
 				<div className="columns is-vcentered">
 					<div className="column is-5">
 						{/* <h1 className="title is-size-2">Create your own card</h1> */}
@@ -65,15 +65,12 @@ export default function App() {
 							/> */}
 
 							{/* <ResizableElements /> */}
-
 						</div>
 					</div>
 				</div>
 			</div>
 			<div className="column is-6">
-				<CardTemplate
-					templateUrl={template}
-				/>
+				<CardTemplate templateUrl={template} />
 				<ResizeImage image={image} />
 			</div>
 		</Router>

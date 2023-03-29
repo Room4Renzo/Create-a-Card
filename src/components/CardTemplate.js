@@ -3,7 +3,9 @@ import "./CardTemplate.css";
 const CardTemplate = (props) => {
 	return (
 		<div className="rectangle">
-			<img src={props.templateUrl} />
+			<figure>
+				<img src={props.templateUrl} />
+			</figure>
 		</div>
 	);
 };
