@@ -5,9 +5,8 @@ import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 
 function TemplateCarousel(props) {
-	// const [activeIndex, setActiveIndex] = useState(0);
 	const [activeImage, setActiveImage] = useState(0);
-	const currentTemplate = TemplateData[activeIndex];
+	const currentTemplate = TemplateData[activeImage];
 
 	const [clicked, setClicked] = useState(false);
 	const [uploadTemplate, setUploadTemplate] = useState(TemplateData[0]);
@@ -45,12 +44,10 @@ function TemplateCarousel(props) {
 						onClick={() => {
 							if (activeImage > 0) {
 								setActiveImage(activeImage - 1);
-							}
-							else {
+							} else {
 								setActiveImage(TemplateData.length - 1);
 							}
-						}
-					}
+						}}
 					>
 						<ArrowBackIosNewIcon style={{ fontSize: 30 }} />
 					</div>
@@ -64,12 +61,10 @@ function TemplateCarousel(props) {
 						onClick={() => {
 							if (activeImage < TemplateData.length - 1) {
 								setActiveImage(activeImage + 1);
-							}
-							else {
+							} else {
 								setActiveImage(0);
 							}
 						}}
-						
 					>
 						<ArrowForwardIosIcon
 							style={{
