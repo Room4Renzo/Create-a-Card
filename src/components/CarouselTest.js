@@ -157,7 +157,12 @@ function Carousel(props) {
 					<div
 						className="carousel-left"
 						onClick={() => {
-							if (activeImage > 0) setActiveImage(activeImage - 1);
+							if (activeImage > 0) {
+								setActiveImage(activeImage - 1);
+							}
+							else {
+								setActiveImage(activeCategory.length - 1);
+							}
 						}}
 					>
 						<ArrowBackIosNewIcon style={{ fontSize: 30 }} />
