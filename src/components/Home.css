@@ -1,0 +1,35 @@
+@import "bulma/css/bulma.css";
+
+.app-container {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	width: 100%;
+}
+
+.left-container {
+	display: grid;
+	flex-direction: column;
+	width: 60%;
+}
+
+.download {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.title {
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+h2 {
+	justify-content: center;
+	align-items: center;
+}
+
+.card {
+	color: white;
+}

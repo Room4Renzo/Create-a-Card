@@ -1,25 +1,19 @@
 import React from "react";
-import { toJpeg, toPng } from "html-to-image";
 import "./DownloadButton.css";
-import mergeImages from 'merge-images';
+import html2canvas from "html2canvas"
 
 const downloadImage = (dataUrl) => {
   const a = document.createElement("a");
-  a.setAttribute("download", "my-card.jpg");
+  a.setAttribute("download", "my-card.png");
   a.setAttribute("href", dataUrl);
   a.click();
 };
 
-const DownloadButton = (props) => {
-
+const DownloadButton = () => {
   const onClick = () => {
-
-    mergeImages([props.template, props.image]).then(
-      (b64) => (document.querySelector("img").src = b64)
-    );
-
-    let toExport = document.querySelector("img");
-    toPng(toExport).then(downloadImage);
+    html2canvas(document.querySelector(".card-to-display")).then((canvas) => {
+      downloadImage(canvas.toDataURL("image/png"));
+    });
   };
 
   return (
