@@ -25,7 +25,7 @@
     "re-resizable": "^6.9.9",
     "react": "^18.2.0",
     "react-alice-carousel": "^2.7.0",
-    "react-bootstrap": "^2.7.2",
+    "react-colorful": "^5.6.1",
     "react-dom": "^18.2.0",
     "react-dropdown": "^1.11.0",
     "react-rnd": "^10.4.1",
