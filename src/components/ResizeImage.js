@@ -13,7 +13,7 @@ const ResizeImage = (props) => {
   <Rnd
     default={{
       x: 0,
-      y: 0,
+      y: -400,
       width: {width},
       height: {height}
     }}

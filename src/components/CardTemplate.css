@@ -8,11 +8,13 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	margin: 50px;
 }
 
 .rectangle-template img {
-	max-height: 600px;
-	max-width: 420px;
+	max-height: 700px;
+	max-width: 520px;
 	position: absolute;
 	align-self: center;
+	margin-top: 40px;
 }
