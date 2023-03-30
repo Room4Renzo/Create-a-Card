@@ -14,6 +14,7 @@ import FontDropdown from "./FontDropdown";
 import CategoryDropdown from "./CategoryDropdown.jsx";
 import { identifier } from "@babel/types";
 import TemplateData from "../data/TemplateData";
+import CarouselData from "../data/CarouselData";
 
 const Home = () => {
   const [name, setName] = useState("");
@@ -25,8 +26,8 @@ const Home = () => {
     setMessage(event.target.value);
   };
 
-  const [image, setImageUrl] = useState();
-  const [template, setTemplateUrl] = useState();
+  const [image, setImageUrl] = useState(CarouselData[Math.floor(Math.random()*CarouselData.length)].picture[0]);
+  const [template, setTemplateUrl] = useState(TemplateData[Math.floor(Math.random()*TemplateData.length)]);
   return (
     <div className="container is-fluid">
       <div className="columns is-vcentered">
