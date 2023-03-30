@@ -32,10 +32,11 @@ const Home = () => {
     <div className="container is-fluid">
       <div className="columns is-vcentered">
         <div className="column is-5">
-          {/* <h1 className="title is-size-2">Create your own card</h1> */}
+          <h1 className="category">Template</h1>
           <TemplateCarousel
             onClickTemplate={(template) => setTemplateUrl(template)}
           />
+           <h1 className="category">Image</h1>
           <Carousel onClickImage={(image) => setImageUrl(image)} />
         </div>
 
@@ -65,6 +66,7 @@ const Home = () => {
           </div>
         </div>
       <div className="column is-6">
+      <h1 className="category">Design</h1>
         <div className="card-to-display">
           <CardTemplate templateUrl={template} />
           <ResizeImage image={image} />
