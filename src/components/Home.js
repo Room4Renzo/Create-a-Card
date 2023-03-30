@@ -14,19 +14,13 @@ import FontDropdown from "./FontDropdown";
 import CategoryDropdown from "./CategoryDropdown.jsx";
 import { identifier } from "@babel/types";
 import TemplateData from "../data/TemplateData";
+import TextInput from "./TextInput";
 
 const Home = () => {
-  const [name, setName] = useState("");
-  const [message, setMessage] = useState("");
-
-  const handleChange = (event) => {
-    console.log(event.target.value);
-    setName(event.target.value);
-    setMessage(event.target.value);
-  };
-
+  const [message, setMessage] = useState();
   const [image, setImageUrl] = useState();
   const [template, setTemplateUrl] = useState();
+
   return (
     <div className="container is-fluid">
       <div className="columns is-vcentered">
@@ -51,21 +45,18 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="card is-shadowless">
+          <div className="is-shadowless">
             <div className="content">
               <h2 className="is-size-2">Enter Text Here ↓</h2>
+              <TextInput onCard={(message) => setMessage(message)}/>
+      
             </div>
-            {/* <TextInput
-        name="name"
-        handleChange={handleChange}
-    /> */}
-
             {/* <ResizableElements /> */}
           </div>
         </div>
       <div className="column is-6">
         <div className="card-to-display">
-          <CardTemplate templateUrl={template} />
+          <CardTemplate templateUrl={template} message={message}/>
           <ResizeImage image={image} />
         </div>
         <DownloadButton />
