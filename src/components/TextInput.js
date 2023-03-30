@@ -5,10 +5,9 @@ const TextInput = (props) => {
 	const [display, setDisplay] = useState(false);
 	
 	const handleChange = (event) => {
-		setMessage(event.target.value);
-		setDisplay(true);
-		props.onCard(message);
-		console.log("Message", message);
+			setMessage(event.target.value);
+			setDisplay(true);
+			props.onCard(message);
 	};
 
 	return (
@@ -17,6 +16,7 @@ const TextInput = (props) => {
 				type="text"
 				value={message}
 				onChange={handleChange}
+				style={{ color: props.color }}
 			/>
 			{/* {display ? <div>{message}</div> : <></>} */}
 		</div>

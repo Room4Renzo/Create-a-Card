@@ -34,6 +34,8 @@ const Home = () => {
   const [template, setTemplateUrl] = useState(
     TemplateData[Math.floor(Math.random() * TemplateData.length)]
   );
+const [textColor, setTextColor] = useState('black');
+
   return (
     <div className="container is-fluid">
       <div className="columns is-vcentered">
@@ -51,7 +53,7 @@ const Home = () => {
             <div className="content">
             <div>
               <h1 className="category">Message</h1>
-              <TextInput onCard={(message) => setMessage(message)}/>
+              <TextInput onCard={(message) => setMessage(message)} />
             </div>
             </div>
           </div>
@@ -68,17 +70,18 @@ const Home = () => {
             <div className="content">
             <div>
               <h1 className="category">Colors</h1>
-              <ColorPicker />
+              <ColorPicker onChange={(color) => setTextColor(color)}/>
             </div>
             </div>
            
           </div>
         </div>
       <div className="column is-6">
+      <h1 className="category">Design</h1>
         <div className="card-to-display">
-        <h1 className="category">Design</h1>
-          <CardTemplate templateUrl={template} message={message}/>
+          <CardTemplate templateUrl={template} message={message} />
           <ResizeImage image={image} />
+          <DownloadButton />
         </div>
       </div>
       </div>
