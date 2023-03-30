@@ -14,52 +14,72 @@ import FontDropdown from "./FontDropdown";
 import CategoryDropdown from "./CategoryDropdown.jsx";
 import { identifier } from "@babel/types";
 import TemplateData from "../data/TemplateData";
+import CarouselData from "../data/CarouselData";
+import ColorPicker from "./ColorPicker";
 import TextInput from "./TextInput";
 
 const Home = () => {
-  const [message, setMessage] = useState();
-  const [image, setImageUrl] = useState();
-  const [template, setTemplateUrl] = useState();
+  const [name, setName] = useState("");
+  const [message, setMessage] = useState("");
 
+  const handleChange = (event) => {
+    console.log(event.target.value);
+    setName(event.target.value);
+    setMessage(event.target.value);
+  };
+
+  const [image, setImageUrl] = useState(
+    CarouselData[Math.floor(Math.random() * CarouselData.length)].picture[0]
+  );
+  const [template, setTemplateUrl] = useState(
+    TemplateData[Math.floor(Math.random() * TemplateData.length)]
+  );
   return (
     <div className="container is-fluid">
       <div className="columns is-vcentered">
         <div className="column is-5">
-          {/* <h1 className="title is-size-2">Create your own card</h1> */}
+          <h1 className="category">Template</h1>
           <TemplateCarousel
             onClickTemplate={(template) => setTemplateUrl(template)}
           />
+          <h1 className="category">Image</h1>
           <Carousel onClickImage={(image) => setImageUrl(image)} />
         </div>
 
-        <div className="column is-2">
+        <div className="column is-2 middle">
           <div className="card is-shadowless">
             <div className="content">
-              <h2 className="is-size-2">← Pick an image here</h2>
+            <div>
+              <h1 className="category">Message</h1>
+              <TextInput onCard={(message) => setMessage(message)}/>
+            </div>
             </div>
           </div>
 
           <div className="card is is-shadowless">
             <div className="content">
-              <h2 className="is-size-2">Design your card here →</h2>
+            <div>
+              <h1 className="category">Fonts</h1>
+            </div>
             </div>
           </div>
 
           <div className="is-shadowless">
             <div className="content">
-              <h2 className="is-size-2">Enter Text Here ↓</h2>
-              <TextInput onCard={(message) => setMessage(message)}/>
-      
+            <div>
+              <h1 className="category">Colors</h1>
+              <ColorPicker />
             </div>
-            {/* <ResizableElements /> */}
+            </div>
+           
           </div>
         </div>
       <div className="column is-6">
         <div className="card-to-display">
+        <h1 className="category">Design</h1>
           <CardTemplate templateUrl={template} message={message}/>
           <ResizeImage image={image} />
         </div>
-        <DownloadButton />
       </div>
       </div>
 

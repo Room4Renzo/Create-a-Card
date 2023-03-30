@@ -1,35 +1,47 @@
 @import "bulma/css/bulma.css";
+@import url('https://fonts.googleapis.com/css2?family=Alkatra&display=swap');
 
-.app-container {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	width: 100%;
-}
-
-.left-container {
-	display: grid;
-	flex-direction: column;
-	width: 60%;
-}
-
-.download {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+.columns.is-vcentered {
+	align-items: flex-start;
 }
 
 .title {
 	justify-content: center;
 	align-items: center;
 	text-align: center;
+	font-size: 50px;
+	font-family: 'Alkatra', cursive;
 }
 
-h2 {
+.category {
 	justify-content: center;
 	align-items: center;
+	font-family: 'Alkatra', cursive;
+	font-size: 32px;
+	margin-top: 40px;
+	font-weight: bold;
 }
 
 .card {
 	color: white;
+}
+
+.content h2 {
+	font-size: 20px !important;
+	margin-top: 30px;
+}
+
+.extras {
+	display: flex;
+	gap: 30px;
+
+}
+
+.middle {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 30px;
+	margin: 10px 40px;
+	
 }
