@@ -8,6 +8,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	z-index: 0;
 }
 
 .rectangle-template img {
@@ -15,4 +16,17 @@
 	max-width: 420px;
 	position: absolute;
 	align-self: center;
+}
+.text-input {
+	z-index: 1;
+	position: absolute;
+	width: 420px;
+	height: 600px;
+	background-color: transparent;
+	border: none;
+	color: black;
+	font-size: 30px;
+	font-family: "Roboto", sans-serif;
+	font-weight: 300;
+	text-align: center;
 }

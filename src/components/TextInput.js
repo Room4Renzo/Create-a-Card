@@ -1,14 +1,11 @@
 import { useState, useRef, useEffect } from "react";
 
-
-const handleChange = (event) => {
-	const [name, setName] = useState("");
-	setMessage(event.target.value);
-	setName(event.target.value);
-};
-
 const TextInput = (props) => {
-	const [state, setState] = useState();
+	const [name, setName] = useState("");
+
+	const handleChange = (event) => {
+		setName(event.target.value);
+	};
 
 	return (
 		<div>
@@ -16,7 +13,6 @@ const TextInput = (props) => {
 			<input
 				type="text"
 				name={props.name}
-				value={message}
 				onChange={handleChange}
 			/>
 		</div>
