@@ -1,31 +1,24 @@
 import { useState, useRef, useEffect } from "react";
 
-// const TextInput = () => {
-// const inputRef = useRef();
-
-// useEffect(() => {
-// 	inputRef.current.focus();
-// }, []);
-
-
-
-	const handleChange = (event) => {
-		setName(event.target.value);
-		setMessage(event.target.value);
-	};
-
 const TextInput = (props) => {
-	const [state, setState] = useState();
+	const [message, setMessage] = useState('Happy Birthday!');
+	const [display, setDisplay] = useState(false);
+	
+	const handleChange = (event) => {
+		setMessage(event.target.value);
+		setDisplay(true);
+		props.onCard(message);
+		console.log("Message", message);
+	};
 
 	return (
 		<div>
-			<p>{props.name}</p>
 			<input
 				type="text"
-				name={props.name}
 				value={message}
 				onChange={handleChange}
 			/>
+			{/* {display ? <div>{message}</div> : <></>} */}
 		</div>
 	);
 };

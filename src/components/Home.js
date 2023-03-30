@@ -16,6 +16,7 @@ import { identifier } from "@babel/types";
 import TemplateData from "../data/TemplateData";
 import CarouselData from "../data/CarouselData";
 import ColorPicker from "./ColorPicker";
+import TextInput from "./TextInput";
 
 const Home = () => {
   const [name, setName] = useState("");
@@ -43,12 +44,6 @@ const Home = () => {
           />
           <h1 className="category">Image</h1>
           <Carousel onClickImage={(image) => setImageUrl(image)} />
-
-          <div className="extras">
-            
-            
-            
-          </div>
         </div>
 
         <div className="column is-2 middle">
@@ -56,6 +51,7 @@ const Home = () => {
             <div className="content">
             <div>
               <h1 className="category">Message</h1>
+              <TextInput onCard={(message) => setMessage(message)}/>
             </div>
             </div>
           </div>
@@ -68,25 +64,25 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="card is-shadowless">
+          <div className="is-shadowless">
             <div className="content">
             <div>
               <h1 className="category">Colors</h1>
               <ColorPicker />
             </div>
             </div>
+           
           </div>
         </div>
-
-        <div className="column is-6">
-          <h1 className="category">Design</h1>
-          <div className="card-to-display">
-            <CardTemplate templateUrl={template} />
-            <ResizeImage image={image} />
-          </div>
-          <DownloadButton />
+      <div className="column is-6">
+        <div className="card-to-display">
+        <h1 className="category">Design</h1>
+          <CardTemplate templateUrl={template} message={message}/>
+          <ResizeImage image={image} />
         </div>
       </div>
+      </div>
+
     </div>
   );
 };
