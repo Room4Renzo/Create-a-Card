@@ -72,8 +72,6 @@ import Spaceship from "../assets/images/Vehicles/Spaceship.png";
 import UFO from "../assets/images/Vehicles/UFO.png";
 import Yacht from "../assets/images/Vehicles/Yacht.png";
 
-import Template1 from "../assets/images/Templates/template1.png";
-
 export const CarouselData = [
 	{
 		category: "animals",
@@ -91,46 +89,6 @@ export const CarouselData = [
 			WolfHowl,
 		],
 	},
-	// {
-	// 	category: "animals",
-	// 	picture: Chicks,
-	// },
-	// {
-	// 	category: "animals",
-	// 	picture: Deer,
-	// },
-	// {
-	// 	category: "animals",
-	// 	picture: Dog,
-	// },
-	// {
-	// 	category: "animals",
-	// 	picture: Fox,
-	// },
-	// {
-	// 	category: "animals",
-	// 	picture: Horse,
-	// },
-	// {
-	// 	category: "animals",
-	// 	picture: Kitten,
-	// },
-	// {
-	// 	category: "animals",
-	// 	picture: KittenHug,
-	// },
-	// {
-	// 	category: "animals",
-	// 	picture: Panther,
-	// },
-	// {
-	// 	category: "animals",
-	// 	picture: Tiger,
-	// },
-	// {
-	// 	category: "animals",
-	// 	picture: WolfHowl,
-	// },
 	{
 		category: "Cartoon",
 		picture: [
@@ -146,62 +104,10 @@ export const CarouselData = [
 			WinnieFriends,
 		],
 	},
-	// {
-	// 	category: "Cartoon",
-	// 	picture: Bulbasaur,
-	// },
-	// {
-	// 	category: "Cartoon",
-	// 	picture: Dora,
-	// },
-	// {
-	// 	category: "Cartoon",
-	// 	picture: Grasshopper,
-	// },
-	// {
-	// 	category: "Cartoon",
-	// 	picture: Mickey,
-	// },
-	// {
-	// 	category: "Cartoon",
-	// 	picture: Pig,
-	// },
-	// {
-	// 	category: "Cartoon",
-	// 	picture: Pikachu,
-	// },
-	// {
-	// 	category: "Cartoon",
-	// 	picture: Simba,
-	// },
-	// {
-	// 	category: "Cartoon",
-	// 	picture: SpongeBob,
-	// },
-	// {
-	// 	category: "Cartoon",
-	// 	picture: WinnieFriends,
-	// },
 	{
 		category: "Holiday",
 		picture: [Beach, BeachLandscape, CoconutDrink, Sunshine, SunSpikes],
 	},
-	// {
-	// 	category: "Holiday",
-	// 	picture: BeachLandscape,
-	// },
-	// {
-	// 	category: "Holiday",
-	// 	picture: CoconutDrink,
-	// },
-	// {
-	// 	category: "Holiday",
-	// 	picture: Sunshine,
-	// },
-	// {
-	// 	category: "Holiday",
-	// 	picture: SunSpikes,
-	// },
 	{
 		category: "Misc",
 		picture: [
@@ -213,38 +119,10 @@ export const CarouselData = [
 			Rainbow,
 		],
 	},
-	// {
-	// 	category: "Misc",
-	// 	picture: FamilySilhouette,
-	// },
-	// {
-	// 	category: "Misc",
-	// 	picture: LightsBig,
-	// },
-	// {
-	// 	category: "Misc",
-	// 	picture: LightsSmall,
-	// },
-	// {
-	// 	category: "Misc",
-	// 	picture: LightsMed,
-	// },
-	// {
-	// 	category: "Misc",
-	// 	picture: Rainbow,
-	// },
 	{
 		category: "Nature",
 		picture: [ArtTree, TreeGlow, TreeRocks],
 	},
-	// {
-	// 	category: "Nature",
-	// 	picture: TreeGlow,
-	// },
-	// {
-	// 	category: "Nature",
-	// 	picture: TreeRocks,
-	// },
 	{
 		category: "Smiley",
 		picture: [
@@ -258,38 +136,6 @@ export const CarouselData = [
 			Wink,
 		],
 	},
-	// {
-	// 	category: "Smiley",
-	// 	picture: BlowKiss,
-	// },
-	// {
-	// 	category: "Smiley",
-	// 	picture: Kisses,
-	// },
-	// {
-	// 	category: "Smiley",
-	// 	picture: LoveHearts,
-	// },
-	// {
-	// 	category: "Smiley",
-	// 	picture: Sunglasses,
-	// },
-	// {
-	// 	category: "Smiley",
-	// 	picture: SunGrin,
-	// },
-	// {
-	// 	category: "Smiley",
-	// 	picture: SunSmile,
-	// },
-	// {
-	// 	category: "Smiley",
-	// 	picture: Wink,
-	// },
-	// {
-	// 	category: "Templates",
-	// 	picture: Birthday,
-	// },
 	{
 		category: "Text",
 		picture: [
@@ -310,94 +156,10 @@ export const CarouselData = [
 			TrueLove,
 		],
 	},
-	// {
-	// 	category: "Text",
-	// 	picture: HappyBirthday,
-	// },
-	// {
-	// 	category: "Text",
-	// 	picture: HappyHolidays,
-	// },
-	// {
-	// 	category: "Text",
-	// 	picture: HappyNewYear,
-	// },
-	// {
-	// 	category: "Text",
-	// 	picture: LoveBalloon,
-	// },
-	// {
-	// 	category: "Text",
-	// 	picture: LoveBig,
-	// },
-	// {
-	// 	category: "Text",
-	// 	picture: LoveBirds,
-	// },
-	// {
-	// 	category: "Text",
-	// 	picture: LoveBubble,
-	// },
-	// {
-	// 	category: "Text",
-	// 	picture: LoveCursive,
-	// },
-	// {
-	// 	category: "Text",
-	// 	picture: LoveFlower,
-	// },
-	// {
-	// 	category: "Text",
-	// 	picture: LoveHeart,
-	// },
-	// {
-	// 	category: "Text",
-	// 	picture: LoveHeartBalloon,
-	// },
-	// {
-	// 	category: "Text",
-	// 	picture: LoveStory,
-	// },
-	// {
-	// 	category: "Text",
-	// 	picture: NeedLove,
-	// },
-	// {
-	// 	category: "Text",
-	// 	picture: TrueLove,
-	// },
 	{
 		category: "Vehicles",
 		picture: [Boat, CarRed, Car, Rocket, Ship, Spaceship, UFO, Yacht],
 	},
-	// {
-	// 	category: "Vehicles",
-	// 	picture: CarRed,
-	// },
-	// {
-	// 	category: "Vehicles",
-	// 	picture: Car,
-	// },
-	// {
-	// 	category: "Vehicles",
-	// 	picture: Rocket,
-	// },
-	// {
-	// 	category: "Vehicles",
-	// 	picture: Ship,
-	// },
-	// {
-	// 	category: "Vehicles",
-	// 	picture: Spaceship,
-	// },
-	// {
-	// 	category: "Vehicles",
-	// 	picture: UFO,
-	// },
-	// {
-	// 	category: "Vehicles",
-	// 	picture: Yacht,
-	// },
 ];
 
 export default CarouselData;
