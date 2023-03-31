@@ -11,7 +11,7 @@ const FontPicker = (props) => {
   
     const handleChange = (event) => {
       setFont(event.target.value);
-      props.fontChange(font);
+      props.style(font)
     };
   
     return (
