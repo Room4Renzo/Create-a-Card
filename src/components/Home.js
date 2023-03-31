@@ -17,16 +17,17 @@ import TemplateData from "../data/TemplateData";
 import CarouselData from "../data/CarouselData";
 import ColorPicker from "./ColorPicker";
 import TextInput from "./TextInput";
+import FontPicker from "./FontPicker";
 
 const Home = () => {
-  const [name, setName] = useState("");
+  // const [name, setName] = useState("");
   const [message, setMessage] = useState("");
 
-  const handleChange = (event) => {
-    console.log(event.target.value);
-    setName(event.target.value);
-    setMessage(event.target.value);
-  };
+  // const handleChange = (event) => {
+  //   console.log(event.target.value);
+  //   setName(event.target.value);
+  //   setMessage(event.target.value);
+  // };
 
   const [image, setImageUrl] = useState(
     CarouselData[Math.floor(Math.random() * CarouselData.length)].picture[0]
@@ -35,6 +36,7 @@ const Home = () => {
     TemplateData[Math.floor(Math.random() * TemplateData.length)]
   );
 const [textColor, setTextColor] = useState('black');
+const [textFont, setTextFont] = useState('Arial');
 
   return (
     <div className="container is-fluid">
@@ -62,6 +64,7 @@ const [textColor, setTextColor] = useState('black');
             <div className="content">
             <div>
               <h1 className="category">Fonts</h1>
+              <FontPicker />
             </div>
             </div>
           </div>
