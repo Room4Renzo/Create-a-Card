@@ -64,7 +64,7 @@ const [textFont, setTextFont] = useState('Arial');
             <div className="content">
             <div>
               <h1 className="category">Fonts</h1>
-              <FontPicker />
+              <FontPicker onChange={(font) => setTextFont(font)}/>
             </div>
             </div>
           </div>
@@ -73,7 +73,7 @@ const [textFont, setTextFont] = useState('Arial');
             <div className="content">
             <div>
               <h1 className="category">Colors</h1>
-              <ColorPicker onChange={(color) => setTextColor(color)}/>
+              <ColorPicker onChange={(color) => setTextColor(color)} />
             </div>
             </div>
            
