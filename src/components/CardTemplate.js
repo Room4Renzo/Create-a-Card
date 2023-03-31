@@ -6,7 +6,7 @@ const CardTemplate = (props) => {
         <div className = "head-image">
 		<img src={props.templateUrl} />
         </div>
-          <div class='text-on-image'>
+          <div class='text-on-image' style={{ color: props.color }}>
              <h3> {props.message} </h3>
           </div>
 		  </div>

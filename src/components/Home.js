@@ -34,7 +34,9 @@ const Home = () => {
   const [template, setTemplateUrl] = useState(
     TemplateData[Math.floor(Math.random() * TemplateData.length)]
   );
-const [textColor, setTextColor] = useState('black');
+
+  const [textColor, setTextColor] = useState();
+  console.log("TextColor", textColor);
 
   return (
     <div className="container is-fluid">
@@ -51,41 +53,39 @@ const [textColor, setTextColor] = useState('black');
         <div className="column is-2 middle">
           <div className="card is-shadowless">
             <div className="content">
-            <div>
-              <h1 className="category">Message</h1>
-              <TextInput onCard={(message) => setMessage(message)} />
-            </div>
+              <div>
+                <h1 className="category">Message</h1>
+                <TextInput onCard={(message) => setMessage(message)} color={textColor}/>
+              </div>
             </div>
           </div>
 
           <div className="card is is-shadowless">
             <div className="content">
-            <div>
-              <h1 className="category">Fonts</h1>
-            </div>
+              <div>
+                <h1 className="category">Fonts</h1>
+              </div>
             </div>
           </div>
 
           <div className="is-shadowless">
             <div className="content">
-            <div>
-              <h1 className="category">Colors</h1>
-              <ColorPicker onChange={(color) => setTextColor(color)}/>
+              <div>
+                <h1 className="category">Colors</h1>
+                <ColorPicker setTextColor={(textColor) => setTextColor(textColor)}/>
+              </div>
             </div>
-            </div>
-           
           </div>
         </div>
-      <div className="column is-6">
-      <h1 className="category">Design</h1>
-        <div className="card-to-display">
-          <CardTemplate templateUrl={template} message={message} />
-          <ResizeImage image={image} />
-          <DownloadButton />
+        <div className="column is-6">
+          <h1 className="category">Design</h1>
+          <div className="card-to-display">
+            <CardTemplate templateUrl={template} message={message} color={textColor}/>
+            <ResizeImage image={image} />
+            <DownloadButton />
+          </div>
         </div>
       </div>
-      </div>
-
     </div>
   );
 };
