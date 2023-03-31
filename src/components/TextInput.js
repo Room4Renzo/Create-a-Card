@@ -16,7 +16,7 @@ const TextInput = (props) => {
 				type="text"
 				value={message}
 				onChange={handleChange}
-				style={{ color: props.color }}
+				style={{color: props.color}}
 			/>
 			{/* {display ? <div>{message}</div> : <></>} */}
 		</div>
