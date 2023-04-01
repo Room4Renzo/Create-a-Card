@@ -4,14 +4,13 @@ import * as React from 'react';
   import FormControl from '@mui/material/FormControl';
   import Select, { SelectChangeEvent } from '@mui/material/Select';
   import { useState } from 'react';
-  import { Typography } from '@mui/material';
 
 const FontPicker = (props) => {
     const [font, setFont] = useState('');
   
     const handleChange = (event) => {
       setFont(event.target.value);
-      props.style(font)
+      props.onFontChange(font);
     };
   
     return (

@@ -35,8 +35,9 @@ const Home = () => {
   const [template, setTemplateUrl] = useState(
     TemplateData[Math.floor(Math.random() * TemplateData.length)]
   );
+
 const [textColor, setTextColor] = useState('black');
-const [textFont, setTextFont] = useState('Arial');
+const [textFont, setTextFont] = useState('Verdana');
 
   return (
     <div className="container is-fluid">
@@ -55,7 +56,7 @@ const [textFont, setTextFont] = useState('Arial');
             <div className="content">
             <div>
               <h1 className="category">Message</h1>
-              <TextInput onCard={(message) => setMessage(message)} />
+              <TextInput onTextChange={(message) => setMessage(message)} />
             </div>
             </div>
           </div>
@@ -64,7 +65,7 @@ const [textFont, setTextFont] = useState('Arial');
             <div className="content">
             <div>
               <h1 className="category">Fonts</h1>
-              <FontPicker onChange={(font) => setTextFont(font)}/>
+              <FontPicker onFontChange={(font) => setTextFont(font)}/>
             </div>
             </div>
           </div>
@@ -82,7 +83,7 @@ const [textFont, setTextFont] = useState('Arial');
       <div className="column is-6">
       <h1 className="category">Design</h1>
         <div className="card-to-display">
-          <CardTemplate templateUrl={template} message={message} />
+          <CardTemplate templateUrl={template} message={message} font={textFont} color={textColor}/>
           <ResizeImage image={image} />
           <DownloadButton />
         </div>
