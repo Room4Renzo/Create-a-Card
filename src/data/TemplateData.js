@@ -10,19 +10,18 @@ import Template9 from "../assets/images/Templates/template9.png";
 import Template10 from "../assets/images/Templates/template10.png";
 import Template11 from "../assets/images/Templates/template11.png";
 
-
 export const TemplateData = [
-  Template1,
-  Template2,
-  Template3,
-  Template4,
-  Template5,
-  Template6,
-  Template7,
-  Template8,
-  Template9,
-  Template10, 
-  Template11
+	Template1,
+	Template2,
+	Template3,
+	Template4,
+	Template5,
+	Template6,
+	Template7,
+	Template8,
+	Template9,
+	Template10,
+	Template11,
 ];
 
 export default TemplateData;
