@@ -40,7 +40,7 @@ const Home = () => {
 	return (
 		<div className="container is-fluid">
 			<div className="columns is-vcentered">
-				<div className="column is-5">
+				<div className="column is-6">
 					<h1 className="category">Template</h1>
 					<TemplateCarousel
 						className="element"
