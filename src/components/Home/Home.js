@@ -5,10 +5,8 @@ import TemplateCarousel from "../TemplateCarousel/TemplateCarousel";
 import Carousel from "../Carousel/Carousel";
 import CardTemplate from "../CardTemplate/CardTemplate";
 import ResizeImage from "../ResizeImage/ResizeImage";
+import ResizeText from "../ResizeText/ResizeText";
 import DownloadButton from "../DownloadButton/DownloadButton";
-import FontDropdown from "../FontChange/FontDropdown";
-import CategoryDropdown from "../FontChange/CategoryDropdown";
-import { identifier } from "@babel/types";
 import TemplateData from "../../data/TemplateData";
 import CarouselData from "../../data/CarouselData";
 import ColorPicker from "../ColorPicker/ColorPicker";
@@ -92,12 +90,12 @@ const Home = () => {
           <div className="card-to-display">
             <CardTemplate
               templateUrl={template}
-              message={message}
-              color={textColor}
-              fontSize={fontSize}
-              font={textFont}
             />
             <ResizeImage image={image} />
+			<ResizeText message={message}
+              color={textColor}
+              fontSize={fontSize}
+              font={textFont}/>
             <DownloadButton />
           </div>
         </div>
