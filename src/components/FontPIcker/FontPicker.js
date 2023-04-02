@@ -9,9 +9,7 @@ const FontPicker = (props) => {
     const [font, setFont] = useState('');
   
     const handleChange = (event) => {
-      console.log("setting font to ", event.target.value);
       setFont(event.target.value);
-      console.log("set font to ", event.target.value, " result ", font);
       props.onFontChange(event.target.value); 
     };
   
