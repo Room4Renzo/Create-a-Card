@@ -13,6 +13,7 @@ import TemplateData from "../../data/TemplateData";
 import CarouselData from "../../data/CarouselData";
 import ColorPicker from "../ColorPicker/ColorPicker";
 import TextInput from "../TextInput/TextInput";
+import FontSizePicker from "../FontSizeChange/FontSizePicker";
 
 const Home = () => {
 	const [name, setName] = useState("");
@@ -32,6 +33,7 @@ const Home = () => {
 	);
 
 	const [textColor, setTextColor] = useState();
+	const [fontSize, setFontSize] = useState(14);
 	console.log("TextColor", textColor);
 
 	return (
@@ -77,6 +79,18 @@ const Home = () => {
 							</div>
 						</div>
 					</div>
+
+					<div className="is-shadowless">
+						<div className="content">
+							<div>
+								<h1 className="category">Font Sizes</h1>
+								<FontSizePicker
+									onFontSizeChange={(fontSize) => setFontSize(fontSize)}
+								/>
+							</div>
+						</div>
+					</div>
+
 				</div>
 				<div className="column is-6">
 					<h1 className="category">Design</h1>
@@ -85,6 +99,7 @@ const Home = () => {
 							templateUrl={template}
 							message={message}
 							color={textColor}
+							fontSize={fontSize}
 						/>
 						<ResizeImage image={image} />
 						<DownloadButton />

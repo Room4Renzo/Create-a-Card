@@ -8,7 +8,7 @@ const CardTemplate = (props) => {
 			</div>
 			<div
 				class="text-on-image"
-				style={{ color: props.color }}
+				style={{ color: props.color, fontSize: props.fontSize }}
 			>
 				<h3> {props.message} </h3>
 			</div>
