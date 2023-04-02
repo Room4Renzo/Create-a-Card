@@ -33,6 +33,21 @@
 	border: 0.3em solid black;
 }
 
+.card-to-display {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.card-template {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+}
+
 .card {
 	color: black;
 }

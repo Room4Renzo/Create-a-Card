@@ -3,6 +3,7 @@
 	height: 600px;
 	align-items: center;
 	justify-content: center;
+	position: fixed;
 }
 
 .rectangle-template img {
@@ -10,19 +11,20 @@
 	max-width: 520px;
 	position: absolute;
 	align-self: center;
+	position: fixed;
+	top: 5%;
+	right: 10%;
 }
-
 
 .head-text {
 	position: relative;
- }
+}
 
- .text-on-image {
-   position: absolute;
-   width: 40%;
-   margin: 20px;
-   right: 20%;
-   left: 20%;
-   top: 20%;
- }
- 
+.text-on-image {
+	position: absolute;
+	width: 40%;
+	margin: 20px;
+	right: 20%;
+	left: 20%;
+	top: 20%;
+}

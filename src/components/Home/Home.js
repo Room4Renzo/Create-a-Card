@@ -21,12 +21,17 @@ import FontPicker from "../FontPIcker/FontPicker";
 
 const Home = () => {
 	const [message, setMessage] = useState("");
-	const [image, setImageUrl] = useState(
-		CarouselData[Math.floor(Math.random() * CarouselData.length)].picture[0]
-	);
-	const [template, setTemplateUrl] = useState(
-		TemplateData[Math.floor(Math.random() * TemplateData.length)]
-	);
+	const [image, setImageUrl] = useState(0);
+	const [template, setTemplateUrl] = useState(0);
+
+	function setRandom() {
+		setImageUrl(
+			CarouselData[Math.floor(Math.random() * CarouselData.length)].picture[0]
+		);
+		setTemplateUrl(
+			TemplateData[Math.floor(Math.random() * TemplateData.length)].template[0]
+		);
+	}
 
 	const [textColor, setTextColor] = useState();
 	const [fontSize, setFontSize] = useState(14);
@@ -74,7 +79,10 @@ const Home = () => {
 				<div className="column is-6">
 					<h1 className="category">Design</h1>
 					<div className="card-to-display">
-						<CardTemplate templateUrl={template} />
+						<CardTemplate
+							className="card-template"
+							templateUrl={template}
+						/>
 						<ResizeImage image={image} />
 						<ResizeText
 							message={message}
