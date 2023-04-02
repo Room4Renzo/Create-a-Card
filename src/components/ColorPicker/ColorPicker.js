@@ -5,9 +5,7 @@ const ColorPicker = (props) => {
   const [color, setColor] = useState("#aabbcc");
   
   const onClick = () => {
-    console.log("Clicked");
-    console.log("Color", color);
-    props.setTextColor(color);
+    props.onColorChange(color);
   }
 
   return <HexColorPicker color={color} onChange={setColor} onClick={onClick}/>;

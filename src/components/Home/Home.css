@@ -1,5 +1,5 @@
 @import "bulma/css/bulma.css";
-@import url('https://fonts.googleapis.com/css2?family=Alkatra&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Alkatra&display=swap");
 
 .columns.is-vcentered {
 	align-items: flex-start;
@@ -10,20 +10,31 @@
 	align-items: center;
 	text-align: center;
 	font-size: 50px;
-	font-family: 'Alkatra', cursive;
+	font-family: "Alkatra", cursive;
 }
 
 .category {
 	justify-content: center;
 	align-items: center;
-	font-family: 'Alkatra', cursive;
+	font-family: "Alkatra", cursive;
 	font-size: 32px;
 	margin-top: 40px;
 	font-weight: bold;
+	border: 0.1em solid black;
+	color: black;
+	text-align: center;
+}
+
+.element {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border: 0.3em solid black;
 }
 
 .card {
-	color: white;
+	color: black;
 }
 
 .content h2 {
@@ -34,7 +45,6 @@
 .extras {
 	display: flex;
 	gap: 30px;
-
 }
 
 .middle {
@@ -43,5 +53,4 @@
 	justify-content: center;
 	gap: 30px;
 	margin: 10px 40px;
-	
 }
