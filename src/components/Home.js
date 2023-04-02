@@ -10,9 +10,6 @@ import CardTemplate from "./CardTemplate";
 import ResizeImage from "./ResizeImage";
 import DownloadButton from "./DownloadButton";
 // import "bulma/css/bulma.css";
-import FontDropdown from "./FontDropdown";
-import CategoryDropdown from "./CategoryDropdown.jsx";
-import { identifier } from "@babel/types";
 import TemplateData from "../data/TemplateData";
 import CarouselData from "../data/CarouselData";
 import ColorPicker from "./ColorPicker";
@@ -36,8 +33,9 @@ const Home = () => {
     TemplateData[Math.floor(Math.random() * TemplateData.length)]
   );
 
-const [textColor, setTextColor] = useState('black');
-const [textFont, setTextFont] = useState('Verdana');
+  const [textColor, setTextColor] = useState("black");
+  const [textFont, setTextFont] = useState("Arial");
+  console.log("text font on change", textFont);
 
   return (
     <div className="container is-fluid">
@@ -54,42 +52,45 @@ const [textFont, setTextFont] = useState('Verdana');
         <div className="column is-2 middle">
           <div className="card is-shadowless">
             <div className="content">
-            <div>
-              <h1 className="category">Message</h1>
-              <TextInput onTextChange={(message) => setMessage(message)} />
-            </div>
+              <div>
+                <h1 className="category">Message</h1>
+                <TextInput onTextChange={(message) => setMessage(message)} />
+              </div>
             </div>
           </div>
 
           <div className="card is is-shadowless">
             <div className="content">
-            <div>
-              <h1 className="category">Fonts</h1>
-              <FontPicker onFontChange={(font) => setTextFont(font)}/>
-            </div>
+              <div>
+                <h1 className="category">Fonts</h1>
+                <FontPicker onFontChange={(font) => setTextFont(font)} />
+              </div>
             </div>
           </div>
 
           <div className="is-shadowless">
             <div className="content">
-            <div>
-              <h1 className="category">Colors</h1>
-              <ColorPicker onChange={(color) => setTextColor(color)} />
+              <div>
+                <h1 className="category">Colors</h1>
+                <ColorPicker onChange={(color) => setTextColor(color)} />
+              </div>
             </div>
-            </div>
-           
           </div>
         </div>
-      <div className="column is-6">
-      <h1 className="category">Design</h1>
-        <div className="card-to-display">
-          <CardTemplate templateUrl={template} message={message} font={textFont} color={textColor}/>
-          <ResizeImage image={image} />
-          <DownloadButton />
+        <div className="column is-6">
+          <h1 className="category">Design</h1>
+          <div className="card-to-display">
+            <CardTemplate
+              templateUrl={template}
+              message={message}
+              font={textFont}
+              color={textColor}
+            />
+            <ResizeImage image={image} />
+            <DownloadButton />
+          </div>
         </div>
       </div>
-      </div>
-
     </div>
   );
 };
