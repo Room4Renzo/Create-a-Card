@@ -10,6 +10,8 @@ import CardTemplate from "../CardTemplate/CardTemplate";
 import ResizeImage from "../ResizeImage/ResizeImage";
 import ResizeText from "../ResizeText/ResizeText";
 import DownloadButton from "../DownloadButton/DownloadButton";
+// import "bulma/css/bulma.css";
+
 import TemplateData from "../../data/TemplateData";
 import CarouselData from "../../data/CarouselData";
 import ColorPicker from "../ColorPicker/ColorPicker";
