@@ -1,29 +1,30 @@
+// import ResizableElements from "./components/ResizableElements.jsx";
+// import { Resizable } from "re-resizable";
 import { useState } from "react";
 import "./Home.css";
 
 import TemplateCarousel from "../TemplateCarousel/TemplateCarousel";
 import Carousel from "../Carousel/Carousel";
+
 import CardTemplate from "../CardTemplate/CardTemplate";
 import ResizeImage from "../ResizeImage/ResizeImage";
 import DownloadButton from "../DownloadButton/DownloadButton";
-import FontDropdown from "../FontChange/FontDropdown";
-import CategoryDropdown from "../FontChange/CategoryDropdown";
-import { identifier } from "@babel/types";
+// import "bulma/css/bulma.css";
 import TemplateData from "../../data/TemplateData";
 import CarouselData from "../../data/CarouselData";
 import ColorPicker from "../ColorPicker/ColorPicker";
 import TextInput from "../TextInput/TextInput";
-import FontSizePicker from "../FontSizeChange/FontSizePicker";
+import FontPicker from "../FontChange/FontPicker";
 
 const Home = () => {
-	const [name, setName] = useState("");
+	// const [name, setName] = useState("");
 	const [message, setMessage] = useState("");
 
-	const handleChange = (event) => {
-		console.log(event.target.value);
-		setName(event.target.value);
-		setMessage(event.target.value);
-	};
+	// const handleChange = (event) => {
+	//   console.log(event.target.value);
+	//   setName(event.target.value);
+	//   setMessage(event.target.value);
+	// };
 
 	const [image, setImageUrl] = useState(
 		CarouselData[Math.floor(Math.random() * CarouselData.length)].picture[0]
@@ -32,9 +33,9 @@ const Home = () => {
 		TemplateData[Math.floor(Math.random() * TemplateData.length)]
 	);
 
-	const [textColor, setTextColor] = useState();
-	const [fontSize, setFontSize] = useState(14);
-	console.log("TextColor", textColor);
+	const [textColor, setTextColor] = useState("black");
+	const [textFont, setTextFont] = useState("Arial");
+	console.log("text font on change", textFont);
 
 	return (
 		<div className="container is-fluid">
@@ -53,10 +54,7 @@ const Home = () => {
 						<div className="content">
 							<div>
 								<h1 className="category">Message</h1>
-								<TextInput
-									onCard={(message) => setMessage(message)}
-									color={textColor}
-								/>
+								<TextInput onTextChange={(message) => setMessage(message)} />
 							</div>
 						</div>
 					</div>
@@ -65,6 +63,7 @@ const Home = () => {
 						<div className="content">
 							<div>
 								<h1 className="category">Fonts</h1>
+								<FontPicker onFontChange={(font) => setTextFont(font)} />
 							</div>
 						</div>
 					</div>
@@ -73,24 +72,10 @@ const Home = () => {
 						<div className="content">
 							<div>
 								<h1 className="category">Colors</h1>
-								<ColorPicker
-									setTextColor={(textColor) => setTextColor(textColor)}
-								/>
+								<ColorPicker onChange={(color) => setTextColor(color)} />
 							</div>
 						</div>
 					</div>
-
-					<div className="is-shadowless">
-						<div className="content">
-							<div>
-								<h1 className="category">Font Sizes</h1>
-								<FontSizePicker
-									onFontSizeChange={(fontSize) => setFontSize(fontSize)}
-								/>
-							</div>
-						</div>
-					</div>
-
 				</div>
 				<div className="column is-6">
 					<h1 className="category">Design</h1>
@@ -98,8 +83,8 @@ const Home = () => {
 						<CardTemplate
 							templateUrl={template}
 							message={message}
+							font={textFont}
 							color={textColor}
-							fontSize={fontSize}
 						/>
 						<ResizeImage image={image} />
 						<DownloadButton />
