@@ -47,34 +47,17 @@ const Home = () => {
 					/>
 					<h1 className="category">Image</h1>
 					<Carousel onClickImage={(image) => setImageUrl(image)} />
-				</div>
-
-				<div className="column is-2 middle">
-					<div className="card is-shadowless">
-						<div className="content">
-							<div>
-								<h1 className="category">Message</h1>
-								<TextInput onTextChange={(message) => setMessage(message)} />
-							</div>
-						</div>
+					<div>
+						<h1 className="category card is-shadowless">Message</h1>
+						<TextInput onTextChange={(message) => setMessage(message)} />
 					</div>
-
-					<div className="card is is-shadowless">
-						<div className="content">
-							<div>
-								<h1 className="category">Fonts</h1>
-								<FontPicker onFontChange={(font) => setTextFont(font)} />
-							</div>
-						</div>
+					<div>
+						<h1 className="category card is-shadowless">Fonts</h1>
+						<FontPicker onFontChange={(font) => setTextFont(font)} />
 					</div>
-
-					<div className="is-shadowless">
-						<div className="content">
-							<div>
-								<h1 className="category">Colors</h1>
-								<ColorPicker onChange={(color) => setTextColor(color)} />
-							</div>
-						</div>
+					<div>
+						<h1 className="category card is-shadowless">Colors</h1>
+						<ColorPicker onChange={(color) => setTextColor(color)} />
 					</div>
 				</div>
 				<div className="column is-6">
