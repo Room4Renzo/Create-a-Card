@@ -1,8 +1,8 @@
-import React, { useState, useEffect, Fragment } from "react";
-import "./CarouselTest.css";
-import CarouselData from "../data/CarouselData";
+import { useState, useEffect, Fragment } from "react";
+import "./Carousel.css";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import CarouselData from "../../data/CarouselData";
 import {
 	Box,
 	List,
@@ -155,8 +155,7 @@ function Carousel(props) {
 						onClick={() => {
 							if (activeImage > 0) {
 								setActiveImage(activeImage - 1);
-							}
-							else {
+							} else {
 								setActiveImage(activeCategory.length - 1);
 							}
 						}}

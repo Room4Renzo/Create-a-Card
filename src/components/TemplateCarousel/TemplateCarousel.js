@@ -1,9 +1,8 @@
 import React, { useState, useEffect, Fragment } from "react";
-import "./CarouselTest.css";
-import TemplateData from "../data/TemplateData";
+import "../Carousel/Carousel.css";
+import TemplateData from "../../data/TemplateData";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-import template1 from "../assets/images/Templates/template1.png";
 
 function TemplateCarousel(props) {
 	const [activeImage, setActiveImage] = useState(0);

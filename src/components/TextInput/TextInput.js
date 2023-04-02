@@ -16,6 +16,10 @@ const TextInput = (props) => {
 				type="text"
 				value={message}
 				onChange={handleChange}
+<<<<<<< HEAD:src/components/TextInput.js
+=======
+				style={{color: props.color}}
+>>>>>>> main:src/components/TextInput/TextInput.js
 			/>
 		</div>
 	);

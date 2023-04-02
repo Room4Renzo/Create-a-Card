@@ -1,5 +1,4 @@
 import "./ResizeImage.css";
-import React from "react";
 import { Rnd } from "react-rnd";
 import { useState } from 'react';
 
