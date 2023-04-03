@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Alkatra&display=swap");
+body {
+	width: 100%;
+}
 
 .navbar-container {
 	display: flex;

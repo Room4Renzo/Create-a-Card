@@ -2,6 +2,7 @@
 // import { Resizable } from "re-resizable";
 import { useState } from "react";
 import "./Home.css";
+import Navbar from "../Navbar/Navbar";
 
 import TemplateCarousel from "../TemplateCarousel/TemplateCarousel";
 import Carousel from "../Carousel/Carousel";
@@ -39,6 +40,7 @@ const Home = () => {
 
 	return (
 		<div className="container is-fluid">
+			<Navbar className="navbar" />
 			<div className="columns is-vcentered">
 				<div className="column is-6">
 					<h1 className="category">Template</h1>
@@ -77,7 +79,6 @@ const Home = () => {
 				</div>
 
 				<div className="column is-6">
-					<h1 className="category">Design</h1>
 					<div className="card-to-display">
 						<CardTemplate
 							className="card-template"
