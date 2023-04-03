@@ -1,24 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Alkatra&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Alkatra&display=swap");
+body {
+	width: 100%;
+}
 
 .navbar-container {
 	display: flex;
-	justify-content: center;
+	justify-content: flex-start;
 	gap: 20px;
 	height: 50px;
 	align-items: center;
 	background-color: black;
 	height: 130px;
 	width: 100%;
-	font-family: 'Alkatra', cursive;
+	font-family: "Alkatra", cursive;
 	font-size: 50px;
 }
 
 p {
 	color: white;
-	font-size: 40px;
+	font-size: 80px;
 	display: flex;
-	justify-content: center;
+	justify-content: left;
 	align-items: center;
 	text-align: center;
 }
-
