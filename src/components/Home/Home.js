@@ -14,14 +14,16 @@ import TextInput from "../TextInput/TextInput";
 import FontSizePicker from "../FontSizePicker/FontSizePicker";
 import FontPicker from "../FontPIcker/FontPicker";
 import TemplateOrientation from "../TemplateOrientation/TemplateOrientation";
+import TemplateDataPortrait from "../../data/TemplateDataPortrait";
 
 const Home = () => {
   const [message, setMessage] = useState("");
+  
   const [image, setImageUrl] = useState(
     CarouselData[Math.floor(Math.random() * CarouselData.length)].picture[0]
   );
   const [template, setTemplateUrl] = useState(
-    TemplateData[Math.floor(Math.random() * TemplateData.length)]
+    TemplateDataPortrait[Math.floor(Math.random() * TemplateDataPortrait.length)]
   );
 
   const [textColor, setTextColor] = useState();
