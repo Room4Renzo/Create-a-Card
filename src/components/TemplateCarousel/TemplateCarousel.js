@@ -1,21 +1,34 @@
-import React, { useState, useEffect, Fragment } from "react";
+import React, { useState, useEffect } from "react";
 import "../Carousel/Carousel.css";
-import TemplateData from "../../data/TemplateData";
+import TemplateDataPortrait from "../../data/TemplateDataPortrait";
+import TemplateDataLandscape from "../../data/TemplateDataLandscape";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import TemplateData from "../../data/TemplateData";
 
 function TemplateCarousel(props) {
 	const [activeImage, setActiveImage] = useState(0);
-	const currentTemplate = TemplateData[activeImage];
+	let currentTemplate;
+	let TemplateData;
+if (props.orientation === 'portrait') {
+	currentTemplate = TemplateDataPortrait[activeImage];
+	TemplateData = TemplateDataPortrait;
+}
+else {
+	currentTemplate = TemplateDataLandscape[activeImage];
+	TemplateData = TemplateDataLandscape;
+}
+
+	
 	const [clicked, setClicked] = useState(false);
 
 	useEffect(() => {
 		const interval = setInterval(() => {
-			if (activeImage < TemplateData.length - 1) {
-				setActiveImage(activeImage + 1);
-			} else {
-				setActiveImage(0);
-			}
+				if (activeImage < TemplateData.length - 1) {
+					setActiveImage(activeImage + 1);
+				} else {
+					setActiveImage(0);
+				}
 		}, 3600);
 		return () => clearInterval(interval);
 	});

@@ -13,6 +13,7 @@ import ColorPicker from "../ColorPicker/ColorPicker";
 import TextInput from "../TextInput/TextInput";
 import FontSizePicker from "../FontSizePicker/FontSizePicker";
 import FontPicker from "../FontPIcker/FontPicker";
+import TemplateOrientation from "../TemplateOrientation/TemplateOrientation";
 
 const Home = () => {
   const [message, setMessage] = useState("");
@@ -26,14 +27,16 @@ const Home = () => {
   const [textColor, setTextColor] = useState();
   const [fontSize, setFontSize] = useState(14);
   const [textFont, setTextFont] = useState("Arial");
+  const [orientation, setOrientation] = useState("portrait");
 
   return (
     <div className="container is-fluid">
       <div className="columns is-vcentered">
         <div className="column is-5">
           <h1 className="category">Template</h1>
+		  <TemplateOrientation onOrientationChange={(orientation) => setOrientation(orientation)}/>
           <TemplateCarousel
-            onClickTemplate={(template) => setTemplateUrl(template)}
+            onClickTemplate={(template) => setTemplateUrl(template)} orientation={orientation}
           />
           <h1 className="category">Image</h1>
           <Carousel onClickImage={(image) => setImageUrl(image)} />
