@@ -13,20 +13,26 @@ import ColorPicker from "../ColorPicker/ColorPicker";
 import TextInput from "../TextInput/TextInput";
 import FontSizePicker from "../FontSizePicker/FontSizePicker";
 import FontPicker from "../FontPIcker/FontPicker";
+import TemplateOrientation from "../TemplateOrientation/TemplateOrientation";
+import TemplateDataPortrait from "../../data/TemplateDataPortrait";
+
 import Category from "../Category/Category";
 
 const Home = () => {
   const [message, setMessage] = useState("");
+  
   const [image, setImageUrl] = useState(
     CarouselData[Math.floor(Math.random() * CarouselData.length)].picture[0]
   );
   const [template, setTemplateUrl] = useState(
-    TemplateData[Math.floor(Math.random() * TemplateData.length)]
+    TemplateDataPortrait[Math.floor(Math.random() * TemplateDataPortrait.length)]
   );
 
   const [textColor, setTextColor] = useState();
   const [fontSize, setFontSize] = useState(14);
   const [textFont, setTextFont] = useState("Arial");
+  const [orientation, setOrientation] = useState("portrait");
+
   const [category, setCategory] = useState('animals');
 
   return (
@@ -34,8 +40,9 @@ const Home = () => {
       <div className="columns is-vcentered">
         <div className="column is-5">
           <h1 className="category">Template</h1>
+		  <TemplateOrientation onOrientationChange={(orientation) => setOrientation(orientation)}/>
           <TemplateCarousel
-            onClickTemplate={(template) => setTemplateUrl(template)}
+            onClickTemplate={(template) => setTemplateUrl(template)} orientation={orientation}
           />
 		<h1 className="category">Category</h1>
          <Category onCategoryChange={(category) => setCategory(category)}/>			
