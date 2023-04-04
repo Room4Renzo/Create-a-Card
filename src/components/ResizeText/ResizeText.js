@@ -11,8 +11,8 @@ const ResizeText = (props) => {
     <div className="rectangle-image">
   <Rnd
     default={{
-      x: 0,
-      y: -400,
+      x: 200,
+      y: -300,
       width: {width},
       height: {height}
     }}

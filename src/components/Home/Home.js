@@ -96,8 +96,9 @@ const Home = () => {
               color={textColor}
               fontSize={fontSize}
               font={textFont}/>
-            <DownloadButton />
           </div>
+		  <div> <DownloadButton /></div>
+		 
         </div>
       </div>
     </div>
