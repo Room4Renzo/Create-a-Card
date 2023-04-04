@@ -13,6 +13,7 @@ import ColorPicker from "../ColorPicker/ColorPicker";
 import TextInput from "../TextInput/TextInput";
 import FontSizePicker from "../FontSizePicker/FontSizePicker";
 import FontPicker from "../FontPIcker/FontPicker";
+import FontWeightPicker from "../FontWeight/FontWeight";
 
 const Home = () => {
   const [message, setMessage] = useState("");
@@ -26,6 +27,7 @@ const Home = () => {
   const [textColor, setTextColor] = useState();
   const [fontSize, setFontSize] = useState(14);
   const [textFont, setTextFont] = useState("Arial");
+  const [fontWeight, setFontWeight] = useState(400);
 
   return (
     <div className="container is-fluid">
@@ -73,6 +75,17 @@ const Home = () => {
             </div>
           </div>
 
+		  <div className="is-shadowless">
+            <div className="content">
+              <div>
+                <h1 className="category">Font Weights</h1>
+                <FontWeightPicker
+                  onFontWeightChange={(fontWeight) => setFontWeight(fontWeight)}
+                />
+              </div>
+            </div>
+          </div>
+
           <div className="is-shadowless">
             <div className="content">
               <div>
@@ -95,7 +108,8 @@ const Home = () => {
 			<ResizeText message={message}
               color={textColor}
               fontSize={fontSize}
-              font={textFont}/>
+              font={textFont}
+			  fontWeight={fontWeight}/>
             <DownloadButton />
           </div>
         </div>

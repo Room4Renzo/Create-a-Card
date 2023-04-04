@@ -24,9 +24,9 @@ const ResizeText = (props) => {
   >
 			<div
 				class="text-on-image"
-				style={{ color: props.color, fontSize: props.fontSize, fontFamily: props.font }}
+				style={{ color: props.color, fontSize: props.fontSize, fontFamily: props.font, fontWeight: props.fontWeight }}
 			>
-				<h3> {props.message} </h3>
+				{props.message}
 			</div>
   </Rnd>
   </div>

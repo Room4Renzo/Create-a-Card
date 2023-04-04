@@ -4,6 +4,7 @@ import * as React from 'react';
   import FormControl from '@mui/material/FormControl';
   import Select from '@mui/material/Select';
   import { useState } from 'react';
+  import Fonts from '../../data/FontData';
 
 const FontPicker = (props) => {
     const [font, setFont] = useState('');
@@ -23,15 +24,9 @@ const FontPicker = (props) => {
             label="font"
             onChange={handleChange}
             style={{fontFamily: font }}
+            defaultValue='arial'
           >
-            <MenuItem value="Arial" style={{fontFamily: "Arial" }}>Arial</MenuItem>
-            <MenuItem value="Tahoma" style={{fontFamily: "Tahoma" }}>Tahoma</MenuItem>
-            <MenuItem value="Courier New" style={{fontFamily: "Courier New" }}>Courier New</MenuItem>
-            <MenuItem value="Trebuchet MS" style={{fontFamily:" Trebuchet MS" }}>Trebuchet MS</MenuItem>
-            <MenuItem value="Garamond" style={{fontFamily:" Garamond" }}>Garamond</MenuItem>
-            <MenuItem value="Georgia" style={{fontFamily: "Georgia" }}>Georgia</MenuItem>
-            <MenuItem value="Times New Roman" style={{fontFamily: "Times New Roman" }}>Times New Roman</MenuItem>
-            <MenuItem value="Verdana" style={{fontFamily: "Verdana"}}>Verdana</MenuItem>
+            {Fonts.map((font) => <MenuItem key={font} value={font} style={{fontFamily: font}}>{font}</MenuItem>)}
           </Select>
         </FormControl>
          
