@@ -1,9 +1,9 @@
-import Lato from "assets/fonts/Lato/Lato-Regular.ttf";
-import Montserrat from "assets/fonts/Montserrat/Montserrat-Regular.ttf";
-import OpenSans from "assets/fonts/Open_Sans/OpenSans-VariableFont_wdthwght.ttf";
-import Oswald from "assets/fonts/Oswald/Oswald-VariableFont_wght.ttf";
-import Poppins from "assets/fonts/Poppins/Poppins-Regular.ttf";
-import Raleway from "assets/fonts/Raleway/Raleway-VariableFont_wght.ttf";
-import Roboto from "assets/fonts/Roboto/Roboto-Regular.ttf";
-import RobotoCondesed from "assets/fonts/Roboto_Condensed/RobotoCondensed-Regular.ttf";
-import SourceSansPro from "assets/fonts/Source_Sans_Pro/SourceSansPro-Regular.ttf";
+const Fonts = [
+    "Arial", "Tahoma", "Courier  New",
+    "Trebuchet MS", "Garamond", "Georgia",
+    "Verdana",
+    "Copperplate",
+    "Papyrus", "Helvetica", "Monaco", "	Brush Script MT", 
+]
+
+export default Fonts;
