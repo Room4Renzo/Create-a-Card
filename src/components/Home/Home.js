@@ -16,6 +16,8 @@ import FontPicker from "../FontPIcker/FontPicker";
 import TemplateOrientation from "../TemplateOrientation/TemplateOrientation";
 import TemplateDataPortrait from "../../data/TemplateDataPortrait";
 
+import Category from "../Category/Category";
+
 const Home = () => {
   const [message, setMessage] = useState("");
   
@@ -31,6 +33,8 @@ const Home = () => {
   const [textFont, setTextFont] = useState("Arial");
   const [orientation, setOrientation] = useState("portrait");
 
+  const [category, setCategory] = useState('animals');
+
   return (
     <div className="container is-fluid">
       <div className="columns is-vcentered">
@@ -40,8 +44,10 @@ const Home = () => {
           <TemplateCarousel
             onClickTemplate={(template) => setTemplateUrl(template)} orientation={orientation}
           />
+		<h1 className="category">Category</h1>
+         <Category onCategoryChange={(category) => setCategory(category)}/>			
           <h1 className="category">Image</h1>
-          <Carousel onClickImage={(image) => setImageUrl(image)} />
+          <Carousel onClickImage={(image) => setImageUrl(image)} category={category}/>
         </div>
 
         <div className="column is-2 middle">

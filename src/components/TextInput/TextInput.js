@@ -1,4 +1,7 @@
 import { useState, useRef, useEffect } from "react";
+import * as React from 'react';
+import Box from '@mui/material/Box';
+import TextField from '@mui/material/TextField';
 
 const TextInput = (props) => {
 	const [message, setMessage] = useState('Happy Birthday!');
@@ -7,18 +10,23 @@ const TextInput = (props) => {
 	const handleChange = (event) => {
 			setMessage(event.target.value);
 			setDisplay(true);
-			props.onTextChange(message);
+			props.onTextChange(event.target.value);
 	};
 
 	return (
-		<div>
-			<input
-				type="text"
-				value={message}
-				onChange={handleChange}
-				style={{color: props.color}}
-			/>
-		</div>
+		<Box
+		component="form"
+		sx={{
+		  '& > :not(style)': { m: 1, width: '25ch' },
+		}}
+		noValidate
+		autoComplete="off"
+	  >
+		<TextField id="outlined-basic" label="Message" variant="outlined"  multiline
+				  value={message}
+				  onChange={handleChange}
+				  style={{color: props.color}}/>
+	  </Box>
 	);
 };
 export default TextInput;

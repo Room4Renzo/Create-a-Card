@@ -27,7 +27,7 @@ const FontSizePicker = (props) => {
                 value={fontSize}
                 step={1}
                 marks={marks}
-                valueLabelDisplay="on"
+                valueLabelDisplay="off"
                 onChange={handleChange}
               />
           );
