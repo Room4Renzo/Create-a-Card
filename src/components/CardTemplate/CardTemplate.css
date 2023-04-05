@@ -15,14 +15,9 @@
 
 .head-text {
 	position: relative;
+	white-space: pre-wrap;
  }
 
  .text-on-image {
-   position: absolute;
-   width: 40%;
-   margin: 20px;
-   right: 20%;
-   left: 20%;
-   top: 20%;
+	white-space: pre-wrap;
  }
- 
