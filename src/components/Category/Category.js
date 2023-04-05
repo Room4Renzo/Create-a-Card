@@ -19,6 +19,7 @@ const Category = (props) => {
         aria-labelledby="demo-row-radio-buttons-group-label"
         name="row-radio-buttons-group"
         onChange={handleChange}
+        defaultValue='animals'
       >
         <FormControlLabel value="animals" control={<Radio />} label="Animals" />
         <FormControlLabel value="Cartoon" control={<Radio />} label="Cartoons" />

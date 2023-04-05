@@ -53,7 +53,7 @@ const Home = () => {
           <Carousel onClickImage={(image) => setImageUrl(image)} category={category}/>
         </div>
 
-        <div className="column is-2 middle">
+        <div className="column is-3 middle">
           <div className="card is-shadowless">
             <div className="content">
               <div>
