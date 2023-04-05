@@ -1,14 +1,13 @@
 .rectangle-template {
-	width: 420px;
-	height: 600px;
+	width: 450px;
 	align-items: center;
 	justify-content: center;
 }
 
 .rectangle-template img {
 	max-height: 600px;
-	max-width: 520px;
-	position: absolute;
+	max-width: 550px;
+	position: relative;
 	align-self: center;
 }
 
@@ -21,3 +20,7 @@
  .text-on-image {
 	white-space: pre-wrap;
  }
+
+   position: absolute;
+ }
+ 

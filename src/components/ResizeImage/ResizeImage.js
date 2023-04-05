@@ -11,10 +11,14 @@ const ResizeImage = (props) => {
     <div className="rectangle-image">
   <Rnd
     default={{
-      x: 0,
-      y: -400,
-      width: {width},
-      height: {height}
+      x: 100,
+      y: -200,
+      width: width,
+      height: height
+    }}
+    
+    onDrag={e => {
+      e.stopImmediatePropagation();
     }}
     onResize={(e, direction, ref, delta, position) => {
       setWidth(ref.offsetWidth);

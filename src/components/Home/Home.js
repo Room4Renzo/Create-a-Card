@@ -122,8 +122,9 @@ const Home = () => {
               fontSize={fontSize}
               font={textFont}
 			  fontWeight={fontWeight}/>
-            <DownloadButton />
           </div>
+		  <div> <DownloadButton /></div>
+		 
         </div>
       </div>
     </div>
