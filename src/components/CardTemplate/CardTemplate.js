@@ -1,3 +1,4 @@
+import ResizeImage from "../ResizeImage/ResizeImage";
 import "./CardTemplate.css";
 
 const CardTemplate = (props) => {
