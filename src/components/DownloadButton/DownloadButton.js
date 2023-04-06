@@ -1,6 +1,6 @@
 import React from "react";
 import "./DownloadButton.css";
-import html2canvas from "html2canvas"
+import html2canvas from "html2canvas";
 
 const downloadImage = (dataUrl) => {
   const a = document.createElement("a");
@@ -9,17 +9,27 @@ const downloadImage = (dataUrl) => {
   a.click();
 };
 
-const DownloadButton = () => {
+const DownloadButton = (props) => {
   const onClick = () => {
     html2canvas(document.querySelector(".card-to-display")).then((canvas) => {
       downloadImage(canvas.toDataURL("image/png"));
     });
   };
 
+  const clear = () => {
+    props.clearCardImage();
+    props.clearCardMessage();
+  }
+
   return (
-    <button className="download-btn" onClick={onClick}>
-      Download Card
-    </button>
+    <div className="card-buttons">
+      <button className="download-btn" onClick={clear}>
+        Clear Card
+      </button>
+      <button className="download-btn" onClick={onClick}>
+        Download Card
+      </button>
+    </div>
   );
 };
 
