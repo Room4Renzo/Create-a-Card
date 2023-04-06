@@ -1,7 +1,6 @@
 import "./ResizeImage.css";
 import { Rnd } from "react-rnd";
-import { useState } from 'react';
-
+import { useState } from "react";
 
 const ResizeImage = (props) => {
   const [width, setWidth] = useState(200);

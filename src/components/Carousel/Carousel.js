@@ -9,6 +9,7 @@ const category = CarouselData.filter((element) => element.category === props.cat
 
 const [activeImage, setActiveImage] = useState(0);
   const currentImage = category.picture[activeImage];
+  const [clickedImages, setClickedImages] = useState([]);
   const [clicked, setClicked] = useState(false);
 
   useEffect(() => {
@@ -23,9 +24,11 @@ const [activeImage, setActiveImage] = useState(0);
   }, [category]);
 
   const onClick = () => {
-    setClicked(true);
-    props.onClickImage(currentImage);
-    console.log(currentImage);
+    setClicked(true); 
+    const newArray = [...clickedImages, currentImage];
+    setClickedImages(newArray);
+    console.log(newArray);
+    props.onClickImage(newArray);
   };
 
   return (

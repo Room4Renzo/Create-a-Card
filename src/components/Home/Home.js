@@ -23,9 +23,8 @@ import Category from "../Category/Category";
 const Home = () => {
   const [message, setMessage] = useState("");
   
-  const [image, setImageUrl] = useState(
-    CarouselData[Math.floor(Math.random() * CarouselData.length)].picture[0]
-  );
+  const [images, setImageUrls] = useState([]);
+
   const [template, setTemplateUrl] = useState(
     TemplateDataPortrait[Math.floor(Math.random() * TemplateDataPortrait.length)]
   );
@@ -44,13 +43,15 @@ const Home = () => {
         <div className="column is-5">
           <h1 className="category">Template</h1>
 		  <TemplateOrientation onOrientationChange={(orientation) => setOrientation(orientation)}/>
+      
           <TemplateCarousel
             onClickTemplate={(template) => setTemplateUrl(template)} orientation={orientation}
           />
 		<h1 className="category">Category</h1>
          <Category onCategoryChange={(category) => setCategory(category)}/>			
           <h1 className="category">Image</h1>
-          <Carousel onClickImage={(image) => setImageUrl(image)} category={category}/>
+          <h3>Click on image to add it on your card</h3>
+          <Carousel onClickImage={(images) => setImageUrls(images)} category={category}/>
         </div>
 
         <div className="column is-3 middle">
@@ -116,7 +117,8 @@ const Home = () => {
             <CardTemplate
               templateUrl={template}
             />
-            <ResizeImage image={image} />
+            {images.map((url) => <ResizeImage image={url} />)}
+            
 			<ResizeText message={message}
               color={textColor}
               fontSize={fontSize}
