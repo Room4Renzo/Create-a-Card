@@ -6,7 +6,10 @@
 
 Create a Card is an application that allows you to design and share a custom greetings card. A user can choose a template and image, add  a message and download the finished product to share with friends and family.
 
-Technologies: JavaScript, React, CSS, Netlify
+Technologies: JavaScript, React, CSS, Netlify, Material UI
 
-<img width="816" alt="screenshot1" src="https://user-images.githubusercontent.com/84686704/228838015-704b632e-d989-46ac-8feb-e750b9e14509.png
+<img width="816" alt="screenshot1" src="https://user-images.githubusercontent.com/84686704/230482114-07022c49-814e-4c7f-a6e8-44c65fb82053.png
+" width="300">
+
+<img width="816" alt="screenshot1" src="https://user-images.githubusercontent.com/84686704/230482172-83d9fdad-ca96-4d3a-8bee-a60f025b5af4.png
 " width="300">
