@@ -4,10 +4,11 @@
   }
 
   .rectangle-image {
-    display: flex;
+    display: inline-block;
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
+    position: absolute;
   }
 
   .rectangle-image img {

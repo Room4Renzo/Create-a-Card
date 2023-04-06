@@ -1,5 +1,7 @@
 .message-on-card {
     color: black !important;
     background-color: transparent !important;
+    position:relative;
 
+    
 }

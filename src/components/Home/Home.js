@@ -54,7 +54,7 @@ const Home = () => {
           <Carousel onClickImage={(images) => setImageUrls(images)} category={category}/>
         </div>
 
-        <div className="column is-2 middle">
+        <div className="column is-3 middle">
           <div className="card is-shadowless">
             <div className="content">
               <div>
@@ -124,8 +124,9 @@ const Home = () => {
               fontSize={fontSize}
               font={textFont}
 			  fontWeight={fontWeight}/>
-            <DownloadButton />
           </div>
+		  <div> <DownloadButton /></div>
+		 
         </div>
       </div>
     </div>

@@ -1,28 +1,23 @@
 .rectangle-template {
-	width: 420px;
-	height: 600px;
+	width: 450px;
 	align-items: center;
 	justify-content: center;
 }
 
 .rectangle-template img {
 	max-height: 600px;
-	max-width: 520px;
-	position: absolute;
+	max-width: 550px;
+	position: relative;
 	align-self: center;
 }
 
 
 .head-text {
 	position: relative;
+	white-space: pre-wrap;
  }
 
  .text-on-image {
-   position: absolute;
-   width: 40%;
-   margin: 20px;
-   right: 20%;
-   left: 20%;
-   top: 20%;
+	white-space: pre-wrap;
  }
- 
+
