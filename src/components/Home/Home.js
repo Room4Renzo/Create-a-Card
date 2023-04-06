@@ -17,7 +17,7 @@ import FontWeightPicker from "../FontWeight/FontWeight";
 
 import TemplateOrientation from "../TemplateOrientation/TemplateOrientation";
 import TemplateDataPortrait from "../../data/TemplateDataPortrait";
-
+import UploadImage from "../UploadImage/UploadImage";
 import Category from "../Category/Category";
 
 const Home = () => {
@@ -125,9 +125,10 @@ const Home = () => {
               font={textFont}
 			  fontWeight={fontWeight}/>
           </div>
-		  <div> <DownloadButton clearCardImage={(image) => setImageUrl('')} clearCardMessage={(message) => setMessage('')}/></div>
-		 
+		  <div> <DownloadButton clearCardImage={(image) => setImageUrls('')} clearCardMessage={(message) => setMessage('')}/></div>
+		  <UploadImage />
         </div>
+       
       </div>
     </div>
   );
