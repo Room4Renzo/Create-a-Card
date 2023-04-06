@@ -1,7 +1,6 @@
 import "./ResizeImage.css";
 import { Rnd } from "react-rnd";
-import { useState } from 'react';
-
+import { useState } from "react";
 
 const ResizeImage = (props) => {
   const [width, setWidth] = useState(200);
@@ -9,23 +8,27 @@ const ResizeImage = (props) => {
 
   return (
     <div className="rectangle-image">
-  <Rnd
-    default={{
-      x: 0,
-      y: -400,
-      width: {width},
-      height: {height}
-    }}
-    onResize={(e, direction, ref, delta, position) => {
-      setWidth(ref.offsetWidth);
-      setHeight(ref.offsetHeight);
-    }}
-    lockAspectRatio={true}
-  >
-    {props.image ? <img src={props.image} width={width} height={height} /> : <></> }
-  </Rnd>
-  </div>
-);
+      <Rnd
+        default={{
+          x: 0,
+          y: -400,
+          width: { width },
+          height: { height },
+        }}
+        onResize={(e, direction, ref, delta, position) => {
+          setWidth(ref.offsetWidth);
+          setHeight(ref.offsetHeight);
+        }}
+        lockAspectRatio={true}
+      >
+        {props.image ? (
+          <img src={props.image} width={width} height={height} />
+        ) : (
+          <></>
+        )}
+      </Rnd>
+    </div>
+  );
 };
 
 export default ResizeImage;
