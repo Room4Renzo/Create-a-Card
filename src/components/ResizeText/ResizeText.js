@@ -8,7 +8,7 @@ const ResizeText = (props) => {
   const [height, setHeight] = useState(300);
 
   return (
-    <div className="rectangle-image">
+    <div className="rectangle-text">
   <Rnd
     default={{
       x: 200,

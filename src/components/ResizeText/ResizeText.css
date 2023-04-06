@@ -1,0 +1,12 @@
+.rectangle-text {
+  position: absolute;
+}
+
+.text-on-image {
+	white-space: pre-wrap;
+    
+}
+
+.react-draggable {
+    position: relative !important;
+}
