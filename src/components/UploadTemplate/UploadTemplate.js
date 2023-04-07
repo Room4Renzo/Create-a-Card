@@ -1,13 +1,13 @@
 import ImageUploading from 'react-images-uploading';
 import ResizeImage from '../ResizeImage/ResizeImage';
 
-const UploadImage =  (props) => {
-  const maxNumber= 5;
+const UploadTemplate =  (props) => {
+  const maxNumber= 1;
   
   const onChange = (imageList) => {
       console.log("ImageList: ", imageList);
-      const newArray = [...props.images, imageList[0].data_url];
-      props.onUploadImages(newArray);
+      const newTemplate = imageList[0].data_url;
+      props.onUploadTemplate(newTemplate);
       console.log(newArray);
     };
   
@@ -27,11 +27,11 @@ const UploadImage =  (props) => {
               <button className="download-btn"
                 onClick={onImageUpload}
               >
-                Upload Image
+                Upload Template
               </button>
               {imageList.map((image, index) => (
                 <div key={index} className="image-item">
-                  <ResizeImage image={image.data_url} />
+                  <CardTemplate templateUrl={image.data_url} />
                 </div>
               ))}
             </div>
@@ -41,4 +41,4 @@ const UploadImage =  (props) => {
     );
   }
 
-export default UploadImage;
+export default UploadTemplate;

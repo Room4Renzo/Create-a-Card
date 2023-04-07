@@ -18,6 +18,7 @@ import FontWeightPicker from "../FontWeight/FontWeight";
 import TemplateOrientation from "../TemplateOrientation/TemplateOrientation";
 import TemplateDataPortrait from "../../data/TemplateDataPortrait";
 import UploadImage from "../UploadImage/UploadImage";
+import UploadTemplate from "../UploadTemplate/UploadTemplate";
 import Category from "../Category/Category";
 import ClearButton from "../ClearButton/ClearButton";
 
@@ -56,8 +57,13 @@ const Home = () => {
             orientation={orientation}
           />
           <h1 className="category">Category</h1>
+          
           <Category onCategoryChange={(category) => setCategory(category)} images={images}/>
+          
+          <div className="card-buttons">
+          <UploadTemplate onUploadTemplate={(template) => setTemplateUrl(template)}/>
           <UploadImage images={images} onUploadImages={(images) => setImageUrls(images)}/>
+          </div>
           
           <h1 className="category">Image</h1>
           <h3>Click on image to add it on your card</h3>
