@@ -19,6 +19,7 @@ import TemplateOrientation from "../TemplateOrientation/TemplateOrientation";
 import TemplateDataPortrait from "../../data/TemplateDataPortrait";
 
 import Category from "../Category/Category";
+import ClearButton from "../ClearButton/ClearButton";
 
 const Home = () => {
   const [message, setMessage] = useState("");
@@ -34,8 +35,9 @@ const Home = () => {
   const [textFont, setTextFont] = useState("Arial");
   const [fontWeight, setFontWeight] = useState(400);
   const [orientation, setOrientation] = useState("portrait");
-
   const [category, setCategory] = useState('animals');
+  const [clearButtonClicked, setClearButtonClicked] = useState(false);
+
 
   return (
     <div className="container is-fluid">
@@ -51,7 +53,7 @@ const Home = () => {
          <Category onCategoryChange={(category) => setCategory(category)}/>			
           <h1 className="category">Image</h1>
           <h3>Click on image to add it on your card</h3>
-          <Carousel onClickImage={(images) => setImageUrls(images)} category={category}/>
+          <Carousel onClickImage={(images) => setImageUrls(images)} images={images} category={category}/>
         </div>
 
         <div className="column is-2 middle">
@@ -125,7 +127,10 @@ const Home = () => {
               font={textFont}
 			  fontWeight={fontWeight}/>
           </div>
-		  <div> <DownloadButton clearCardImage={(image) => setImageUrl('')} clearCardMessage={(message) => setMessage('')}/></div>
+		  <div className="card-buttons"> 
+        <ClearButton onClearButtonClick={() => setClearButtonClicked(true)} setImageUrls={() => setImageUrls([])} setMessage={() => setMessage('')}/>
+        <DownloadButton />
+        </div>
 		 
         </div>
       </div>
