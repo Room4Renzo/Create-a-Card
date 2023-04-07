@@ -23,11 +23,15 @@ import ClearButton from "../ClearButton/ClearButton";
 
 const Home = () => {
   const [message, setMessage] = useState("");
-  
+
   const [images, setImageUrls] = useState([]);
 
+  console.log("all images", images);
+
   const [template, setTemplateUrl] = useState(
-    TemplateDataPortrait[Math.floor(Math.random() * TemplateDataPortrait.length)]
+    TemplateDataPortrait[
+      Math.floor(Math.random() * TemplateDataPortrait.length)
+    ]
   );
 
   const [textColor, setTextColor] = useState();
@@ -35,25 +39,34 @@ const Home = () => {
   const [textFont, setTextFont] = useState("Arial");
   const [fontWeight, setFontWeight] = useState(400);
   const [orientation, setOrientation] = useState("portrait");
-  const [category, setCategory] = useState('animals');
+  const [category, setCategory] = useState("animals");
   const [clearButtonClicked, setClearButtonClicked] = useState(false);
-
 
   return (
     <div className="container is-fluid">
       <div className="columns is-vcentered">
         <div className="column is-5">
           <h1 className="category">Template</h1>
-		  <TemplateOrientation onOrientationChange={(orientation) => setOrientation(orientation)}/>
-      
-          <TemplateCarousel
-            onClickTemplate={(template) => setTemplateUrl(template)} orientation={orientation}
+          <TemplateOrientation
+            onOrientationChange={(orientation) => setOrientation(orientation)}
           />
-		<h1 className="category">Category</h1>
-         <Category onCategoryChange={(category) => setCategory(category)}/>			
+
+          <TemplateCarousel
+            onClickTemplate={(template) => setTemplateUrl(template)}
+            orientation={orientation}
+          />
+          <h1 className="category">Category</h1>
+          <Category onCategoryChange={(category) => setCategory(category)} images={images}/>
+          <UploadImage images={images} onUploadImages={(images) => setImageUrls(images)}/>
+          
           <h1 className="category">Image</h1>
           <h3>Click on image to add it on your card</h3>
-          <Carousel onClickImage={(images) => setImageUrls(images)} images={images} category={category}/>
+         
+        <Carousel
+            onClickImage={(images) => setImageUrls(images)}
+            images={images}
+            category={category}
+          /> 
         </div>
 
         <div className="column is-2 middle">
@@ -78,8 +91,7 @@ const Home = () => {
             </div>
           </div>
 
-
-		  <div className="is-shadowless">
+          <div className="is-shadowless">
             <div className="content">
               <div>
                 <h1 className="category">Font Sizes</h1>
@@ -90,7 +102,7 @@ const Home = () => {
             </div>
           </div>
 
-		  <div className="is-shadowless">
+          <div className="is-shadowless">
             <div className="content">
               <div>
                 <h1 className="category">Font Weights</h1>
@@ -111,29 +123,32 @@ const Home = () => {
               </div>
             </div>
           </div>
-
         </div>
         <div className="column is-6">
           <h1 className="category">Design</h1>
           <div className="card-to-display">
-            <CardTemplate
-              templateUrl={template}
-            />
-            {images.map((url) => <ResizeImage image={url} />)}
-            
-			<ResizeText message={message}
+            <CardTemplate templateUrl={template} />
+            {images.map((url) => (
+              <ResizeImage image={url} />
+            ))}
+
+            <ResizeText
+              message={message}
               color={textColor}
               fontSize={fontSize}
               font={textFont}
-			  fontWeight={fontWeight}/>
+              fontWeight={fontWeight}
+            />
           </div>
-		  <div className="card-buttons"> 
-        <ClearButton onClearButtonClick={() => setClearButtonClicked(true)} setImageUrls={() => setImageUrls([])} setMessage={() => setMessage('')}/>
-        <DownloadButton />
+          <div className="card-buttons">
+            <ClearButton
+              onClearButtonClick={() => setClearButtonClicked(true)}
+              setImageUrls={() => setImageUrls([])}
+              setMessage={() => setMessage("")}
+            />
+            <DownloadButton />
+          </div>
         </div>
-		 
-        </div>
-       
       </div>
     </div>
   );

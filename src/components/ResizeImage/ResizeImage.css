@@ -9,6 +9,7 @@
     align-items: center;
     justify-content: flex-start;
     position: absolute;
+    top: 50%;
   }
 
   .rectangle-image img {
