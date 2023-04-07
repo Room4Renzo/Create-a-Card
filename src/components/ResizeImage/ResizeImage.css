@@ -8,8 +8,10 @@
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
-    position: absolute;
     top: 50%;
+    position: absolute;
+    width: 1px;
+    height: 1px;
   }
 
   .rectangle-image img {
@@ -17,3 +19,7 @@
     max-width: 300px;
   }
 
+.image-item .rectangle-image .react-draggable {
+  width: 1px !important;
+  height: 1px !important;
+}
