@@ -16,20 +16,10 @@ const DownloadButton = (props) => {
     });
   };
 
-  const clear = () => {
-    props.clearCardImage();
-    props.clearCardMessage();
-  }
-
   return (
-    <div className="card-buttons">
-      <button className="download-btn" onClick={clear}>
-        Clear Card
-      </button>
       <button className="download-btn" onClick={onClick}>
         Download Card
       </button>
-    </div>
   );
 };
 
