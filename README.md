@@ -8,6 +8,5 @@ Create a Card is a versatile and user-friendly application that enables its user
 
 Technologies: JavaScript, React, CSS, Netlify, Material UI
 
-<img width="816" alt="screenshot1" src="https://user-images.githubusercontent.com/84686704/230482114-07022c49-814e-4c7f-a6e8-44c65fb82053.png
-" width="300">
+<img width="816" alt="screenshot1" src="src/assets/images/create-a-card.png" width="300">
 
