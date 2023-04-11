@@ -23,7 +23,7 @@ const ResizeText = (props) => {
     lockAspectRatio={true}
   >
 			<div
-				class="text-on-image"
+				className="text-on-image"
 				style={{ color: props.color, fontSize: props.fontSize, fontFamily: props.font, fontWeight: props.fontWeight }}
 			>
 				{props.message}
