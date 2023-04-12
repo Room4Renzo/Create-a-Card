@@ -8,7 +8,8 @@
     right: 10px;
     z-index: 10;
     border: 1px solid #eee;
-    background: #ebf8ff;
+    background: black;
+    color: white;
     padding: 10px 20px;
     border-radius: 5px;
     font-weight: 700;

@@ -21,6 +21,7 @@ import UploadImage from "../UploadImage/UploadImage";
 import UploadTemplate from "../UploadTemplate/UploadTemplate";
 import Category from "../Category/Category";
 import ClearButton from "../ClearButton/ClearButton";
+import Footer from "../Footer/Footer";
 
 const Home = () => {
   const [message, setMessage] = useState("");
@@ -122,7 +123,7 @@ const Home = () => {
           <div className="is-shadowless">
             <div className="content">
               <div>
-                <h1 className="category">Colors</h1>
+                <h1 className="category">Colours</h1>
                 <ColorPicker
                   onColorChange={(textColor) => setTextColor(textColor)}
                 />
@@ -132,6 +133,25 @@ const Home = () => {
         </div>
         <div className="column is-6">
           <h1 className="category">Design</h1>
+          <ol>
+            <li>
+              Select an orientation for a template: portrait or landscape
+            </li>
+            <li>
+              Select a desired template from the top carousel by clicking on it
+              or upload template from your computer
+            </li>
+            <li>
+              Select an image category and choose an image from the bottom
+              carousel or upload image from your computer
+            </li>
+            <li>You can select as many images as you like</li>
+            <li>You can drag or resize your images</li>
+            <li>
+              Customise your message by selecting a font, a font size, and a colour
+            </li>
+            <li>Download your unique card to your computer</li>
+          </ol>
           <div className="card-to-display">
             <CardTemplate templateUrl={template} />
             {images.map((url) => (
